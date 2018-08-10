@@ -24,3 +24,8 @@
 a:hover {
     color: #ffffff;
 }
+
+.modal {
+    min-height: 100%;
+    min-width: 100%;
+}
