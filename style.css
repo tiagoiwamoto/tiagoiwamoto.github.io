@@ -1,0 +1,26 @@
+.title{
+    font-family: 'Modern Antiqua', cursive;
+}
+
+.routed-img{
+    border-radius: 80px;
+    width: 128px;
+}
+
+.background{
+    background-image: url('1.jpg');
+}
+
+.back-color{
+    background-color: #000000;
+    opacity: 0.7;
+}
+
+.text{
+    font-family: 'Sunflower', sans-serif;
+    font-size: 22px;
+}
+
+a:hover {
+    color: #ffffff;
+}
