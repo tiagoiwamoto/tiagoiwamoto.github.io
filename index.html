@@ -72,7 +72,7 @@
                   <p>Veja meu CV em português</p>
                 </div>
                 <div class="card-action">
-                  <a href="#">Ver</a>
+                  <a href="#" onclick="openNav('portuguese-resume')"onclick="openNav()" class="modal-trigger">Ver</a>
                 </div>
               </div>
             </div>
@@ -93,6 +93,22 @@
     <div class="overlay-content">
         <object id="resume-view" name="resume-view" data="english_resume.pdf" type="application/pdf" style="min-width: 90%; min-height: 800px;">
             <param name="Tiago Iwamoto - English Resume" value="Fit" />
+        </object>
+    </div>
+
+</div>
+    
+    <!-- Portuguese resume -->
+<!-- The overlay -->
+<div id="portuguese-resume" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('portuguese-resume')">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <object id="resume-view" name="resume-view" data="portuguese_resume.pdf" type="application/pdf" style="min-width: 90%; min-height: 800px;">
+            <param name="Tiago Iwamoto - Cv" value="Fit" />
         </object>
     </div>
 
