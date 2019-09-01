@@ -20,6 +20,14 @@
     opacity: 0.7;
 }
 
+.main-background{
+    background-image: url('main-background.jpg');
+}
+
+.padding-top{
+    padding-top: 15px;
+}
+
 .text{
     font-family: 'Sunflower', sans-serif;
     font-size: 22px;
