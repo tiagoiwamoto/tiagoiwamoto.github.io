@@ -1,140 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Tiago Henrique Iwamoto</title>
-<!-- Compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css" />
-<link href="https://fonts.googleapis.com/css?family=Modern+Antiqua" rel="stylesheet" />
-<link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
-<link href="style.css" rel="stylesheet" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Tiago Iwamoto - Analista de sistemas</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body class="background">
-<br />
-<br />
-<br />
-<br />
-<br />
-<div class="container">
-    <div class="center">
-        <img src="img_routed.jpg" width="200px" height="200px" class="profile" />
-    </div>
-    <h4 class="center white-text text">A System analyst</h4>
-    <p class="center white-text text">I love to code, build solutions, contribute with community!</p>
-    <p class="center white-text text">A special thanks to Foundation and Materializecss, because of them i can make nice pages :)</p>
-    <p class="center white-text text">I like to play guitar in my free time, play videogames and listem a nice rock or metal songs !</p>
-    
-    <hr />
-    
-    <div class="center">
-       <a href=""><i class="fab fa-linkedin fa-3x tooltipped" data-position="left" data-tooltip="Read my posts !"></i></a>
-       <a href=""><i class="fab fa-instagram fa-3x tooltipped" data-position="top" data-tooltip="See my pics"></i></a>
-       <a href=""><i class="fab fa-youtube fa-3x tooltipped" data-position="bottom" data-tooltip="Check my channel !"></i></a>
-       <a href=""><i class="fas fa-envelope fa-3x tooltipped" data-position="left" data-tooltip="Mail me"></i></a>
-       <a href=""><i class="fab fa-whatsapp fa-3x tooltipped" data-position="top" data-tooltip="Send me a zap"></i></a>
-       <a href=""><i class="fab fa-github fa-3x tooltipped" data-position="right" data-tooltip="Check my projects"></i></a>
-    </div>
-    
-    <hr />
-    
-    <div class="row">
-        <div class="col s4">
-            <div class="card horizontal">
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Check my CV in English !</p>
-                </div>
-                <div class="card-action">
-                  <a href="#" onclick="openNav('english-resume')"onclick="openNav()" class="modal-trigger">See me</a>
-                </div>
-              </div>
-            </div>
+<body>
+<div class="navbar-fixed">
+    <nav class="purple darken-3">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center">Tiago Iwamoto - Analista de sistemas</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
-        
-        <div class="col s4">
-            <div class="card horizontal">
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>日本語のりれきしょう !</p>
-                </div>
-                <div class="card-action">
-                  <a href="#">見て</a>
-                </div>
-              </div>
-            </div>
-        </div>
-        
-        <div class="col s4">
-            <div class="card horizontal">
-              <div class="card-stacked">
-                <div class="card-content">
-                  <p>Veja meu CV em português</p>
-                </div>
-                <div class="card-action">
-                  <a href="#" onclick="openNav('portuguese-resume')"onclick="openNav()" class="modal-trigger">Ver</a>
-                </div>
-              </div>
-            </div>
-        </div>
-    </div>
-    
-    
+    </nav>
 </div>
 
-<!-- English resume -->
-<!-- The overlay -->
-<div id="english-resume" class="overlay">
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Email Microservice</a></li>
+    <li><a href="badges.html">Sms Microservice</a></li>
+    <li><a href="collapsible.html">Boleto Microservice</a></li>
+    <li><a href="mobile.html">Remessa Microservice</a></li>
+    <li><a href="mobile.html">Retorno Microservice</a></li>
+    <li><a href="mobile.html">Cielo Microservice</a></li>
+    <li><a href="mobile.html">Pagseguro Microservice</a></li>
+    <li><a href="mobile.html">Mercadopago Microservice</a></li>
+    <li><a href="mobile.html">Mercadolivre Microservice</a></li>
+    <li><a href="mobile.html">B2W Microservice</a></li>
+</ul>
 
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('english-resume')">&times;</a>
-
-    <!-- Overlay content -->
-    <div class="overlay-content">
-        <object id="resume-view" name="resume-view" data="english_resume.pdf" type="application/pdf" style="min-width: 90%; min-height: 800px;">
-            <param name="Tiago Iwamoto - English Resume" value="Fit" />
-        </object>
+<div class="section white">
+    <div class="row container">
+        <div class="center">
+            <img src="1.jpg" width="200px" height="200px" class="profile" />
+        </div>
     </div>
-
 </div>
-    
-    <!-- Portuguese resume -->
-<!-- The overlay -->
-<div id="portuguese-resume" class="overlay">
-
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('portuguese-resume')">&times;</a>
-
-    <!-- Overlay content -->
-    <div class="overlay-content">
-        <object id="resume-view" name="resume-view" data="portuguese_resume.pdf" type="application/pdf" style="min-width: 90%; min-height: 800px;">
-            <param name="Tiago Iwamoto - Cv" value="Fit" />
-        </object>
+<div class="parallax-container">
+    <div class="parallax"><img src="http://www.sclance.com/backgrounds/background-url-image/background-url-image_254675.jpg"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header">Serviços</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="https://cdn.iconscout.com/icon/free/png-256/java-43-569305.png" width="64px">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Email Microservice<i class="material-icons right">more_horiz</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Detalhes do serviço<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="https://cdn.iconscout.com/icon/free/png-256/java-43-569305.png" width="64px">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">SMS Microservice<i class="material-icons right">more_horiz</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Detalhes do serviço<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="https://cdn.iconscout.com/icon/free/png-256/java-43-569305.png" width="64px">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Boleto Microservice<i class="material-icons right">more_horiz</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Detalhes do serviço<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<div class="parallax-container">
+    <div class="parallax"><img src="http://eskipaper.com/images/hd-wallpapers-mac-5.jpg"></div>
+</div>
+<div class="section white">
+    <div class="row container">
+        <h2 class="header">Sobre mim</h2>
+        <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+        <div class="row">
+            <div class="col s12 m4">
 
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Cv em português</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col s12 m4">
+
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">English Cv</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col s12 m4">
+
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">日本語の履歴照会</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col s12 m6">
+
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Linkedin</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col s12 m6">
+
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Github</span>
+                        <p>I am a very simple card. I am good at containing small bits of information.
+                            I am convenient because I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">This is a link</a>
+                        <a href="#">This is a link</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="row">
+            <p class="grey-text text-darken-3 lighten-3">Iniciando com asp no inicio dos anos 2000 tive meu primeiro crud criado com access e asp. Logo conheci o delphi e o BDE que era o padrão da epoca. Na sequencia me deparei com o php e foi muito amor junto com o mysql até conhecer o java e descobrir a orientação a objetos foi amor a primeira vista. Trabalhando com diversos bancos como Oracle, h2, mysql, postgres. Passei a utilizar vários frameworks do java como jsf, jsp, thymeleaf, por fim o spring e spring boot. Foram muitos trabalhos realizados mas destaco plataformas de pagamento e fiscais que foram muito bem estruturadas e executadas. Muito orgulho do resultado. Neste meio tempo passei por Ruby com Rails. Escalabilidade em sistemas, gerenciamento de threads, consumo de memoria e processamento são coisas que somente a experiencia pode ensinar. </p>
+        </div>
+    </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- Compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script>
-
-      $(document).ready(function(){
-        $('.tooltipped').tooltip();
-          $('.modal').modal();
-      });
-
-      /* Open when someone clicks on the span element */
-      function openNav(resume) {
-          document.getElementById(resume).style.width = "100%";
-      }
-
-      /* Close when someone clicks on the "x" symbol inside the overlay */
-      function closeNav(resume) {
-          document.getElementById(resume).style.width = "0%";
-      }
-    
+    $(document).ready(function(){
+        $('.sidenav').sidenav();
+        $('.parallax').parallax();
+    });
 </script>
 </body>
-
 </html>
