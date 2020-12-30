@@ -1,25 +1,9 @@
-body {
-    background-image: url('main-background-pc.jpg');
+.brand-title{
+    font-family: 'Comfortaa', cursive;
+    font-size: x-large;
 }
-h1{
-    color: white;
-    font-family: 'Raleway', sans-serif;
-    font-weight:300;
-    font-size:3em;
-}
-h2{
-    color: white;
-    font-size: 20px;
-    font-family: Roboto;
-    font-weight: normal;
-}
-a{
-    color:white;
-    font-size:15px;
-    padding: 0 30px
-}
-.color-opacity{
-    padding: 5px;
-    background-color: black;
-    opacity: 0.8;
+
+.padding-top{
+    padding-top: 15px;
+    padding-left: 10px;
 }
