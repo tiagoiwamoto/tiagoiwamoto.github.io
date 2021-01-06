@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@tiagoiwamoto</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
     </style>
@@ -23,6 +24,19 @@
             <span aria-hidden="true"></span>
         </a>
     </div>
+
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+                <a href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank" class="padding-right">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/tiagoiwamoto?tab=repositories" target="_blank" class="padding-left">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 </nav>
 
 <section class="hero is-info">
@@ -34,6 +48,19 @@
             <h2 class="subtitle">
                 Analista de sistemas, Programador, Fotográfo, Professor e Youtuber
             </h2>
+
+            <a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
+                <img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
+            </a>
+            <a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_b.jpg" title="Electrical Power Lines and Pylons disappear over t.. (pautliubomir)">
+                <img src="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_m.jpg" alt="" />
+            </a>
+            <a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" title="Morning Godafoss (Brads5)">
+                <img src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_m.jpg" alt="" />
+            </a>
+            <a class="fancybox" rel="gallery1" href="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg" title="Vertical - Special Edition! (cedarsphoto)">
+                <img src="http://farm4.staticflickr.com/3691/10185053775_701272da37_m.jpg" alt="" />
+            </a>
         </div>
     </div>
 </section>
@@ -161,6 +188,20 @@
                         </div>
                     </div>
 
+                    <div class="control">
+                        <div class="tags has-addons">
+                            <span class="tag is-dark">SOLID</span>
+                            <span class="tag is-success"><i class="fas fa-check"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="control">
+                        <div class="tags has-addons">
+                            <span class="tag is-dark">KISS</span>
+                            <span class="tag is-success"><i class="fas fa-check"></i></span>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="field is-grouped is-grouped-multiline">
@@ -227,6 +268,26 @@
     </div>
 </section>
 <br />
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        </p>
+    </div>
+</footer>
+<!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".fancybox").fancybox({
+            openEffect	: 'none',
+            closeEffect	: 'none'
+        });
+    });
+</script>
 </body>
 </html>
