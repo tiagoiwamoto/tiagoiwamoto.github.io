@@ -1,3 +1,7 @@
+### Meu perfil
+Compartilhando meu perfil na web para facilitar o contato e fazer network.
+
+[Meu Github](https://tiagoiwamoto.github.io) | [Meu Linkedin](https://www.linkedin.com/in/tiago-iwamoto/)
+
 ### References
-    https://bulma-divider.netlify.app/get-started/
-    https://bulma-tooltip.netlify.app/get-started/
+[Bulma.io](https://bulma.io) | [Bulma-Extension](https://bulma-divider.netlify.app/get-started/) | [FontAwesome](https://fontawesome.com)
