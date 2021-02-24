@@ -1,6 +1,6 @@
-body{
-    background-color: hsl(0, 0%, 29%);
-}
+/*body{*/
+/*    background-color: hsl(0, 0%, 29%);*/
+/*}*/
 .brand-title{
     font-family: 'Comfortaa', cursive;
     font-size: x-large;
@@ -18,3 +18,4 @@ body{
 .padding-right{
     padding-right: 5px;
 }
+
