@@ -19,6 +19,16 @@
     padding-right: 5px;
 }
 
+.routed{
+    border-radius: 75px;
+}
+
+.routed:hover{
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
