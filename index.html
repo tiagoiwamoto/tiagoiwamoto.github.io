@@ -5,289 +5,287 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@tiagoiwamoto</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" integrity="sha512-nNlU0WK2QfKsuEmdcTwkeh+lhGs6uyOxuUs+n+0oXSYDok5qy0EI0lt01ZynHq6+p/tbgpZ7P+yUb+r71wqdXg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.0.2/dist/bulma-tooltip.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.0.0/dist/bulma-divider.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
     </style>
     <link rel="stylesheet" href="mycss.css">
 </head>
 <body>
-<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item brand-title" href="https://tiagoiwamoto.github.io">
-            <i class="fas fa-mug-hot fa-2x"></i> <span class="padding-top">Tiago Iwamoto</span>
-        </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+<!-- Navbar -->
+<nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <span class="navbar-item">
+            <figure class="image is-32x32">
+                <img src="https://bulma.io/images/placeholders/32x32.png">
+            </figure>
+            <div class="brand-title ml-2">Tiago Iwamoto</div>
+        </span>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
 
-    <div class="navbar-end">
-        <div class="navbar-item">
-            <div class="buttons">
-                <a href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank" class="padding-right">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-                <a href="https://github.com/tiagoiwamoto?tab=repositories" target="_blank" class="padding-left">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
-            </div>
+        <div class="navbar-end">
+            <a class="navbar-item has-tooltip-left" data-tooltip="Confira meus repositórios" href="#"><img src="assets/imgs/github-icon.png" width="32" /></a>
+            <a class="navbar-item has-tooltip-left" data-tooltip="Acesse meu perfil no linkedin" href="#"><img src="assets/imgs/linkedin-icon.png" width="32" /></a>
         </div>
     </div>
 </nav>
 
-<section class="hero has-background-grey-dark">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title has-text-primary-light">
-                Sobre mim
-            </h1>
-            <h2 class="subtitle">
-                Analista de sistemas, Programador, Fotográfo, Professor e Youtuber
-            </h2>
+<!-- Corpo -->
+<div class="columns mt-3">
+    <div class="column">
+        <div class="ml-4 mr-4 box">
+            <p class="subtitle is-5">Sobre mim</p>
+            <p>Olá, meu nome é Tiago sou Brasileiro com decendencia Japonesa.
+                Nasci em Curitiba-Paraná porem vivi praticamente minha vida toda no Japão.</p>
+            <p>Me formei em 2008 no Japão, trabalhei em muitos tipos de trabalhos.</p>
+            <p>Amo trabalhar com computadores, principalmente com desenvolvimento de sistemas, hoje com mais de 15 anos de experiência só tenho gostado mais e mais.</p>
+            <p>Também amo realizar outras atividades como fotografia, ensinar e compartilhar coisas no youtube.</p>
+            <p>Sem falar nos meus hobbies, adoro música, andar de bike, moto correr e jogar game e sem falar em maratonar series e filmes :)</p>
+            <p>Espero que eu possa ajudar você ou sua empresa, me coloco a disposição para te ajudar.</p>
+        </div>
+        <div class="ml-4 mr-4 box">
+            <p class="subtitle is-5">Formação</p>
 
-            <a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_b.jpg" title="Twilight Memories (doraartem)">
-                <img src="http://farm2.staticflickr.com/1669/23976340262_a5ca3859f6_m.jpg" alt="" />
-            </a>
-            <a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_b.jpg" title="Electrical Power Lines and Pylons disappear over t.. (pautliubomir)">
-                <img src="http://farm2.staticflickr.com/1459/23610702803_83655c7c56_m.jpg" alt="" />
-            </a>
-            <a class="fancybox" rel="gallery1" href="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_b.jpg" title="Morning Godafoss (Brads5)">
-                <img src="http://farm2.staticflickr.com/1617/24108587812_6c9825d0da_m.jpg" alt="" />
-            </a>
-            <a class="fancybox" rel="gallery1" href="http://farm4.staticflickr.com/3691/10185053775_701272da37_b.jpg" title="Vertical - Special Edition! (cedarsphoto)">
-                <img src="http://farm4.staticflickr.com/3691/10185053775_701272da37_m.jpg" alt="" />
-            </a>
+            <article class="message is-success">
+                <div class="message-header">
+                    <p>Mestrado</p>
+                </div>
+                <div class="message-body">
+                    Próximo objetivo é ingressar em um mestrado...
+                    <br />
+                    Universidade ? - 2021 - ATUAL
+                </div>
+            </article>
+
+            <article class="message is-info">
+                <div class="message-header">
+                    <p>MBA Business Intelligence</p>
+                </div>
+                <div class="message-body">
+                    Universidade Positivo - 2018 - 2019
+                </div>
+            </article>
+
+            <article class="message is-link">
+                <div class="message-header">
+                    <p>Analise de sistemas</p>
+                </div>
+                <div class="message-body">
+                    Centro universitário Opet - 2016 - 2018
+                </div>
+            </article>
+
+        </div>
+        <div class="ml-4 mr-4 box">
+            <p class="subtitle is-5">Especialidades</p>
+
+            <div class="divider is-info">Backend</div>
+            <div class="field is-grouped is-grouped-multiline">
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Java</span>
+                        <span class="tag is-success"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Springboot</span>
+                        <span class="tag is-success"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">PHP</span>
+                        <span class="tag is-success"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Slim Framework</span>
+                        <span class="tag is-success"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider is-info">Frontend</div>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Angular</span>
+                        <span class="tag is-info"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">VueJs</span>
+                        <span class="tag is-info"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider is-success">Mobile</div>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Flutter</span>
+                        <span class="tag is-link"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divider is-success">Outras habilidades TI</div>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Kafka</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Ignite</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">AWS</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Redis</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">SQL</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">NoSQL</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">CI/CD</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Linux</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Docker</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Kubernetes</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">SOLID</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">KISS</span>
+                        <span class="tag is-warning"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="divider is-success">Fotografia</div>
+            <div class="field is-grouped is-grouped-multiline">
+                <div class="control">
+                    <div class="tags has-addons">
+                        <span class="tag is-dark">Adobe Lightroom</span>
+                        <span class="tag is-danger"><i class="fas fa-check"></i></span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-</section>
-<br />
-<div class="container">
-    <div class="notification has-background-grey-darker has-text-primary-light">
-        <p>Olá, meu nome é Tiago sou Brasileiro com decendencia Japonesa.
-            Nasci em Curitiba-Paraná porem vivi praticamente minha vida toda no Japão.</p>
-        <br />
-        <p>Me formei em 2008 no Japão, trabalhei em muitos tipos de trabalhos.</p>
-        <br />
-        <p>Amo trabalhar com computadores, principalmente com desenvolvimento de sistemas, hoje com mais de 15 anos de experiência só tenho gostado mais e mais.</p>
-        <p>Porem também amo realizar outras atividades como fotografia, ensinar e compartilhar coisas no youtube.</p>
-        <br />
-        <p>Sem falar nos meus hobbies, adoro música, andar de bike, moto correr e jogar game e sem falar em maratonar series e filmes :)</p>
-        <br />
-        <p>Espero que eu possa ajudar você ou sua empresa, me coloco a disposição para te ajudar.</p>
+
+    <div class="column">
+        <div class="ml-4 mr-4 box">
+            <p class="subtitle is-5">Cvs</p>
+            <div class="divider is-info">Atualizado: 23/02/2021</div>
+            <div class="columns">
+                <div class="column is-flex is-justify-content-center">
+                    <a href="https://drive.google.com/file/d/16wbdtFWMBS9EqU_P86ljDB1HK7bR3qiK/view?usp=sharing" target="_blank" class="button is-success is-active">
+                        <img src="assets/imgs/brazil.png" width="32" /><span class="ml-2">Download PT-BR</span></a>
+                </div>
+                <div class="column is-flex is-justify-content-center">
+                    <button class="button is-info" title="Disabled button" disabled>
+                        <img src="assets/imgs/english.png" width="32" /> <span class="ml-2">Download EN</span> </button>
+                </div>
+            </div>
+            <div class="divider is-info">Cv em áudio</div>
+            <div class="is-flex is-justify-content-center">
+                <audio controls autoplay>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="divider is-info">Cv em video</div>
+            <div class="is-flex is-justify-content-center">
+                <video controls width="100%" height="480">
+                    <source src="movie.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div class="ml-4 mr-4 box">
+
+        </div>
     </div>
 </div>
-<br />
-<section class="hero has-background-grey-dark">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title has-text-primary-light">
-                Habilidades técnicas
-            </h1>
-            <h2 class="subtitle">
-                <div class="field is-grouped is-grouped-multiline">
 
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Java</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Springboot</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Angular</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Flutter</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Kafka</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Ignite</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">AWS</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Redis</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">SQL</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">NoSQL</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">CI/CD</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Linux</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Docker</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Kubernetes</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">SOLID</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">KISS</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Nikon</span>
-                            <span class="tag is-info"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Adobe Lightroom</span>
-                            <span class="tag is-info"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                </div>
-
-            </h2>
-        </div>
-    </div>
-</section>
-<br />
-<section class="hero is-medium has-background-grey-dark">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title has-text-primary-light">
-                Curriculum
-            </h1>
-            <h2 class="subtitle">
-                <div class="columns">
-                    <div class="column">
-                        <figure class="image is-16by9">
-                            <iframe class="has-ratio" width="100%" src="https://" frameborder="0" allowfullscreen></iframe>
-                        </figure>
-                    </div>
-                    <div class="column">
-                        <figure class="image is-16by9">
-                            <iframe class="has-ratio" width="100%" src="https://" frameborder="0" allowfullscreen></iframe>
-                        </figure>
-                    </div>
-                </div>
-                <div class="columns">
-                    <div class="column">
-                        <button class="button is-primary is-large">
-                    <span class="icon is-medium">
-                      <i class="fas fa-download"></i>
-                    </span>
-                            <span>Em Português</span>
-                        </button>
-                    </div>
-                    <div class="column">
-                        <button class="button is-primary is-large">
-                    <span class="icon is-medium">
-                      <i class="fas fa-download"></i>
-                    </span>
-                            <span>English version</span>
-                        </button>
-                    </div>
-                </div>
-            </h2>
-        </div>
-    </div>
-</section>
-<br />
-<footer class="footer">
-    <div class="content has-text-centered">
-        <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-        </p>
-    </div>
-</footer>
 <!-- Add jQuery library -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-<script>
-    $(document).ready(function() {
-        $(".fancybox").fancybox({
-            openEffect	: 'none',
-            closeEffect	: 'none'
-        });
-    });
-</script>
 </body>
 </html>
