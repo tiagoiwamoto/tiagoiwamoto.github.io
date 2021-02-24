@@ -3,7 +3,7 @@
 /*}*/
 .brand-title{
     font-family: 'Comfortaa', cursive;
-    font-size: x-large;
+    font-size: large;
 }
 
 .padding-top{
@@ -17,5 +17,22 @@
 
 .padding-right{
     padding-right: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(13deg, #76bfed 14%,#43aae6 64%);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(13deg, #43aae6 14%,#76BFED 64%);
+}
+::-webkit-scrollbar-track{
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
 }
 
