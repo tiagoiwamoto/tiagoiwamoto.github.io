@@ -19,6 +19,11 @@
     padding-right: 5px;
 }
 
+.certificate-block{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .routed{
     border-radius: 75px;
 }
