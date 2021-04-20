@@ -13,18 +13,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
     </style>
     <link rel="stylesheet" href="mycss.css" />
+    <link rel="stylesheet" href="lightbox.min.css">
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar is-link" role="navigation" aria-label="main navigation">
     <div class="navbar-brand animate__animated animate__bounceInDown">
-        <span class="navbar-item">
-            <figure class="ml-2 image is-32x32">
-                <img src="assets/imgs/code-img.png" />
-            </figure>
+        <a class="navbar-item" href="/">
+            <img src="assets/imgs/code-img.png" />
             <div class="brand-title ml-2">Tiago Iwamoto</div>
-        </span>
+        </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
@@ -61,7 +60,7 @@
             <p>Amo trabalhar com computadores, principalmente com desenvolvimento de sistemas, hoje com mais de 15 anos de experiência só tenho gostado mais e mais.</p>
             <p>Também amo realizar outras atividades como fotografia, ensinar e compartilhar coisas no youtube.</p>
             <p>Sem falar nos meus hobbies, adoro música, andar de bike, moto correr e jogar game e sem falar em maratonar series e filmes :)</p>
-            <p>Espero que eu possa ajudar você ou sua empresa, me coloco a disposição para te ajudar.</p>
+            <p>Espero que eu possa ajudar você ou sua empresa, me coloco a disposição.</p>
         </div>
         <div class="ml-4 mr-4 box animate__animated animate__fadeInRight">
             <p class="subtitle is-5">Formação</p>
@@ -349,34 +348,84 @@
     </div>
 </div>
 
+<div class="ml-4 mr-4 box animate__animated animate__fadeInRight">
+    <p class="subtitle is-5">Cursos</p>
+    <div class="divider is-info">Backend</div>
+    <div class="columns certificate-block">
+
+        <div class="column">
+            <article class="message is-dark">
+                <div class="message-header">
+                    <p>Java Sênior</p>
+                </div>
+                <div class="message-body">
+                    <a class="example-image-link" href="assets/certificates/java_sr.png" data-lightbox="example-set" data-title="Java Sênior (Treinaweb).">
+                        <img class="example-image" src="assets/certificates/java_sr_thumb.png" alt=""/>
+                    </a>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="message is-dark">
+                <div class="message-header">
+                    <p>Spring Sênior</p>
+                </div>
+                <div class="message-body">
+                    <a class="example-image-link" href="assets/certificates/spring_sr.png" data-lightbox="example-set" data-title="Spring (Treinaweb).">
+                        <img class="example-image" src="assets/certificates/spring_sr_thumb.png" alt=""/>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+        <div class="column">
+            <article class="message is-dark">
+                <div class="message-header">
+                    <p>Ruby Fullstack</p>
+                </div>
+                <div class="message-body">
+                    <a class="example-image-link" href="assets/certificates/ruby_fullstack.png" data-lightbox="example-set" data-title="Ruby On Rails (Treinaweb).">
+                        <img class="example-image" src="assets/certificates/ruby_fullstack_thumb.png" alt=""/>
+                    </a>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="message is-dark">
+                <div class="message-header">
+                    <p>Ruby API</p>
+                </div>
+                <div class="message-body">
+                    <a class="example-image-link" href="assets/certificates/udemy_ruby_rest.jpg" data-lightbox="example-set" data-title="Ruby On Rails - API (Udemy).">
+                        <img class="example-image" src="assets/certificates/udemy_ruby_rest_thumb.jpg" alt=""/>
+                    </a>
+                </div>
+            </article>
+        </div>
+
+
+    </div>
+    <div class="divider is-info">Frontend</div>
+    <div class="columns certificate-block">
+        <div class="column">
+            <article class="message is-info">
+                <div class="message-header">
+                    <p>Angular</p>
+                </div>
+                <div class="message-body">
+                    <a class="example-image-link" href="assets/certificates/angular_sr.png" data-lightbox="example-set" data-title="Angular (Treinaweb).">
+                        <img class="example-image" src="assets/certificates/angular_sr_thumb.png" alt=""/>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</div>
+
 <!-- Add jQuery library -->
 <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
+<script src="lightbox.min.js"></script>
 
-        // Get all "navbar-burger" elements
-        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-        // Check if there are any navbar burgers
-        if ($navbarBurgers.length > 0) {
-
-            // Add a click event on each of them
-            $navbarBurgers.forEach( el => {
-                el.addEventListener('click', () => {
-
-                    // Get the target from the "data-target" attribute
-                    const target = el.dataset.target;
-                    const $target = document.getElementById(target);
-
-                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-                    el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-
-                });
-            });
-        }
-
-    });
-</script>
 </body>
 </html>
