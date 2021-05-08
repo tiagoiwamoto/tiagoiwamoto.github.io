@@ -24,6 +24,11 @@
     padding-right: 15px;
 }
 
+.certificate-center {
+    width:100%;
+    text-align:center;
+}
+
 .routed{
     border-radius: 75px;
 }
