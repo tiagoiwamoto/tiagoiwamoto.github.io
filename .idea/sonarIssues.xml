@@ -28,6 +28,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../java/springboot-with-mongodb/src/main/java/br/com/tiagoiwamoto/api/business/service/BlogCategoryService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../java/springboot-with-mongodb/src/main/java/br/com/tiagoiwamoto/api/business/service/BlogPostService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../java/springboot-with-mongodb/src/test/java/br/com/tiagoiwamoto/api/business/service/BlogCategoryServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../java/springboot-with-mongodb/src/test/java/br/com/tiagoiwamoto/api/business/service/BlogPostServiceTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
