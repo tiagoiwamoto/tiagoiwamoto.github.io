@@ -43,6 +43,10 @@
     width: 100%;
 }
 
+.text-right{
+    text-align: right;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
