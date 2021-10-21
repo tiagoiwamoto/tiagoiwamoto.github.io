@@ -47,6 +47,11 @@
     text-align: right;
 }
 
+.text-center{
+    text-align: center;
+    align-content: center;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
