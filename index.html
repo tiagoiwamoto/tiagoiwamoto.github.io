@@ -174,13 +174,6 @@
                             <span class="tag has-background-primary-light"><i class="fas fa-check"></i></span>
                         </div>
                     </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">NewSql</span>
-                            <span class="tag has-background-primary-light"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="divider is-info">Cloud</div>
@@ -373,52 +366,37 @@
 
             <div class="box animate__animated animate__fadeInLeft">
                 <p class="subtitle is-5">Aplicações publicadas</p>
-                <table class="table is-hoverable is-fullwidth">
-                    <thead>
-                    <th>App</th>
-                    <th>Techs</th>
-                    <th></th>
-                    <th></th>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>iwt-amazing-vueapp</td>
-                        <td>VueJs 3.x | Bootstrap 5.x</td>
-                        <td><a href="http://iwt-vueapp.meajudatintin.cf/iwt-amazing-vueapp/" target="_blank" class="button is-link is-small">Acessar</a></td>
-                        <td><a href="https://github.com/tiagoiwamoto/iwt-amazing-vuejs-app" target="_blank" class="button is-dark is-small">Fonte</a></td>
-                    </tr>
-                    <tr>
-                        <td>iwt-clean-architecture</td>
-                        <td>Java 15 | Spring boot 2.5.x</td>
-                        <td><a class="button is-link is-small" disabled>Acessar</a></td>
-                        <td><a href="https://github.com/tiagoiwamoto/clean-arch-poc" target="_blank" class="button is-dark is-small">Fonte</a></td>
-                    </tr>
-                    <tr>
-                        <td>iwt-twifeed</td>
-                        <td>Ruby x.x | Rails x.x.x</td>
-                        <td><a class="button is-link is-small" disabled>Acessar</a></td>
-                        <td><a class="button is-dark is-small" disabled>Fonte</a></td>
-                    </tr>
-                    <tr>
-                        <td>iwt-user-dashboard</td>
-                        <td>Typescript 3.x | Angular 12.x</td>
-                        <td><a class="button is-link is-small" disabled>Acessar</a></td>
-                        <td><a class="button is-dark is-small" disabled>Fonte</a></td>
-                    </tr>
-                    <tr>
-                        <td>iwt-mygadgets</td>
-                        <td>Dart x.x | Flutter x.x</td>
-                        <td><a class="button is-link is-small" disabled>Acessar</a></td>
-                        <td><a class="button is-dark is-small" disabled>Fonte</a></td>
-                    </tr>
-                    <tr>
-                        <td>iwt-???</td>
-                        <td>Python x.x | Flask x.x</td>
-                        <td><a class="button is-link is-small" disabled>Acessar</a></td>
-                        <td><a class="button is-dark is-small" disabled>Fonte</a></td>
-                    </tr>
-                    </tbody>
-                </table>
+
+                <article class="message is-dark">
+                    <div class="message-body">
+                        <p><b>iwt-amazing-vueapp</b></p>
+                        <p>Aplicação construinda com HTML5, Bootstrap 5.x e Vuejs 3.x</p>
+                        <p>Hospedado na AWS S3, Cloudfront</p>
+                        <br />
+                        <div class="text-right">
+                            <a href="http://iwt-vueapp.meajudatintin.cf/iwt-amazing-vueapp/" target="_blank" class="button is-success is-outlined">Acessar</a>
+                            <a href="https://github.com/tiagoiwamoto/iwt-amazing-vuejs-app" target="_blank" class="button is-link is-outlined">Código fonte</a>
+                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
+                            <a class="button is-info is-outlined">Curtir</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="message is-dark">
+                    <div class="message-body">
+                        <p><b>iwt-clean-architecture</b></p>
+                        <p>Aplicação construinda com Java 15, Spring boot 2.5.x</p>
+                        <p>Utiliza arquitetura limpa</p>
+                        <p>Hospedado na AWS EC2</p>
+                        <br />
+                        <div class="text-right">
+                           <a disabled class="button is-success is-outlined">Acessar</a>
+                            <a href="https://github.com/tiagoiwamoto/clean-arch-poc" target="_blank" class="button is-link is-outlined">Código fonte</a>
+                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
+                            <a class="button is-info is-outlined">Curtir</a>
+                        </div>
+                    </div>
+                </article>
             </div>
             <div class="box animate__animated animate__fadeInLeft">
                 <p class="subtitle is-5">Contribuição para a comunidade</p>
@@ -435,8 +413,10 @@
 &lt;&sol;&#x64;&#x65;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x6e;&#x63;&#x79;&gt;
                     </pre>
                         <div class="mt-3 text-right">
-                            <a href="https://mvnrepository.com/artifact/work.iwacloud/springdata-helper" class="button is-dark is-small" target="_blank">Link do MVN Repository</a>
-                            <a href="https://github.com/tiagoiwamoto/springdata-helper" class="button is-dark is-small" target="_blank">Link do Git Repository</a>
+                            <a href="https://mvnrepository.com/artifact/work.iwacloud/springdata-helper" target="_blank" class="button is-success is-outlined">Acessar</a>
+                            <a href="https://github.com/tiagoiwamoto/springdata-helper" target="_blank" class="button is-link is-outlined">Código fonte</a>
+                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
+                            <a class="button is-info is-outlined">Curtir</a>
                         </div>
                     </div>
                 </article>
@@ -447,8 +427,10 @@
                         <p>Este software gera recibos de pagamentos e armazena em uma base de dados local. É disponibilizado gratuitamente e seu código está disponível sobre licensa CREATIVE COMMONS</p>
 
                         <div class="mt-3 text-right">
-                            <a href="https://sourceforge.net/projects/iwarecibos/" class="button is-dark is-small" target="_blank">Download</a>
-                            <a href="https://github.com/tiagoiwamoto/IwaRecibos" class="button is-dark is-small" target="_blank">Link do Git Repository</a>
+                            <a href="https://sourceforge.net/projects/iwarecibos/" target="_blank" class="button is-success is-outlined">Acessar</a>
+                            <a href="https://github.com/tiagoiwamoto/IwaRecibos" target="_blank" class="button is-link is-outlined">Código fonte</a>
+                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
+                            <a class="button is-info is-outlined">Curtir</a>
                         </div>
                     </div>
                 </article>
@@ -459,8 +441,10 @@
                         <p>Está planilha em Excel e LibreOffice ajuda a controlar os investimentos em Fiis e Ações</p>
 
                         <div class="mt-3 text-right">
-                            <a href="https://github.com/tiagoiwamoto/iwt-invest-control-worksheet/archive/refs/tags/iwt-avaliador-release-1.0.0.zip" class="button is-dark is-small" target="_blank">Download</a>
-                            <a href="https://github.com/tiagoiwamoto/iwt-invest-control-worksheet" class="button is-dark is-small" target="_blank">Link do Git Repository</a>
+                            <a href="https://github.com/tiagoiwamoto/iwt-invest-control-worksheet" target="_blank" class="button is-success is-outlined">Acessar</a>
+                            <a href="https://github.com/tiagoiwamoto/iwt-invest-control-worksheet" target="_blank" class="button is-link is-outlined">Código fonte</a>
+                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
+                            <a class="button is-info is-outlined">Curtir</a>
                         </div>
                     </div>
                 </article>
@@ -622,8 +606,8 @@
                         <p>AWS</p>
                     </div>
                     <div class="message-body certificate-center">
-                        <a href="/assets/certificates/aws.png" data-lightbox="certificate-set" data-title="AWS (Alura).">
-                            <img src="/assets/certificates/aws_thumb.png" alt=""/>
+                        <a href="/assets/certificates/aws_solution_arc_ass_1.png" data-lightbox="certificate-set" data-title="AWS (Alura).">
+                            <img src="/assets/certificates/aws_solution_arc_ass_1_thumb.png" alt=""/>
                         </a>
                     </div>
                 </article>
