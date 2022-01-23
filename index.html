@@ -1,756 +1,268 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@tiagoiwamoto</title>
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.0.2/dist/bulma-tooltip.min.css" />
+    <meta charset="UTF-8">
+    <title>Mr. Tiago</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="./assets/css/bulma.min.css"
+          integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./assets/css/animate.min.css" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.0.0/dist/bulma-divider.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/lightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/mycss.css" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Overlock:ital@1&display=swap');
     </style>
-    <link rel="stylesheet" href="mycss.css" />
-    <link rel="stylesheet" href="lightbox.min.css">
 </head>
-<body>
-
+<body id="app">
 <section class="hero is-primary">
-    <div class="columns">
-        <div class="column mt-4 ml-4 is-1"><img class="routed" src="assets/imgs/1621460436451.jpg" width="128" /></div>
-        <div class="column is-11">
-            <div class="hero-body">
-                <p class="title">
-                    Tiago Henrique Iwamoto
+    <div class="hero-body">
+        <div class="columns">
+            <div class="column">
+                <p class="title app-title animate__animated animate__bounceInLeft">
+                    <img src="assets/imgs/ninja.svg" width="36" alt=""/>
+                    {{data.info.title}}
                 </p>
-                <p class="subtitle">
-                    Especialista em sistemas
+                <p class="subtitle animate__animated animate__bounceInRight">
+                    <img src="assets/imgs/shuriken.png" width="16" alt=""/>
+                    {{data.info.subTitle}}
                 </p>
             </div>
         </div>
     </div>
 </section>
-
-<div class="container">
-    <div class="columns ml-3 mr-3 mt-3">
+<div class="container animate__animated animate__rubberBand">
+    <div class="columns mt-3">
         <div class="column">
-            <a class="button w100" href="https://github.com/tiagoiwamoto?tab=repositories" target="_blank"><span class="icon"><i class="fab fa-github"></i></span><span>Repositórios GitHub</span></a>
+            <div class="box">
+                <article class="media">
+                    <div class="media-left">
+                        <figure class="image is-64x64">
+                            <img src="assets/imgs/1621460436451.jpg" width="64" alt="Image">
+                        </figure>
+                    </div>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>Sobre mim</strong>
+                                <br />
+                                <small>{{ (currentYear - 1984) - 1 }} anos, </small><small>São josé do rio preto, </small>
+                                <small>Home office</small>
+                                <br>
+                                <span v-html="data.aboutMe"></span>
+                            </p>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item" aria-label="reply">
+            <span class="icon is-small">
+              <i class="fas fa-reply" aria-hidden="true"></i>
+            </span>
+                                </a>
+                                <a class="level-item" aria-label="retweet">
+            <span class="icon is-small">
+              <i class="fas fa-retweet" aria-hidden="true"></i>
+            </span>
+                                </a>
+                                <a class="level-item" aria-label="like">
+            <span class="icon is-small">
+              <i class="fas fa-heart" aria-hidden="true"></i>
+            </span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
         </div>
         <div class="column">
-            <a class="button w100" href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank"><span class="icon"><i class="fab fa-linkedin"></i></span><span>Linkedin</span></a>
-        </div>
-    </div>
-    <!-- Corpo -->
-    <div class="columns mt-2">
-        <div class="column ml-2 mr-2">
-            <div class="box animate__animated animate__fadeInLeft">
-                <p class="subtitle is-5">Sobre mim</p>
-                <p>Olá, meu nome é Tiago sou Brasileiro com decendencia Japonesa.
-                    Nasci em Curitiba-Paraná porem vivi praticamente minha vida toda no Japão.</p>
-                <p>Me formei em 2008 no Japão, trabalhei em muitos tipos de trabalhos.</p>
-                <p>Amo trabalhar com computadores, principalmente com desenvolvimento de sistemas, hoje com mais de 15 anos de experiência só tenho gostado mais e mais.</p>
-                <p>Também amo realizar outras atividades como fotografia, ensinar e compartilhar coisas no youtube.</p>
-                <p>Sem falar nos meus hobbies, adoro música, andar de bike, moto correr e jogar game e sem falar em maratonar series e filmes :)</p>
-                <p>Espero que eu possa ajudar você ou sua empresa, me coloco a disposição.</p>
-            </div>
-            <div class="box animate__animated animate__fadeInRight">
-                <p class="subtitle is-5">Formação</p>
-
-                <article class="message is-success">
-                    <div class="message-header">
-                        <p>Especialização Arquitetura de software</p>
-                    </div>
-                    <div class="message-body">
-                        IGTI - 2021 - ATUAL
-                    </div>
-                </article>
-
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>MBA Business Intelligence</p>
-                    </div>
-                    <div class="message-body">
-                        Universidade Positivo - 2018 - 2019
-                    </div>
-                </article>
-
-                <article class="message is-link">
-                    <div class="message-header">
-                        <p>Analise de sistemas</p>
-                    </div>
-                    <div class="message-body">
-                        Centro universitário Opet - 2016 - 2018
-                    </div>
-                </article>
-
-            </div>
-            <div class="box animate__animated animate__fadeInLeft">
-                <p class="subtitle is-5">Especialidades</p>
-
-                <div class="divider is-info">Backend</div>
-                <div class="field is-grouped is-grouped-multiline">
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Java</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
+            <div class="box">
+                <div class="media-content">
+                    <div class="content">
+                        <p><strong>Cv pt-br</strong> <small>atualizado em</small> <small>08/2021</small></p>
+                        <div class="has-text-right">
+                            <a href="https://app.box.com/s/5owltb8d3qkn9txwq3p3j48zsemw2z5e" target="_blank" class="button is-link">
+                                <span>Ir para cv</span>
+                                <span class="icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Springboot</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">PHP</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Slim Framework</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Ruby</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Ruby on rails</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Python</span>
-                            <span class="tag is-success"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="divider is-info">Frontend</div>
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Angular</span>
-                            <span class="tag is-info"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">VueJs</span>
-                            <span class="tag is-info"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="divider is-info">Banco de dados</div>
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">SQL</span>
-                            <span class="tag has-background-primary-light"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">NoSQL</span>
-                            <span class="tag has-background-primary-light"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="divider is-info">Cloud</div>
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">AWS</span>
-                            <span class="tag has-background-link-light"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Azure</span>
-                            <span class="tag has-background-link-light"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Heroku</span>
-                            <span class="tag has-background-link-light"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Firebase</span>
-                            <span class="tag has-background-link-light"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="divider is-success">Mobile</div>
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Flutter</span>
-                            <span class="tag is-link"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Ionic</span>
-                            <span class="tag is-link"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="divider is-success">Ágil</div>
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Scrum</span>
-                            <span class="tag is-primary"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Kanban</span>
-                            <span class="tag is-primary"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="divider is-success">Outras habilidades TI</div>
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Kafka</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Ignite</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Redis</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Hadoop</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Spark</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">CI/CD</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Linux</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Docker</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Kubernetes</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">SOLID</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">KISS</span>
-                            <span class="tag is-warning"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="divider is-success">Fotografia</div>
-                <div class="field is-grouped is-grouped-multiline">
-                    <div class="control">
-                        <div class="tags has-addons">
-                            <span class="tag is-dark">Adobe Lightroom</span>
-                            <span class="tag is-danger"><i class="fas fa-check"></i></span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="column ml-2 mr-2">
-            <div class="box animate__animated animate__fadeInRight">
-                <p class="subtitle is-5">Cvs</p>
-                <div class="divider is-info">Atualizado: 25/08/2021</div>
-                <div class="columns">
-                    <div class="column is-flex is-justify-content-center">
-                        <a href="https://app.box.com/s/5owltb8d3qkn9txwq3p3j48zsemw2z5e" target="_blank" class="button is-success is-active">
-                            <img src="assets/imgs/brazil.png" width="32" /><span class="ml-2">Download PT-BR</span></a>
-                    </div>
-                    <div class="column is-flex is-justify-content-center">
-                        <button class="button is-info" title="Disabled button" disabled>
-                            <img src="assets/imgs/english.png" width="32" /> <span class="ml-2">Download EN</span> </button>
-                    </div>
-                </div>
-                <div class="divider is-info">Cv em áudio 29/05/2021</div>
-                <div class="is-flex is-justify-content-center">
-                    <audio controls>
-                        <source src="assets/tiago-cv-2021-05.m4a" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                </div>
-                <div class="divider is-info">Cv em video</div>
-                <div class="is-flex is-justify-content-center">
-                    <video controls width="100%" height="480">
-                        <source src="movie.mp4" type="video/mp4">
-                        <source src="movie.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
                 </div>
             </div>
-
-            <div class="box animate__animated animate__fadeInLeft">
-                <p class="subtitle is-5">Aplicações publicadas</p>
-
-                <article class="message is-dark">
-                    <div class="message-body">
-                        <p><b>iwt-amazing-vueapp</b></p>
-                        <p>Aplicação construinda com HTML5, Bootstrap 5.x e Vuejs 3.x</p>
-                        <p>Hospedado na AWS S3, Cloudfront</p>
-                        <br />
-                        <div class="text-right">
-                            <a href="http://iwt-vueapp.meajudatintin.cf/iwt-amazing-vueapp/" target="_blank" class="button is-success is-outlined">Acessar</a>
-                            <a href="https://github.com/tiagoiwamoto/iwt-amazing-vuejs-app" target="_blank" class="button is-link is-outlined">Código fonte</a>
-                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
-                            <a class="button is-info is-outlined">Curtir</a>
+            <div class="box mt-2">
+                <div class="media-content">
+                    <div class="content">
+                        <p><strong>Resume English</strong> <small>updated at</small> <small>-/-</small></p>
+                        <div class="has-text-right">
+                            <button class="button is-link" disabled>
+                                <span>Go to resume</span>
+                                <span class="icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                            </button>
                         </div>
                     </div>
-                </article>
-
-                <article class="message is-dark">
-                    <div class="message-body">
-                        <p><b>iwt-clean-architecture</b></p>
-                        <p>Aplicação construinda com Java 15, Spring boot 2.5.x</p>
-                        <p>Utiliza arquitetura limpa</p>
-                        <p>Hospedado na AWS EC2</p>
-                        <br />
-                        <div class="text-right">
-                           <a disabled class="button is-success is-outlined">Acessar</a>
-                            <a href="https://github.com/tiagoiwamoto/clean-arch-poc" target="_blank" class="button is-link is-outlined">Código fonte</a>
-                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
-                            <a class="button is-info is-outlined">Curtir</a>
-                        </div>
-                    </div>
-                </article>
+                </div>
             </div>
-            <div class="box animate__animated animate__fadeInLeft">
-                <p class="subtitle is-5">Contribuição para a comunidade</p>
-                <article class="message is-success">
-                    <div class="message-body">
-                        <strong>iwt-resultset-mapper</strong>
-                        <p>Esta biblioteca para Java transforma qualquer Resultset em uma lista de chave e valor, o que torna o processo para conversão muito mais rápido.</p>
-
-                        <pre class="mt-2">
-&lt;&#x64;&#x65;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x6e;&#x63;&#x79;&gt;
-&#x20;&#x20;&#x20;&#x20;&lt;&#x67;&#x72;&#x6f;&#x75;&#x70;&#x49;&#x64;&gt;&#x77;&#x6f;&#x72;&#x6b;&period;&#x69;&#x77;&#x61;&#x63;&#x6c;&#x6f;&#x75;&#x64;&lt;&sol;&#x67;&#x72;&#x6f;&#x75;&#x70;&#x49;&#x64;&gt;
-&#x20;&#x20;&#x20;&#x20;&lt;&#x61;&#x72;&#x74;&#x69;&#x66;&#x61;&#x63;&#x74;&#x49;&#x64;&gt;&#x73;&#x70;&#x72;&#x69;&#x6e;&#x67;&#x64;&#x61;&#x74;&#x61;&#x2d;&#x68;&#x65;&#x6c;&#x70;&#x65;&#x72;&lt;&sol;&#x61;&#x72;&#x74;&#x69;&#x66;&#x61;&#x63;&#x74;&#x49;&#x64;&gt;
-&#x20;&#x20;&#x20;&#x20;&lt;&#x76;&#x65;&#x72;&#x73;&#x69;&#x6f;&#x6e;&gt;&#x31;&period;&#x30;&period;&#x36;&lt;&sol;&#x76;&#x65;&#x72;&#x73;&#x69;&#x6f;&#x6e;&gt;
-&lt;&sol;&#x64;&#x65;&#x70;&#x65;&#x6e;&#x64;&#x65;&#x6e;&#x63;&#x79;&gt;
-                    </pre>
-                        <div class="mt-3 text-right">
-                            <a href="https://mvnrepository.com/artifact/work.iwacloud/springdata-helper" target="_blank" class="button is-success is-outlined">Acessar</a>
-                            <a href="https://github.com/tiagoiwamoto/springdata-helper" target="_blank" class="button is-link is-outlined">Código fonte</a>
-                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
-                            <a class="button is-info is-outlined">Curtir</a>
-                        </div>
+            <div class="box">
+                <div class="media-content">
+                    <p><strong>Fale comigo</strong> <small>atualizado em</small> <small>01/2022</small></p>
+                    <div class="content text-center mt-3">
+                        <span class="mr-3 tool" data-tip="Fale comigo por essa rede social com foco no profissional" tabindex="1">
+                            <a href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                        </span>
+                        <span class="mr-3 tool" data-tip="Acompanhe meus projetos de código aberto" tabindex="1">
+                            <a href="https://github.com/tiagoiwamoto?tab=repositories" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                        </span>
+                        <!--                        <span class="mr-3 tool" data-tip="Se inscreva em meu canal com dicas de tecnologia" tabindex="1">-->
+                        <!--                            <a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>-->
+                        <!--                        </span>-->
+                        <!--                        <span class="mr-3 tool" data-tip="Me envie um email com dúvida, sugestão, reclamação ou elogio." tabindex="1">-->
+                        <!--                            <a href="#" target="_blank"><i class="fas fa-envelope-open fa-3x"></i></a>-->
+                        <!--                        </span>-->
                     </div>
-                </article>
-
-                <article class="message is-success">
-                    <div class="message-body">
-                        <strong>iwt-recibo</strong>
-                        <p>Este software gera recibos de pagamentos e armazena em uma base de dados local. É disponibilizado gratuitamente e seu código está disponível sobre licensa CREATIVE COMMONS</p>
-
-                        <div class="mt-3 text-right">
-                            <a href="https://sourceforge.net/projects/iwarecibos/" target="_blank" class="button is-success is-outlined">Acessar</a>
-                            <a href="https://github.com/tiagoiwamoto/IwaRecibos" target="_blank" class="button is-link is-outlined">Código fonte</a>
-                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
-                            <a class="button is-info is-outlined">Curtir</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="message is-success">
-                    <div class="message-body">
-                        <strong>iwt-personal-finnance</strong>
-                        <p>Está planilha em Excel e LibreOffice ajuda a controlar os investimentos em Fiis e Ações</p>
-
-                        <div class="mt-3 text-right">
-                            <a href="https://github.com/tiagoiwamoto/iwt-invest-control-worksheet" target="_blank" class="button is-success is-outlined">Acessar</a>
-                            <a href="https://github.com/tiagoiwamoto/iwt-invest-control-worksheet" target="_blank" class="button is-link is-outlined">Código fonte</a>
-                            <a target="_blank" class="button is-danger is-outlined">Pagar café</a>
-                            <a class="button is-info is-outlined">Curtir</a>
-                        </div>
-                    </div>
-                </article>
-
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="ml-2 mr-2 box">
-        <p class="subtitle is-5">Cursos</p>
-        <div class="divider is-info">Backend</div>
-        <div class="columns certificate-block animate__animated animate__lightSpeedInRight">
-            <div class="column">
-                <article class="message is-dark">
-                    <div class="message-header">
-                        <p>Java Sênior</p>
+    <div class="mt-3 mr-3 ml-3">
+        <hr />
+    </div>
+    <div class="columns mt-3">
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        Escolaridade
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <div v-for="education of data.educations">
+                            <article class="message is-link mb-5">
+                                <div class="message-body">
+                                    <strong>{{education.institution}} - {{education.courseName}} </strong>
+                                    <p>{{education.startDate}} ~ {{education.endDate == '' ? 'atual' : education.endDate}}</p>
+                                    <small>{{education.description}}</small>
+                                </div>
+                            </article>
+                        </div>
                     </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/java_sr.png" data-lightbox="certificate-set" data-title="Java Sênior (Treinaweb).">
-                            <img src="/assets/certificates/java_sr_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-dark">
-                    <div class="message-header">
-                        <p>Spring Sênior</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/spring_sr.png" data-lightbox="certificate-set" data-title="Spring (Treinaweb).">
-                            <img src="/assets/certificates/spring_sr_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-
-            </div>
-            <div class="column">
-                <article class="message is-dark">
-                    <div class="message-header">
-                        <p>Ruby Fullstack</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/ruby_fullstack.png" data-lightbox="certificate-set" data-title="Ruby On Rails (Treinaweb).">
-                            <img src="/assets/certificates/ruby_fullstack_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-dark">
-                    <div class="message-header">
-                        <p>Ruby API</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/udemy_ruby_rest.jpg" data-lightbox="certificate-set" data-title="Ruby On Rails - API (Udemy).">
-                            <img src="/assets/certificates/udemy_ruby_rest_thumb.jpg" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-dark">
-                    <div class="message-header">
-                        <p>ShellScript</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/shell_script.png" data-lightbox="certificate-set" data-title="Shell Script (Treinaweb).">
-                            <img src="/assets/certificates/shell_script_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-dark">
-                    <div class="message-header">
-                        <p>Python</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/python.png" data-lightbox="certificate-set" data-title="Python (Treinaweb).">
-                            <img src="/assets/certificates/python_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-
-        </div>
-        <div class="divider is-info">Frontend</div>
-        <div class="columns certificate-block animate__animated animate__lightSpeedInLeft">
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Angular</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/angular_sr.png" data-lightbox="certificate-set" data-title="Angular (Treinaweb).">
-                            <img src="/assets/certificates/angular_sr_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Ionic</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/ionic.png" data-lightbox="certificate-set" data-title="Ionic (Treinaweb).">
-                            <img src="/assets/certificates/ionic_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Vue</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/vue.png" data-lightbox="certificate-set" data-title="Vue (Treinaweb).">
-                            <img src="/assets/certificates/vue_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
-        <div class="divider is-info">DevOps</div>
-        <div class="columns certificate-block animate__animated animate__lightSpeedInLeft">
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Apache Kafka</p>
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        <i class="fas fa-certificate mr-2"></i>
+                        Certificações
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <article class="message is-success" v-for="certificate of data.certifications">
+                            <div class="message-body">
+                                <strong>{{certificate.name}}</strong>
+                                <br />
+                                <small>{{certificate.description}}</small>
+                                <div class="has-text-right">
+                                    <a v-bind:href="certificate.url" target="_blank" class="button is-link">Validação</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/kafka.png" data-lightbox="certificate-set" data-title="Kafka (Alura).">
-                            <img src="/assets/certificates/kafka_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Redis</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/redis.png" data-lightbox="certificate-set" data-title="Redis (Alura).">
-                            <img src="/assets/certificates/redis_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>AWS</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/aws_solution_arc_ass_1.png" data-lightbox="certificate-set" data-title="AWS (Alura).">
-                            <img src="/assets/certificates/aws_solution_arc_ass_1_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Docker</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/docker_devops.png" data-lightbox="certificate-set" data-title="Docker (Treinaweb).">
-                            <img src="/assets/certificates/docker_devops_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>AWS - SQS & SNS</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/udemy_aws_sqs_and_sns.jpg" data-lightbox="certificate-set" data-title="AWS - SQS & SNS (Udemy).">
-                            <img src="/assets/certificates/udemy_aws_sqs_and_sns_thumb.jpg" alt=""/>
-                        </a>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
-        <div class="divider is-info">Aprimoramento DEV</div>
-        <div class="columns certificate-block animate__animated animate__lightSpeedInLeft">
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>SOLID</p>
+    </div>
+    <div class="mt-3">
+        <hr />
+    </div>
+    <div class="columns mt-3">
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        <i class="fab fa-connectdevelop mr-2"></i>
+                        Habilidades
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <div v-for="specialist of data.specialists">
+                            <div class="divider is-info">{{specialist.category}}</div>
+                            <div class="field is-grouped is-grouped-multiline">
+                                <div class="control" v-for="hability of specialist.habilites">
+                                    <div class="tags has-addons">
+                                        <span class="tag is-dark">{{hability}}</span>
+                                        <span class="tag is-info"><i class="fas fa-check"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/solid.png" data-lightbox="certificate-set" data-title="SOLID (Alura).">
-                            <img src="/assets/certificates/solid_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
-        <div class="divider is-info">Database</div>
-        <div class="columns certificate-block animate__animated animate__lightSpeedInLeft">
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Analista Bando de Dados</p>
+        <div class="column">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        <i class="fas fa-laptop-house mr-2"></i>
+                        Trabalhos e contribuições
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <article class="message is-primary" v-for="work of data.works">
+                            <div class="message-body">
+                                <strong>{{work.name}}</strong>
+                                <br />
+                                <small>{{work.description}}</small>
+                                <div class="has-text-right mt-3">
+                                    <a v-bind:href="work.url" target="_blank" class="button is-success is-outlined ml-2">Acessar</a>
+                                    <a v-bind:href="work.source" target="_blank" class="button is-link is-outlined ml-2">Código fonte</a>
+                                    <a href="" target="_blank" class="button is-dark is-outlined ml-2">Pagar café</a>
+                                </div>
+                            </div>
+                        </article>
                     </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/analista_db.png" data-lightbox="certificate-set" data-title="Analista de banco de dados (Treinaweb).">
-                            <img src="/assets/certificates/analista_db_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>SQL Developer</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/sql_developer.png" data-lightbox="certificate-set" data-title="Sql Developer (Treinaweb).">
-                            <img src="/assets/certificates/sql_developer_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>MongoDB</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/mongo_developer.png" data-lightbox="certificate-set" data-title="MongoDB Developer (Treinaweb).">
-                            <img src="/assets/certificates/mongo_developer_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Dados</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/digitalhouse_dados.png" data-lightbox="certificate-set" data-title="Dados (DigitalHouse).">
-                            <img src="/assets/certificates/digitalhouse_dados_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
+                </div>
             </div>
         </div>
-        <div class="divider is-info">Metodologias ágeis</div>
-        <div class="columns certificate-block animate__animated animate__lightSpeedInRight">
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Scrum</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/scrum.png" data-lightbox="certificate-set" data-title="Scrum (Treinaweb).">
-                            <img src="/assets/certificates/scrum_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Kanban</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/kanban.png" data-lightbox="certificate-set" data-title="Kanban (Treinaweb).">
-                            <img src="/assets/certificates/kanban_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
-            </div>
-
-            <div class="column">
-                <article class="message is-info">
-                    <div class="message-header">
-                        <p>Scrum com Kanban</p>
-                    </div>
-                    <div class="message-body certificate-center">
-                        <a href="/assets/certificates/scrumban.png" data-lightbox="certificate-set" data-title="Scrum com Kanban (Treinaweb).">
-                            <img src="/assets/certificates/scrumban_thumb.png" alt=""/>
-                        </a>
-                    </div>
-                </article>
+    </div>
+    <div class="mt-3">
+        <hr />
+    </div>
+    <div class="box mb-3">
+        <strong>Cursos extracurriculares</strong>
+        <div v-for="course of data.courses">
+            <div class="divider is-info">{{course.category}}</div>
+            <div class="columns certificate-block">
+                <div class="column" v-for="certificate of course.certificates">
+                    <article class="message is-dark">
+                        <div class="message-header">
+                            <p>{{certificate.name}}</p>
+                        </div>
+                        <div class="message-body certificate-center gallery-item">
+                            <a v-bind:href="certificate.image" data-lightbox="certificate-set" v-bind:data-title="certificate.dataTitle">
+                                <img v-bind:src="certificate.thumb" alt=""/>
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
-
-
 <footer class="footer">
     <div class="content has-text-centered">
         <p>
@@ -758,9 +270,88 @@
         </p>
     </div>
 </footer>
-<!-- Add jQuery library -->
-<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-<script src="lightbox.min.js"></script>
 
+<script src="assets/js/lightbox.min.js"></script>
+<script src="assets/js/vue.global.js"></script>
+<script src="assets/js/axios.min.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                currentYear: new Date().getFullYear(),
+                data: {
+                    info: {
+                        title: "",
+                        subTitle: ""
+                    },
+                    socialNetworks: {
+                        github: "",
+                        linkedin: ""
+                    },
+                    aboutMe: "",
+                    educations: [
+                        {
+                            courseName: "",
+                            description: "",
+                            institution: "",
+                            startDate: "",
+                            endDate: ""
+                        }
+                    ],
+                    specialists: [
+                        {
+                            category: "",
+                            habilites: []
+                        }
+                    ],
+                    cvs: [
+                        {
+                            type: "",
+                            updatedAt: "",
+                            url: ""
+                        }
+                    ],
+                    works: [
+                        {
+                            name: "",
+                            description: "",
+                            url: "",
+                            source: ""
+                        }
+                    ],
+                    courses: [
+                        {
+                            category: "",
+                            certificates: [
+                                {
+                                    name: "",
+                                    image: "",
+                                    thumb: ""
+                                }
+                            ]
+                        }
+                    ],
+                    certifications: [
+                        {
+                            name: "",
+                            url: ""
+                        }
+                    ]
+                },
+            };
+        },
+        mounted: function () {
+            axios
+                .get('https://public-variables.000webhostapp.com/cv_resume/index.php')
+                .then(response => (this.data = response.data))
+        },
+        methods: {
+            generateClassForEducation() {
+                return this.data.education.endDate === '' ? 'is-primary' : 'is-link';
+            }
+        }
+    };
+    Vue.createApp(app).mount('#app')
+</script>
 </body>
 </html>
