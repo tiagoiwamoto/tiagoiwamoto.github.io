@@ -1,0 +1,241 @@
+{
+  "info": {
+    "title": "Tiago Henrique Iwamoto",
+    "subTitle": "Especialista | Backend | Frontend | Mobile | Cloud"
+  },
+  "socialNetworks": {
+    "github": "https://github.com/tiagoiwamoto?tab=repositories",
+    "linkedin": "https://www.linkedin.com/in/tiago-iwamoto/",
+    "tiktok": ""
+  },
+  "aboutMe": "                <p>Olá, meu nome é Tiago sou Brasileiro com decendencia Japonesa.\n                    Nasci em Curitiba-Paraná porem vivi praticamente minha vida toda no Japão.</p>\n                <p>Me formei em 2008 no Japão, trabalhei em muitos tipos de trabalhos.</p>\n                <p>Amo trabalhar com computadores, principalmente com desenvolvimento de sistemas, hoje com mais de 15 anos de experiência só tenho gostado mais e mais.</p>\n                <p>Também amo realizar outras atividades como fotografia, ensinar e compartilhar coisas no youtube.</p>\n                <p>Sem falar nos meus hobbies, adoro música, andar de bike, moto correr e jogar game e sem falar em maratonar series e filmes :)</p>\n                <p>Espero que eu possa ajudar você ou sua empresa, me coloco a disposição.</p>",
+  "educations": [
+    {
+      "courseName": "Arquitetura de software",
+      "description": "MBA focado em arquitetura de software e cloud.",
+      "institution": "Igti",
+      "startDate": "2022",
+      "endDate": ""
+    },
+    {
+      "courseName": "Arquitetura de software java",
+      "description": "Especialização em arquitetura de software com foco na linguagem java",
+      "institution": "Uniciv",
+      "startDate": "2021",
+      "endDate": ""
+    },
+    {
+      "courseName": "Business Intelligence",
+      "description": "MBA com foco na transforação de dados, com ferramenta como tableau, powerbi e pentaho",
+      "institution": "Up",
+      "startDate": "2019",
+      "endDate": "2019"
+    },
+    {
+      "courseName": "Analise de sistemas",
+      "description": "Graduação",
+      "institution": "Uniopet",
+      "startDate": "2016",
+      "endDate": "2018"
+    }
+  ],
+  "specialists": [
+    {
+      "category": "Backend",
+      "habilites": ["Java", "Springboot", "Ruby", "Ruby on rails", "Python", "PHP", "Slim framework", "Laravel"]
+    },
+    {
+      "category": "Frontend",
+      "habilites": ["Angular", "VueJs"]
+    },
+    {
+      "category": "Mobile",
+      "habilites": ["Flutter", "Ionic"]
+    },
+
+    {
+      "category": "Cloud",
+      "habilites": ["AWS", "Hereku", "Firebase"]
+    },
+
+    {
+      "category": "Banco de dados",
+      "habilites": ["SQL", "NoSQL", "Redis", "Hadoop/Spark"]
+    },
+    {
+      "category": "Ágil",
+      "habilites": ["Scrum", "Kanban"]
+    },
+    {
+      "category": "CI/CD",
+      "habilites": ["Jenkins", "Github CI", "Gitlab CI"]
+    },
+    {
+      "category": "Devtools",
+      "habilites": ["Kafka", "Docker", "Kubernetes"]
+    }
+  ],
+  "cvs": [
+    {
+      "type": "",
+      "updatedAt": "",
+      "url": ""
+    }
+  ],
+  "works": [
+    {
+      "name": "iwt-resultset-mapper",
+      "description": "Esta biblioteca para Java transforma qualquer Resultset em uma lista de chave e valor, o que torna o processo para conversão muito mais rápido.",
+      "url": "https://mvnrepository.com/artifact/work.iwacloud/springdata-helper",
+      "source": "https://github.com/tiagoiwamoto/springdata-helper"
+    },
+    {
+      "name": "iwt-personal-finnance",
+      "description": "Está planilha em Excel e LibreOffice ajuda a controlar os investimentos em Fiis e Ações",
+      "url": "https://github.com/tiagoiwamoto/iwt-invest-control-worksheet",
+      "source": "https://github.com/tiagoiwamoto/iwt-invest-control-worksheet"
+    }
+  ],
+  "courses": [
+    {
+      "category": "Backend",
+      "certificates": [
+        {
+          "name": "Java Sênior",
+          "image": "https://public-variables.000webhostapp.com/certificates/java_sr.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/java_sr_thumb.png",
+          "dataTitle": "Java Sênior (Treinaweb)"
+        },
+        {
+          "name": "Spring Sênior",
+          "image": "https://public-variables.000webhostapp.com/certificates/spring_sr.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/spring_sr_thumb.png",
+          "dataTitle": "Spring (Treinaweb)"
+        },
+        {
+          "name": "Ruby Fullstack",
+          "image": "https://public-variables.000webhostapp.com/certificates/ruby_fullstack.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ruby_fullstack_thumb.png",
+          "dataTitle": "Ruby On Rails (Treinaweb)"
+        },
+        {
+          "name": "Ruby API",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy_ruby_rest.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy_ruby_rest_thumb.jpg",
+          "dataTitle": "Ruby On Rails - API (Udemy)"
+        },
+        {
+          "name": "ShellScript",
+          "image": "https://public-variables.000webhostapp.com/certificates/shell_script.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/shell_script_thumb.png",
+          "dataTitle": "Shell Script (Treinaweb)"
+        },
+        {
+          "name": "Python",
+          "image": "https://public-variables.000webhostapp.com/certificates/python.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/python_thumb.png",
+          "dataTitle": "Python (Treinaweb)"
+        }
+      ]
+    },
+    {
+      "category": "Frontend / Mobile",
+      "certificates": [
+        {
+          "name": "Angular",
+          "image": "https://public-variables.000webhostapp.com/certificates/angular_sr.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/angular_sr_thumb.png",
+          "dataTitle": "Angular (Treinaweb)"
+        },
+        {
+          "name": "Vuejs",
+          "image": "https://public-variables.000webhostapp.com/certificates/ionic.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ionic_thumb.png",
+          "dataTitle": "Vuejs (Treinaweb)"
+        },
+        {
+          "name": "Flutter",
+          "image": "",
+          "thumb": "",
+          "dataTitle": "Flutter (Alura)"
+        },
+        {
+          "name": "Ionic",
+          "image": "https://public-variables.000webhostapp.com/certificates/ionic.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ionic_thumb.png",
+          "dataTitle": "Ionic (Treinaweb)"
+        }
+      ]
+    },
+    {
+      "category": "Cloud",
+      "certificates": [
+        {
+          "name": "AWS - Architect soluction",
+          "image": "https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1_thumb.png",
+          "dataTitle": "AWS - Soluction Architect (Alura)"
+        },
+        {
+          "name": "AWS - Sqs and Sns",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy_aws_sqs_and_sns.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy_aws_sqs_and_sns_thumb.jpg",
+          "dataTitle": "AWS - Sqs & Sns (Udemy)"
+        }
+      ]
+    },
+    {
+      "category": "Database",
+      "certificates": [
+        {
+          "name": "Analista banco de dados",
+          "image": "https://public-variables.000webhostapp.com/certificates/analista_db.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/analista_db_thumb.png",
+          "dataTitle": "Analista de banco de dados (Treinaweb)"
+        },
+        {
+          "name": "SQL Developer",
+          "image": "https://public-variables.000webhostapp.com/certificates/sql_developer.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/sql_developer_thumb.png",
+          "dataTitle": "Sql Developer (Treinaweb)"
+        },
+        {
+          "name": "MongoDB",
+          "image": "https://public-variables.000webhostapp.com/certificates/mongo_developer.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/mongo_developer_thumb.png",
+          "dataTitle": "MongoDB Developer (Treinaweb)"
+        },
+        {
+          "name": "Redis",
+          "image": "",
+          "thumb": "",
+          "dataTitle": "Formação Redis (Alura)"
+        }
+      ]
+    },
+    {
+      "category": "Devops",
+      "certificates": [
+        {
+          "name": "Apache Kafka",
+          "image": "https://public-variables.000webhostapp.com/certificates/kafka.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/kafka_thumb.png",
+          "dataTitle": "Kafka (Alura)"
+        },
+        {
+          "name": "Docker",
+          "image": "https://public-variables.000webhostapp.com/certificates/docker_devops.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/docker_devops_thumb.png",
+          "dataTitle": "Docker (Treinaweb)"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Aws - Architect soluction",
+      "description": "Certificação de nível associate na AWS",
+      "url": "https://www.credly.com/badges/d2caf2a2-2269-406d-93c2-7bb9c3258bae/public_url"
+    }
+  ]
+}
