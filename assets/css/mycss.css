@@ -138,6 +138,32 @@
     transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);
 }
 
+.spinner {
+    animation: Rotate 2.4s both infinite linear;
+}
+.path {
+    animation: DrawLine 1.6s both infinite alternate linear;
+    fill: none;
+    stroke: #000;
+    stroke-width: 50;
+}
+@keyframes Rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes DrawLine {
+    0% {
+        stroke-dasharray: 0 126;
+    }
+    100% {
+        stroke-dasharray: 126 126;
+    }
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
