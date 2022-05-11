@@ -276,35 +276,6 @@
         <hr />
     </div>
 
-
-    <div class="card mb-3">
-        <header class="card-header">
-            <p class="card-header-title">
-                <i class="fas fa-certificate mr-2"></i>
-                Recomendações
-            </p>
-        </header>
-        <div class="card-content">
-            <div class="content">
-                <div class="columns">
-                    <div class="column" v-for="recomendacao of data.recomendacoes">
-                        <article class="message is-dark">
-                            <div class="message-header">
-                                <p>{{recomendacao.name}}</p>
-                            </div>
-                            <div class="message-body certificate-center gallery-item">
-                                {{recomendacao.message}}
-                            </div>
-                            <div class="text-right pr-3">
-                                {{recomendacao.author}}
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
 </div>
 <footer v-if="!loading" class="footer">
     <div class="content has-text-centered">
@@ -380,13 +351,6 @@
                         {
                             name: "",
                             url: ""
-                        }
-                    ],
-                    recomendacoes: [
-                        {
-                            name: "",
-                            message: "",
-                            author: ""
                         }
                     ]
                 },
