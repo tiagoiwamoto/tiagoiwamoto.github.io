@@ -9,7 +9,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="./assets/css/animate.min.css" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.0.0/dist/bulma-divider.min.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
           integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="assets/css/lightbox.min.css" />
     <link rel="stylesheet" href="assets/css/mycss.css" />
@@ -65,7 +65,7 @@
                             <div class="level-left">
                                 <a class="level-item" aria-label="reply">
             <span class="icon is-small">
-              <i class="fas fa-reply" aria-hidden="true"></i>
+                <i class="fas fa-reply"></i>
             </span>
                                 </a>
                                 <a class="level-item" aria-label="retweet">
@@ -119,12 +119,14 @@
                 <div class="media-content">
                     <p><strong>Fale comigo</strong> <small>atualizado em</small> <small>01/2022</small></p>
                     <div class="content text-center mt-3">
-                        <span class="mr-3 tool" data-tip="Fale comigo por essa rede social com foco no profissional" tabindex="1">
-                            <a href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-                        </span>
-                        <span class="mr-3 tool" data-tip="Acompanhe meus projetos de código aberto" tabindex="1">
-                            <a href="https://github.com/tiagoiwamoto?tab=repositories" target="_blank"><i class="fab fa-github fa-3x"></i></a>
-                        </span>
+                        <a class="mr-3 tooltip top" href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank">
+                            <span><i class="fab fa-linkedin fa-3x"></i></span>
+                            <span class="tooltip-content">Fale comigo por essa rede social com foco no profissional</span></a>
+
+                        <a class="tooltip top" href="https://github.com/tiagoiwamoto?tab=repositories" target="_blank">
+                            <span><i class="fab fa-github fa-3x"></i></span>
+                            <span class="tooltip-content">Acompanhe meus projetos de código aberto</span>
+                        </a>
                         <!--                        <span class="mr-3 tool" data-tip="Se inscreva em meu canal com dicas de tecnologia" tabindex="1">-->
                         <!--                            <a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>-->
                         <!--                        </span>-->
@@ -167,7 +169,7 @@
             <div class="card">
                 <header class="card-header">
                     <p class="card-header-title">
-                        <i class="fas fa-certificate mr-2"></i>
+                        <i class="fas fa-award mr-2"></i>
                         Certificações
                     </p>
                 </header>
@@ -248,6 +250,7 @@
         <hr />
     </div>
     <div class="box mb-3">
+        <i class="fas fa-graduation-cap mr-2"></i>
         <strong>Cursos extracurriculares</strong>
         <div v-for="course of data.courses">
             <div class="divider is-info">{{course.category}}</div>
@@ -257,7 +260,7 @@
                         <div class="message-header">
                             <p>{{certificate.name}}</p>
                         </div>
-                        <div class="message-body certificate-center gallery-item">
+                        <div class="message-body certificate-center photo">
                             <a v-bind:href="certificate.image" data-lightbox="certificate-set" v-bind:data-title="certificate.dataTitle">
                                 <img v-bind:src="certificate.thumb" alt=""/>
                             </a>
@@ -268,6 +271,11 @@
         </div>
 
     </div>
+
+    <div class="mt-3">
+        <hr />
+    </div>
+
 </div>
 <footer v-if="!loading" class="footer">
     <div class="content has-text-centered">
@@ -280,6 +288,7 @@
 <script src="assets/js/lightbox.min.js"></script>
 <script src="assets/js/vue.global.js"></script>
 <script src="assets/js/axios.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     const app = {
         data() {
