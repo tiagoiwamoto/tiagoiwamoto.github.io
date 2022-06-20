@@ -16,29 +16,32 @@
         <span class="visually-hidden">Loading...</span>
     </div>
 </div>
-<nav v-if="!loading" class="navbar bg-dark shadow bg-body animate__animated animate__bounceIn">
+<nav v-if="!loading" class="navbar fixed-top shadow transparent animate__animated animate__bounceIn">
     <a class="app-title navbar-brand" href="#">
         <img src="./assets/imgs/ninja.svg" alt="" width="50" />
         {{data.info.title}}
     </a>
+    <button id="offsetMenu" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="d-flex">
-        <ul class="nav">
-            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.linkedin"><i class="fa-brands fa-linkedin fa-2x"></i></a></li>
-            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.github"><i class="fa-brands fa-github-square fa-2x"></i></a></li>
-            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.youtube"><i class="fa-brands fa-youtube fa-2x"></i></a></li>
-            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.sympla"><i class="fa-solid fa-graduation-cap fa-2x"></i></a></li>
+        <ul class="nav" id="navBarMenu">
+            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.linkedin"><i class="fa-brands fa-linkedin fa-2x text-white navLinkHover"></i></a></li>
+            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.github"><i class="fa-brands fa-github-square fa-2x text-white navLinkHover"></i></a></li>
+            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.youtube"><i class="fa-brands fa-youtube fa-2x text-white navLinkHover"></i></a></li>
+            <li><a class="nav-link" target="_blank" v-bind:href="data.socialNetworks.sympla"><i class="fa-solid fa-graduation-cap fa-2x text-white navLinkHover"></i></a></li>
         </ul>
     </div>
 </nav>
 
-<div v-if="!loading" class="container mt-4 shadow bg-body rounded animate__animated animate__bounceIn">
+<div v-if="!loading" class="container shadow bg-body rounded animate__animated animate__bounceIn" style="margin-top: 6rem">
     <!-- sobre mim e cvs -->
     <div class="row">
         <div class="col-sm-12 col-md-6">
             <div class="card border-warning mb-3 mt-3">
                 <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="./assets/imgs/1621460436451.jpg" class="img-fluid" alt="...">
+                    <div class="col-md-4 text-center" style="margin-top: 1rem">
+                        <img src="./assets/imgs/1621460436451.jpg" style="border-radius: 50%;" class="img-fluid" width="96" alt="...">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
@@ -197,7 +200,7 @@
 </div>
 <div v-if="!loading" class="container-fluid mt-3 mb-3">
     <div class="row">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 mb-3">
             <ol class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
@@ -222,13 +225,27 @@
                 </li>
             </ol>
         </div>
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6 mb-3">
             <div class="alert alert-success" role="alert">
                 <h4 class="alert-heading">Obrigado!</h4>
                 <p>Se inscreva em meu canal, siga meu perfil no sympla e favorite meu blog agora mesmo !</p>
                 <hr>
                 <p class="mb-0">Vamos criar um mundo nerd menos chato e mais nerd.</p>
             </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="navbarTogglerDemo03" aria-labelledby="navbarTogglerDemo03">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Minhas redes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="d-grid gap-2">
+            <a v-bind:href="data.socialNetworks.linkedin" class="btn btn-outline-dark"><i class="fa-brands fa-linkedin fa-2x align-middle"></i></a>
+            <a v-bind:href="data.socialNetworks.github" class="btn btn-outline-dark"><i class="fa-brands fa-github-square fa-2x align-middle"></i></a>
+            <a v-bind:href="data.socialNetworks.youtube" class="btn btn-outline-dark"><i class="fa-brands fa-youtube fa-2x align-middle"></i></a>
+            <a v-bind:href="data.socialNetworks.sympla" class="btn btn-outline-dark"><i class="fa-solid fa-graduation-cap fa-2x align-middle"></i></a>
         </div>
     </div>
 </div>
@@ -240,6 +257,12 @@
 <script src="./assets/js/all.min.js"></script>
 <script src="./assets/js/lightbox.min.js"></script>
 <script>
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $(".fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
     const app = {
         data() {
             return {
@@ -322,7 +345,7 @@
         methods: {
             generateClassForEducation() {
                 return this.data.education.endDate === '' ? 'is-primary' : 'is-link';
-            }
+            },
         }
     };
     Vue.createApp(app).mount('#app')

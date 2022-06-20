@@ -186,3 +186,25 @@
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+.navLinkHover:hover {
+    color: darkorange !important;
+}
+
+.fixed-top.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    transition: background-color 200ms linear;
+}
+
+.fixed-top.scrolled .navbar-brand{
+    color:whitesmoke;
+}
+
+#offsetMenu{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #offsetMenu{ display: block; }  /* show it on smaller screen */
+    #navBarMenu{ display: none; }
+}
