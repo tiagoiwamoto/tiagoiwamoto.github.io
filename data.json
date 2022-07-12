@@ -11,18 +11,18 @@
   "aboutMe": "                <p>Olá, meu nome é Tiago sou Brasileiro com decendencia Japonesa.\n                    Nasci em Curitiba-Paraná porem vivi praticamente minha vida toda no Japão.</p>\n                <p>Me formei em 2008 no Japão, trabalhei em muitos tipos de trabalhos.</p>\n                <p>Amo trabalhar com computadores, principalmente com desenvolvimento de sistemas, hoje com mais de 15 anos de experiência só tenho gostado mais e mais.</p>\n                <p>Também amo realizar outras atividades como fotografia, ensinar e compartilhar coisas no youtube.</p>\n                <p>Sem falar nos meus hobbies, adoro música, andar de bike, moto correr e jogar game e sem falar em maratonar series e filmes :)</p>\n                <p>Espero que eu possa ajudar você ou sua empresa, me coloco a disposição.</p>",
   "educations": [
     {
-      "courseName": "Arquitetura de software",
-      "description": "MBA focado em arquitetura de software e cloud.",
-      "institution": "Igti",
+      "courseName": "Arquitetura de soluções",
+      "description": "MBA focado em arquitetura de software, soluções e cloud.",
+      "institution": "XP Educação",
       "startDate": "2022",
-      "endDate": ""
+      "endDate": null
     },
     {
       "courseName": "Arquitetura de software java",
       "description": "Especialização em arquitetura de software com foco na linguagem java",
       "institution": "Uniciv",
       "startDate": "2021",
-      "endDate": ""
+      "endDate": "2022"
     },
     {
       "courseName": "Business Intelligence",
@@ -42,37 +42,53 @@
   "specialists": [
     {
       "category": "Backend",
-      "habilites": ["Java", "Springboot", "Ruby", "Ruby on rails", "Python", "PHP", "Slim framework", "Laravel"]
+      "color": "text-bg-dark",
+      "colorChip": "text-bg-danger",
+      "habilites": ["Java", "Springboot", "Quarkus", "Dart", "Ruby", "Ruby on rails", "Python", "PHP", "Slim framework", "Laravel"]
     },
     {
       "category": "Frontend",
+      "color": "text-bg-primary",
+      "colorChip": "text-bg-dark",
       "habilites": ["Angular", "VueJs"]
     },
     {
       "category": "Mobile",
+      "color": "text-bg-success",
+      "colorChip": "text-bg-warning",
       "habilites": ["Flutter", "Ionic"]
     },
 
     {
       "category": "Cloud",
-      "habilites": ["AWS", "Hereku", "Firebase"]
+      "color": "text-bg-info",
+      "colorChip": "text-bg-primary",
+      "habilites": ["AWS", "Heroku", "Firebase"]
     },
 
     {
       "category": "Banco de dados",
+      "color": "text-bg-warning",
+      "colorChip": "text-bg-success",
       "habilites": ["SQL", "NoSQL", "Redis", "Hadoop/Spark"]
     },
     {
       "category": "Ágil",
+      "color": "text-bg-secondary",
+      "colorChip": "text-bg-info",
       "habilites": ["Scrum", "Kanban"]
     },
     {
       "category": "CI/CD",
+      "color": "text-bg-light",
+      "colorChip": "text-bg-warning",
       "habilites": ["Jenkins", "Github CI", "Gitlab CI"]
     },
     {
       "category": "Devtools",
-      "habilites": ["Kafka", "Docker", "Kubernetes"]
+      "color": "text-bg-danger",
+      "colorChip": "text-bg-dark",
+      "habilites": ["Kafka", "Docker", "Kubernetes", "Linux"]
     }
   ],
   "cvs": [
@@ -99,38 +115,46 @@
   "courses": [
     {
       "category": "Backend",
+      "id": "backend",
+      "color": "alert-primary",
       "certificates": [
         {
+          "id": 1,
           "name": "Java Sênior",
           "image": "https://public-variables.000webhostapp.com/certificates/java_sr.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/java_sr_thumb.png",
           "dataTitle": "Java Sênior (Treinaweb)"
         },
         {
+          "id": 2,
           "name": "Spring Sênior",
           "image": "https://public-variables.000webhostapp.com/certificates/spring_sr.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/spring_sr_thumb.png",
           "dataTitle": "Spring (Treinaweb)"
         },
         {
+          "id": 3,
           "name": "Ruby Fullstack",
           "image": "https://public-variables.000webhostapp.com/certificates/ruby_fullstack.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/ruby_fullstack_thumb.png",
           "dataTitle": "Ruby On Rails (Treinaweb)"
         },
         {
+          "id": 4,
           "name": "Ruby API",
           "image": "https://public-variables.000webhostapp.com/certificates/udemy_ruby_rest.jpg",
           "thumb": "https://public-variables.000webhostapp.com/certificates/udemy_ruby_rest_thumb.jpg",
           "dataTitle": "Ruby On Rails - API (Udemy)"
         },
         {
+          "id": 5,
           "name": "ShellScript",
           "image": "https://public-variables.000webhostapp.com/certificates/shell_script.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/shell_script_thumb.png",
           "dataTitle": "Shell Script (Treinaweb)"
         },
         {
+          "id": 6,
           "name": "Python",
           "image": "https://public-variables.000webhostapp.com/certificates/python.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/python_thumb.png",
@@ -140,26 +164,39 @@
     },
     {
       "category": "Frontend / Mobile",
+      "id": "frontendMobile",
+      "color": "alert-success",
       "certificates": [
         {
+          "id": 1,
+          "name": "Angular",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura-angular.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura-angular-thumb.png",
+          "dataTitle": "Angular (Alura)"
+        },
+        {
+          "id": 2,
           "name": "Angular",
           "image": "https://public-variables.000webhostapp.com/certificates/angular_sr.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/angular_sr_thumb.png",
           "dataTitle": "Angular (Treinaweb)"
         },
         {
+          "id": 3,
           "name": "Vuejs",
           "image": "https://public-variables.000webhostapp.com/certificates/ionic.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/ionic_thumb.png",
           "dataTitle": "Vuejs (Treinaweb)"
         },
         {
+          "id": 4,
           "name": "Flutter",
           "image": "",
           "thumb": "",
           "dataTitle": "Flutter (Alura)"
         },
         {
+          "id": 5,
           "name": "Ionic",
           "image": "https://public-variables.000webhostapp.com/certificates/ionic.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/ionic_thumb.png",
@@ -169,14 +206,18 @@
     },
     {
       "category": "Cloud",
+      "id": "cloud",
+      "color": "alert-info",
       "certificates": [
         {
+          "id": 1,
           "name": "AWS - Architect soluction",
           "image": "https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1_thumb.png",
           "dataTitle": "AWS - Soluction Architect (Alura)"
         },
         {
+          "id": 2,
           "name": "AWS - Sqs and Sns",
           "image": "https://public-variables.000webhostapp.com/certificates/udemy_aws_sqs_and_sns.jpg",
           "thumb": "https://public-variables.000webhostapp.com/certificates/udemy_aws_sqs_and_sns_thumb.jpg",
@@ -186,26 +227,32 @@
     },
     {
       "category": "Database",
+      "id": "database",
+      "color": "alert-dark",
       "certificates": [
         {
+          "id": 1,
           "name": "Analista banco de dados",
           "image": "https://public-variables.000webhostapp.com/certificates/analista_db.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/analista_db_thumb.png",
           "dataTitle": "Analista de banco de dados (Treinaweb)"
         },
         {
+          "id": 2,
           "name": "SQL Developer",
           "image": "https://public-variables.000webhostapp.com/certificates/sql_developer.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/sql_developer_thumb.png",
           "dataTitle": "Sql Developer (Treinaweb)"
         },
         {
+          "id": 3,
           "name": "MongoDB",
           "image": "https://public-variables.000webhostapp.com/certificates/mongo_developer.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/mongo_developer_thumb.png",
           "dataTitle": "MongoDB Developer (Treinaweb)"
         },
         {
+          "id": 4,
           "name": "Redis",
           "image": "",
           "thumb": "",
@@ -215,18 +262,29 @@
     },
     {
       "category": "Devops",
+      "id": "devops",
+      "color": "alert-warning",
       "certificates": [
         {
+          "id": 1,
           "name": "Apache Kafka",
           "image": "https://public-variables.000webhostapp.com/certificates/kafka.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/kafka_thumb.png",
           "dataTitle": "Kafka (Alura)"
         },
         {
+          "id": 2,
           "name": "Docker",
           "image": "https://public-variables.000webhostapp.com/certificates/docker_devops.png",
           "thumb": "https://public-variables.000webhostapp.com/certificates/docker_devops_thumb.png",
           "dataTitle": "Docker (Treinaweb)"
+        },
+        {
+          "id": 3,
+          "name": "Linux",
+          "image": "https://public-variables.000webhostapp.com/certificates/linux-essentials-part-one.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/linux-essentials-part-one-thumb.png",
+          "dataTitle": "Linux (Alura)"
         }
       ]
     }
@@ -236,6 +294,65 @@
       "name": "Aws - Architect soluction",
       "description": "Certificação de nível associate na AWS",
       "url": "https://www.credly.com/badges/d2caf2a2-2269-406d-93c2-7bb9c3258bae/public_url"
+    },
+    {
+      "name": "GitLab 101 Certification",
+      "description": "Certificação de nível fundamentos no Gitlab",
+      "url": "https://gitlab.edcast.com/verify_badge/s_gyq-ZI?user_id=1484703&timestamp=1643621541854&edCast?latest"
+    }
+  ],
+  "diplomas": [
+    {
+      "name": "Arquiteto de software | IGTI",
+      "image": "https://public-variables.000webhostapp.com/certificates/arquiteto-software.png",
+      "thumb": "https://public-variables.000webhostapp.com/certificates/arquiteto-software-thumb.png"
+    },
+    {
+      "name": "Arquitetura de software Java | UNICIV",
+      "image": "https://public-variables.000webhostapp.com/certificates/uniciv-arquitetura-java.png",
+      "thumb": "https://public-variables.000webhostapp.com/certificates/uniciv-arquitetura-java-thumb.png"
+    },
+    {
+      "name": "Disruptives Technologies | IGTI",
+      "image": "https://public-variables.000webhostapp.com/certificates/igti-disruptives-tecnologies-silicon-valley.png",
+      "thumb": "https://public-variables.000webhostapp.com/certificates/igti-disruptives-tecnologies-silicon-valley-thumb.png"
+    },
+    {
+      "name": "Dev Summit IV | IGTI",
+      "image": "https://public-variables.000webhostapp.com/certificates/certificado-dev-summitiv.png",
+      "thumb": "https://public-variables.000webhostapp.com/certificates/certificado-dev-summitiv-thumb.png"
+    }
+  ],
+  "jobs": [
+    {
+      "name": "Itaú Unibanco",
+      "job": "Engenheiro de software Senior",
+      "dataInicio": "09/2021",
+      "dataFim": null
+    },
+    {
+      "name": "GFT",
+      "job": "Especialista de sistema",
+      "dataInicio": "04/2021",
+      "dataFim": "09/2021"
+    },
+    {
+      "name": "Midway Financeira",
+      "job": "Analista de sistema",
+      "dataInicio": "08/2019",
+      "dataFim": "04/2021"
+    },
+    {
+      "name": "Telefonica",
+      "job": "Analista de sistema",
+      "dataInicio": "08/2018",
+      "dataFim": "08/2019"
+    },
+    {
+      "name": "iBolt",
+      "job": "Analista de sistema",
+      "dataInicio": "04/2016",
+      "dataFim": "07/2018"
     }
   ]
 }
