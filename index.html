@@ -6,7 +6,9 @@
     <link rel="shortcut icon" href="favicon.ico"/>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/lightbox.min.css" rel="stylesheet" />
+    <link href="./assets/css/animate.min.css" rel="stylesheet" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
         /*.spec-card .card::before {*/
         /*    position: absolute;*/
         /*    top: 2rem;*/
@@ -17,6 +19,11 @@
         /*    width: 18px;*/
         /*    transform: rotate(45deg);*/
         /*}*/
+
+        .app-title{
+            font-family: 'Edu NSW ACT Foundation', cursive;
+            font-size: 2em;
+        }
 
         .spec-card .card::after {
             position: absolute;
@@ -35,12 +42,20 @@
     </style>
 </head>
 <body id="app">
-<div class="jumbotron jumbotron-fluid shadow-sm rounded">
-    <div class="container">
-        <h1 class="display-4"><i class="fa-solid fa-code"></i> {{data.info.title}}</h1>
-        <p class="lead" style="margin-left: 4em">{{data.info.subTitle}}</p>
+<!--<div class="jumbotron jumbotron-fluid shadow-sm rounded">-->
+<!--    <div class="container">-->
+<!--        <h1 class="display-4"><i class="fa-solid fa-code"></i> {{data.info.title}}</h1>-->
+<!--        <p class="lead" style="margin-left: 4em">{{data.info.subTitle}}</p>-->
+<!--    </div>-->
+<!--</div>-->
+<nav class="navbar navbar-dark text-white" style="background-color: darkslateblue!important;">
+    <div class="container-fluid">
+        <a class="navbar-brand app-title" href="#">
+            <i class="fa-solid fa-code"></i>
+               {{data.info.title}}
+        </a>
     </div>
-</div>
+</nav>
 <div class="container mt-3">
     <div class="row">
         <div class="col-sm-12 col-md-6">
@@ -148,6 +163,21 @@
                             </blockquote>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Certificações / Badges</h5>
+                    <figure class="figure" v-for="badge of data.certifications">
+                        <img  v-bind:id="badge.id" v-on:mouseover="animateBadge(badge.id)" v-on:mouseleave="removeAnimationBadge(badge.id)"  v-bind:src="badge.badge" class="rounded" style="min-width: 250px; max-width: 250px; margin-right: 1em;"  alt="...">
+                        <figcaption class="figure-caption">{{badge.name}}</figcaption>
+                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="badge.url"><span class="badge text-bg-primary">Validar</span></a></figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
@@ -312,7 +342,9 @@
                     certifications: [
                         {
                             name: "",
-                            url: ""
+                            description: "",
+                            url: "",
+                            badge: ""
                         }
                     ]
                 },
@@ -326,11 +358,13 @@
                 .then(response => (this.data = response.data)).finally(() => this.loading = false)
         },
         methods: {
-            generateClassForEducation() {
-                return this.data.education.endDate === '' ? 'is-primary' : 'is-link';
+            animateBadge(id){
+                const element = document.getElementById(id);
+                element.classList.add('animate__animated', 'animate__tada');
             },
-            createCarousel(id){
-                new bootstrap.Carousel('#'+id)
+            removeAnimationBadge(id){
+                const element = document.getElementById(id);
+                element.classList.remove('animate__animated', 'animate__tada');
             }
         }
     };

@@ -291,14 +291,25 @@
   ],
   "certifications": [
     {
+      "id": "badge-1",
       "name": "Aws - Architect soluction",
       "description": "Certificação de nível associate na AWS",
-      "url": "https://www.credly.com/badges/d2caf2a2-2269-406d-93c2-7bb9c3258bae/public_url"
+      "url": "https://www.credly.com/badges/d2caf2a2-2269-406d-93c2-7bb9c3258bae/public_url",
+      "badge": "https://public-variables.000webhostapp.com/badges/aws-soluction-arch.png"
     },
     {
+      "id": "badge-2",
+      "name": "Arquitetura de soluções foundation",
+      "description": "Certificação de nível fundamentos de arquitetura de soluções",
+      "url": "https://brasilopenbadge.com.br/pages/badge/d7ca447a8987cae9fa4947fb535eba9b",
+      "badge": "https://public-variables.000webhostapp.com/badges/arquiteto-solucoes-found.png"
+    },
+    {
+      "id": "badge-3",
       "name": "GitLab 101 Certification",
       "description": "Certificação de nível fundamentos no Gitlab",
-      "url": "https://gitlab.edcast.com/verify_badge/s_gyq-ZI?user_id=1484703&timestamp=1643621541854&edCast?latest"
+      "url": "https://gitlab.edcast.com/verify_badge/s_gyq-ZI?user_id=1484703&timestamp=1643621541854&edCast?latest",
+      "badge": "https://public-variables.000webhostapp.com/badges/gitlab.png"
     }
   ],
   "diplomas": [
