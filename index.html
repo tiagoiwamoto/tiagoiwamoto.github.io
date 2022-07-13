@@ -5,8 +5,8 @@
     <title>Mr. Tiago</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="./assets/css/lightbox.min.css" rel="stylesheet" />
     <link href="./assets/css/animate.min.css" rel="stylesheet" />
+    <link href="./assets/css/lightbox.min.css" rel="stylesheet" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
         /*.spec-card .card::before {*/
@@ -20,7 +20,7 @@
         /*    transform: rotate(45deg);*/
         /*}*/
 
-        .app-title{
+        .app-title-nav{
             font-family: 'Edu NSW ACT Foundation', cursive;
             font-size: 2em;
         }
@@ -50,7 +50,7 @@
 <!--</div>-->
 <nav class="navbar navbar-dark text-white" style="background-color: darkslateblue!important;">
     <div class="container-fluid">
-        <a class="navbar-brand app-title" href="#">
+        <a class="navbar-brand app-title-nav" href="#">
             <i class="fa-solid fa-code"></i>
                {{data.info.title}}
         </a>
@@ -61,10 +61,10 @@
         <div class="col-sm-12 col-md-6">
             <div class="card mb-3 shadow-sm">
                 <div class="row g-0">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img src="./assets/imgs/1621460436451.jpg" width="140" class="img-fluid" style="margin: 1em; border-radius: 20%" alt="...">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title">Sobre mim</h5>
                             <p class="card-text" v-html="data.aboutMe"></p>
@@ -89,7 +89,7 @@
                             </blockquote>
                         </div>
                         <div class="text-end">
-                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Baixar</a>
+                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
                             <a href="#" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Ler Online</a>
                         </div>
                     </div>
@@ -174,9 +174,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Certificações / Badges</h5>
                     <figure class="figure" v-for="badge of data.certifications">
-                        <img  v-bind:id="badge.id" v-on:mouseover="animateBadge(badge.id)" v-on:mouseleave="removeAnimationBadge(badge.id)"  v-bind:src="badge.badge" class="rounded" style="min-width: 250px; max-width: 250px; margin-right: 1em;"  alt="...">
+                        <img  v-bind:id="badge.id" v-on:mouseover="animateBadge(badge.id, 'animate__tada')" v-on:mouseleave="removeAnimationBadge(badge.id, 'animate__tada')"
+                              v-bind:src="badge.badge" class="rounded" style="min-width: 250px; max-width: 250px; margin-right: 1em;"  alt="..." />
                         <figcaption class="figure-caption">{{badge.name}}</figcaption>
-                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="badge.url"><span class="badge text-bg-primary">Validar</span></a></figcaption>
+                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="badge.url"><span class="badge text-bg-primary">Validar online</span></a></figcaption>
                     </figure>
                 </div>
             </div>
@@ -226,8 +227,12 @@
                         <div class="carousel-inner">
                             <div class="carousel-item" v-bind:class="certificate.id == 1 ? 'active' : ''" v-for="certificate of course.certificates" data-bs-interval="3000">
                                 <figure class="figure d-block">
-                                    <a v-bind:href="certificate.image" data-lightbox="certificate-set" v-bind:data-title="certificate.dataTitle">
-                                        <img v-bind:src="certificate.thumb" style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="...">
+                                    <a v-bind:href="certificate.image" v-bind:data-lightbox="course.id+'-set'" v-bind:data-title="certificate.dataTitle">
+                                        <img
+                                                v-bind:id="course.id+certificate.id"
+                                                v-on:mouseover="animateBadge(course.id+certificate.id, 'animate__pulse')"
+                                                v-on:mouseleave="removeAnimationBadge(course.id+certificate.id, 'animate__pulse')"
+                                                v-bind:src="certificate.thumb" style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
                                     </a>
                                     <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{certificate.dataTitle}}</figcaption>
                                 </figure>
@@ -253,29 +258,29 @@
         <div class="col-sm-12 col-md-6">
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    A list item
-                    <span class="badge bg-primary rounded-pill">14</span>
+                    <span><i class="fa-brands fa-youtube"></i> AltissimoProcessamento</span>
+                    <span class="badge bg-danger rounded-pill">NOVO</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    A second list item
-                    <span class="badge bg-primary rounded-pill">2</span>
+                    <span><i class="fa-solid fa-graduation-cap"></i> Sympla (Cursos)</span>
+                    <span class="badge bg-primary rounded-pill">PAGOS</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    A third list item
-                    <span class="badge bg-primary rounded-pill">1</span>
+                    <span><i class="fa-solid fa-blog"></i> Blog</span>
+                    <span class="badge bg-primary rounded-pill">DICAS</span>
                 </li>
             </ul>
         </div>
         <div class="col-sm-12 col-md-6"></div>
     </div>
 </div>
+<a href="https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1.png" data-lightbox="image-1" data-title="My caption">Image #1</a>
 
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/vue.global.js"></script>
-<script src="assets/js/axios.min.js"></script>
-<script src="assets/js/fontawesome.all.min.js"></script>
-<script src="assets/js/all.min.js"></script>
-<script src="assets/js/lightbox.min.js"></script>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/vue.global.js"></script>
+<script src="./assets/js/axios.min.js"></script>
+<script src="./assets/js/fontawesome.all.min.js"></script>
+<script src="./assets/js/lightbox-plus-jquery.min.js"></script>
 <script>
     const app = {
         data() {
@@ -358,13 +363,13 @@
                 .then(response => (this.data = response.data)).finally(() => this.loading = false)
         },
         methods: {
-            animateBadge(id){
+            animateBadge(id, animation){
                 const element = document.getElementById(id);
-                element.classList.add('animate__animated', 'animate__tada');
+                element.classList.add('animate__animated', animation);
             },
-            removeAnimationBadge(id){
+            removeAnimationBadge(id, animation){
                 const element = document.getElementById(id);
-                element.classList.remove('animate__animated', 'animate__tada');
+                element.classList.remove('animate__animated', animation);
             }
         }
     };
