@@ -4,291 +4,305 @@
     <meta charset="UTF-8">
     <title>Mr. Tiago</title>
     <link rel="shortcut icon" href="favicon.ico"/>
-    <link rel="stylesheet" href="./assets/css/bulma.min.css"
-          integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="./assets/css/animate.min.css" referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-divider@1.0.0/dist/bulma-divider.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="assets/css/lightbox.min.css" />
-    <link rel="stylesheet" href="assets/css/mycss.css" />
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/animate.min.css" rel="stylesheet" />
+    <link href="./assets/css/lightbox.min.css" rel="stylesheet" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Overlock:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+        /*.spec-card .card::before {*/
+        /*    position: absolute;*/
+        /*    top: 2rem;*/
+        /*    right: -0.5rem;*/
+        /*    content: "";*/
+        /*    background: #283593;*/
+        /*    height: 18px;*/
+        /*    width: 18px;*/
+        /*    transform: rotate(45deg);*/
+        /*}*/
+
+        .app-title-nav{
+            font-family: 'Edu NSW ACT Foundation', cursive;
+            font-size: 2em;
+        }
+
+        .spec-card .card::after {
+            position: absolute;
+            content: attr(data-label);
+            top: -10px;
+            right: -8px;
+            padding: 0.5rem;
+            width: 7rem;
+            background: #b900ff;
+            color: white;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-size: x-small;
+            box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+        }
     </style>
 </head>
 <body id="app">
-<div class="container mt-6 text-center" v-if="loading">
-    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-    <br />
-    <strong>Carregando perfil...</strong>
-</div>
-<section v-if="!loading" class="hero is-primary">
-    <div class="hero-body">
-        <div class="columns ">
-            <div class="column">
-                <p class="title app-title animate__animated animate__bounceInLeft">
-                    <img src="assets/imgs/ninja.svg" width="36" alt=""/>
-                    {{data.info.title}}
-                </p>
-                <p class="subtitle animate__animated animate__bounceInRight">
-                    <img src="assets/imgs/shuriken.png" width="16" alt=""/>
-                    {{data.info.subTitle}}
-                </p>
+<nav v-if="!loading" class="navbar navbar-dark text-white" style="background-color: darkslateblue!important;">
+    <div class="container-fluid">
+        <a class="navbar-brand app-title-nav" href="#">
+            <i class="fa-solid fa-code"></i>
+               {{data.info.title}}
+        </a>
+    </div>
+</nav>
+<div v-if="!loading" class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img src="./assets/imgs/1621460436451.jpg" width="140" class="img-fluid" style="margin: 1em; border-radius: 20%" alt="...">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Sobre mim</h5>
+                            <p class="card-text" v-html="data.aboutMe"></p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Curriculum</h5>
+                    <div class="card">
+                        <div class="card-header">
+                            Português
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Meu curriculum atualizado</p>
+                                <footer class="blockquote-footer">Atualizado em <cite title="Source Title">10/07/2022</cite></footer>
+                            </blockquote>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
+                            <a href="#" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Ler Online</a>
+                        </div>
+                    </div>
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            English
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>My resume</p>
+                                <footer class="blockquote-footer">Updated at <cite title="Source Title">2022-07-10</cite></footer>
+                            </blockquote>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
+                            <a href="#" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Read Online</a>
+                        </div>
+                    </div>
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            Japanese
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>My resume</p>
+                                <footer class="blockquote-footer">Updated at <cite title="Source Title">2022-07-10</cite></footer>
+                            </blockquote>
+                        </div>
+                        <div class="text-end">
+                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
+                            <a href="#" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Read Online</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</section>
 
-<div v-if="!loading" class="container animate__animated animate__rubberBand">
-    <div class="columns  mt-3">
-        <div class="column">
-            <div class="box">
-                <article class="media">
-                    <div class="media-left">
-                        <figure class="image is-64x64">
-                            <img src="assets/imgs/1621460436451.jpg" width="64" alt="Image">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <div class="content">
-                            <p>
-                                <strong>Sobre mim</strong>
-                                <br />
-                                <small>{{ (currentYear - 1984) - 1 }} anos, </small><small>São josé do rio preto, </small>
-                                <small>Home office</small>
-                                <br>
-                                <span v-html="data.aboutMe"></span>
-                            </p>
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Histórico profissional</h5>
+                    <div class="card mb-2" v-for="job of data.jobs">
+                        <div class="card-header">
+                            {{job.name}}
                         </div>
-                        <nav class="level ">
-                            <div class="level-left">
-                                <a class="level-item" aria-label="reply">
-            <span class="icon is-small">
-                <i class="fas fa-reply"></i>
-            </span>
-                                </a>
-                                <a class="level-item" aria-label="retweet">
-            <span class="icon is-small">
-              <i class="fas fa-retweet" aria-hidden="true"></i>
-            </span>
-                                </a>
-                                <a class="level-item" aria-label="like">
-            <span class="icon is-small">
-              <i class="fas fa-heart" aria-hidden="true"></i>
-            </span>
-                                </a>
-                            </div>
-                        </nav>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{job.job}}</p>
+                                <footer class="blockquote-footer">{{job.dataInicio}} ~ <cite title="Source Title">{{job.dataFim === null ? 'Atual' : job.dataFim}}</cite></footer>
+                            </blockquote>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
-        <div class="column">
-            <div class="box">
-                <div class="media-content">
-                    <div class="content">
-                        <p><strong>Cv pt-br</strong> <small>atualizado em</small> <small>08/2021</small></p>
-                        <div class="has-text-right">
-                            <a href="https://app.box.com/s/5owltb8d3qkn9txwq3p3j48zsemw2z5e" target="_blank" class="button is-link">
-                                <span>Ir para cv</span>
-                                <span class="icon">
-                                <i class="fas fa-arrow-right"></i>
-                            </span>
-                            </a>
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Histórico escolar</h5>
+                    <div class="card mb-2" v-for="education of data.educations">
+                        <div class="card-header">
+                            {{education.courseName}}
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{education.description}}</p>
+                                <p>{{education.institution}}</p>
+                                <footer class="blockquote-footer"><cite title="Source Title">{{education.startDate}} ~ {{education.endDate === null ? 'Atual' : education.endDate}}</cite></footer>
+                            </blockquote>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="box mt-2">
-                <div class="media-content">
-                    <div class="content">
-                        <p><strong>Resume English</strong> <small>updated at</small> <small>-/-</small></p>
-                        <div class="has-text-right">
-                            <button class="button is-link" disabled>
-                                <span>Go to resume</span>
-                                <span class="icon">
-                                <i class="fas fa-arrow-right"></i>
-                            </span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <div class="media-content">
-                    <p><strong>Fale comigo</strong> <small>atualizado em</small> <small>01/2022</small></p>
-                    <div class="content text-center mt-3">
-                        <a class="mr-3 tooltip top" href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank">
-                            <span><i class="fab fa-linkedin fa-3x"></i></span>
-                            <span class="tooltip-content">Fale comigo por essa rede social com foco no profissional</span></a>
+        </div>
+    </div>
 
-                        <a class="tooltip top" href="https://github.com/tiagoiwamoto?tab=repositories" target="_blank">
-                            <span><i class="fab fa-github fa-3x"></i></span>
-                            <span class="tooltip-content">Acompanhe meus projetos de código aberto</span>
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Diplomas</h5>
+                    <figure class="figure" v-for="diploma of data.diplomas" style="margin-right: 1em">
+                        <a v-bind:href="diploma.image" data-lightbox="diploma-set'" v-bind:data-title="diploma.dataTitle">
+                            <img
+                                    v-bind:id="diploma.id"
+                                    v-on:mouseover="animateBadge(diploma.id, 'animate__pulse')"
+                                    v-on:mouseleave="removeAnimationBadge(diploma.id, 'animate__pulse')"
+                                    v-bind:src="diploma.thumb" style="min-width: 250px; max-width: 250px; min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
                         </a>
-                        <!--                        <span class="mr-3 tool" data-tip="Se inscreva em meu canal com dicas de tecnologia" tabindex="1">-->
-                        <!--                            <a href="#" target="_blank"><i class="fab fa-youtube fa-3x"></i></a>-->
-                        <!--                        </span>-->
-                        <!--                        <span class="mr-3 tool" data-tip="Me envie um email com dúvida, sugestão, reclamação ou elogio." tabindex="1">-->
-                        <!--                            <a href="#" target="_blank"><i class="fas fa-envelope-open fa-3x"></i></a>-->
-                        <!--                        </span>-->
-                    </div>
+                        <figcaption class="figure-caption">{{diploma.dataTitle}}</figcaption>
+                    </figure>
                 </div>
             </div>
         </div>
     </div>
-    <div class="mt-3 mr-3 ml-3">
-        <hr />
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Certificações / Badges</h5>
+                    <figure class="figure" v-for="badge of data.certifications">
+                        <img  v-bind:id="badge.id" v-on:mouseover="animateBadge(badge.id, 'animate__tada')" v-on:mouseleave="removeAnimationBadge(badge.id, 'animate__tada')"
+                              v-bind:src="badge.badge" class="rounded" style="min-width: 250px; max-width: 250px; margin-right: 1em;"  alt="..." />
+                        <figcaption class="figure-caption">{{badge.name}}</figcaption>
+                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="badge.url"><span class="badge text-bg-primary">Validar online</span></a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="columns  mt-3">
-        <div class="column">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        <i class="fas fa-graduation-cap mr-2"></i>
-                        Escolaridade
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <div v-for="education of data.educations">
-                            <article class="message is-link mb-5">
-                                <div class="message-body">
-                                    <strong>{{education.institution}} - {{education.courseName}} </strong>
-                                    <p>{{education.startDate}} ~ {{education.endDate == '' ? 'atual' : education.endDate}}</p>
-                                    <small>{{education.description}}</small>
-                                </div>
-                            </article>
+
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body spec-card">
+                    <h5 class="card-title">Habilidades</h5>
+                    <div class="card mb-3" v-bind:data-label="specialist.category" v-bind:class="specialist.color" v-for="specialist of data.specialists">
+                        <div class="card-body" style="margin-right: 5em">
+                            <span class="badge" style="margin-right: 1em" v-bind:class="specialist.colorChip" v-for="hability of specialist.habilites">{{hability}}</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        <i class="fas fa-award mr-2"></i>
-                        Certificações
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <article class="message is-success" v-for="certificate of data.certifications">
-                            <div class="message-body">
-                                <strong>{{certificate.name}}</strong>
-                                <br />
-                                <small>{{certificate.description}}</small>
-                                <div class="has-text-right">
-                                    <a v-bind:href="certificate.url" target="_blank" class="button is-link">Validação</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mt-3">
-        <hr />
-    </div>
-    <div class="columns  mt-3">
-        <div class="column">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        <i class="fab fa-connectdevelop mr-2"></i>
-                        Habilidades
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <div v-for="specialist of data.specialists">
-                            <div class="divider is-info">{{specialist.category}}</div>
-                            <div class="field is-grouped is-grouped-multiline">
-                                <div class="control" v-for="hability of specialist.habilites">
-                                    <div class="tags has-addons">
-                                        <span class="tag is-dark">{{hability}}</span>
-                                        <span class="tag is-info"><i class="fas fa-check"></i></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        <i class="fas fa-laptop-house mr-2"></i>
-                        Trabalhos e contribuições
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <article class="message is-primary" v-for="work of data.works">
-                            <div class="message-body">
-                                <strong>{{work.name}}</strong>
-                                <br />
-                                <small>{{work.description}}</small>
-                                <div class="has-text-right mt-3">
-                                    <a v-bind:href="work.url" target="_blank" class="button is-success is-outlined ml-2">Acessar</a>
-                                    <a v-bind:href="work.source" target="_blank" class="button is-link is-outlined ml-2">Código fonte</a>
-                                    <a href="" target="_blank" class="button is-dark is-outlined ml-2">Pagar café</a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mt-3">
-        <hr />
-    </div>
-    <div class="box mb-3">
-        <i class="fas fa-graduation-cap mr-2"></i>
-        <strong>Cursos extracurriculares</strong>
-        <div v-for="course of data.courses">
-            <div class="divider is-info">{{course.category}}</div>
-            <div class="columns  certificate-block">
-                <div class="column" v-for="certificate of course.certificates">
-                    <article class="message is-dark">
-                        <div class="message-header">
-                            <p>{{certificate.name}}</p>
-                        </div>
-                        <div class="message-body certificate-center photo">
-                            <a v-bind:href="certificate.image" data-lightbox="certificate-set" v-bind:data-title="certificate.dataTitle">
-                                <img v-bind:src="certificate.thumb" alt=""/>
-                            </a>
-                        </div>
-                    </article>
                 </div>
             </div>
         </div>
 
+        <div class="col-sm-12 col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Projetos</h5>
+                    <div class="card mb-3" v-for="work of data.works">
+                        <div class="card-body">
+                            <h5 class="card-title">{{work.name}}</h5>
+                            <p class="card-text">{{work.description}}</p>
+                        </div>
+                        <div class="mt-1 mb-1 text-end">
+                            <a v-bind:href="work.url" class="btn btn-outline-primary" style="margin-right: 1em">Acessar</a>
+                            <a v-bind:href="work.source" class="btn btn-outline-primary">Código fonte</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="mt-3">
-        <hr />
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-4" v-for="course of data.courses">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{course.category}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Total: {{course.certificates.length}}</h6>
+                    <div v-bind:id="course.id" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" v-bind:class="certificate.id == 1 ? 'active' : ''" v-for="certificate of course.certificates" data-bs-interval="3000">
+                                <figure class="figure d-block">
+                                    <a v-bind:href="certificate.image" v-bind:data-lightbox="course.id+'-set'" v-bind:data-title="certificate.dataTitle">
+                                        <img
+                                                v-bind:id="course.id+certificate.id"
+                                                v-on:mouseover="animateBadge(course.id+certificate.id, 'animate__pulse')"
+                                                v-on:mouseleave="removeAnimationBadge(course.id+certificate.id, 'animate__pulse')"
+                                                v-bind:src="certificate.thumb" style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                                    </a>
+                                    <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{certificate.dataTitle}}</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" v-bind:data-bs-target="'#'+course.id" data-bs-slide="prev">
+                            <span class="text-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" v-bind:data-bs-target="'#'+course.id" data-bs-slide="next">
+                            <span class="text-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
-<footer v-if="!loading" class="footer">
-    <div class="content has-text-centered">
-        <p>
-            by <a href="https://tiagoiwamoto.github.io">Tiago Iwamoto</a>.
-        </p>
-    </div>
-</footer>
 
-<script src="assets/js/lightbox.min.js"></script>
-<script src="assets/js/vue.global.js"></script>
-<script src="assets/js/axios.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div v-if="!loading" class="container mb-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="fa-brands fa-youtube"></i> AltissimoProcessamento</span>
+                    <span class="badge bg-danger rounded-pill">NOVO</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="fa-solid fa-graduation-cap"></i> Sympla (Cursos)</span>
+                    <span class="badge bg-primary rounded-pill">PAGOS</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="fa-solid fa-blog"></i> Blog</span>
+                    <span class="badge bg-primary rounded-pill">DICAS</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-6"></div>
+    </div>
+</div>
+
+<div v-if="loading" class="container mt-lg-5">
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <p class="text-center animate__animated animate__jello animate__infinite">Carregando</p>
+</div>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/vue.global.js"></script>
+<script src="./assets/js/axios.min.js"></script>
+<script src="./assets/js/fontawesome.all.min.js"></script>
+<script src="./assets/js/lightbox-plus-jquery.min.js"></script>
 <script>
     const app = {
         data() {
@@ -317,6 +331,8 @@
                     specialists: [
                         {
                             category: "",
+                            color: "",
+                            colorChip: "",
                             habilites: []
                         }
                     ],
@@ -338,11 +354,15 @@
                     courses: [
                         {
                             category: "",
+                            id: "",
+                            color: "",
                             certificates: [
                                 {
+                                    id: 0,
                                     name: "",
                                     image: "",
-                                    thumb: ""
+                                    thumb: "",
+                                    dataTitle: ""
                                 }
                             ]
                         }
@@ -350,7 +370,18 @@
                     certifications: [
                         {
                             name: "",
-                            url: ""
+                            description: "",
+                            url: "",
+                            badge: ""
+                        }
+                    ],
+                    diplomas: [
+                        {
+                            id: 0,
+                            name: "",
+                            image: "",
+                            thumb: "",
+                            dataTitle: ""
                         }
                     ]
                 },
@@ -360,11 +391,21 @@
             this.loading = true;
             axios
                 .get('https://public-variables.000webhostapp.com/cv_resume/index.php')
+                // .get('./data.json')
                 .then(response => (this.data = response.data)).finally(() => this.loading = false)
         },
         methods: {
-            generateClassForEducation() {
-                return this.data.education.endDate === '' ? 'is-primary' : 'is-link';
+            animateBadge(id, animation){
+                const element = document.getElementById(id);
+                element.classList.add('animate__animated', animation);
+            },
+            removeAnimationBadge(id, animation){
+                const element = document.getElementById(id);
+                element.classList.remove('animate__animated', animation);
+            },
+            getRandomIdFrom(lista){
+                const randomElement = lista[Math.floor(Math.random() * lista.length)];
+                return lista[randomElement.id];
             }
         }
     };
