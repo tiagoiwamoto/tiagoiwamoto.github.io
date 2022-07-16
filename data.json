@@ -116,175 +116,1330 @@
     {
       "category": "Backend",
       "id": "backend",
-      "color": "alert-primary",
+      "color": "alert-dark",
       "certificates": [
         {
           "id": 1,
-          "name": "Java Sênior",
-          "image": "https://public-variables.000webhostapp.com/certificates/java_sr.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/java_sr_thumb.png",
-          "dataTitle": "Java Sênior (Treinaweb)"
+          "name": "Java Solid",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/java-solid.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/java-solid_tn.jpg",
+          "dataTitle": "Java Solid | Alura"
         },
         {
           "id": 2,
-          "name": "Spring Sênior",
-          "image": "https://public-variables.000webhostapp.com/certificates/spring_sr.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/spring_sr_thumb.png",
-          "dataTitle": "Spring (Treinaweb)"
+          "name": "Wordpress",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/wordpress-basics.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/wordpress-basics_tn.jpg",
+          "dataTitle": "Wordpress | Alura"
         },
         {
           "id": 3,
-          "name": "Ruby Fullstack",
-          "image": "https://public-variables.000webhostapp.com/certificates/ruby_fullstack.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/ruby_fullstack_thumb.png",
-          "dataTitle": "Ruby On Rails (Treinaweb)"
+          "name": "Kotlin com Springboot",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy/kotlin-springboot-mongodb.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy/kotlin-springboot-mongodb_tn.jpg",
+          "dataTitle": "Kotlin com Springboot | Udemy"
         },
         {
           "id": 4,
-          "name": "Ruby API",
-          "image": "https://public-variables.000webhostapp.com/certificates/udemy_ruby_rest.jpg",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy_ruby_rest_thumb.jpg",
-          "dataTitle": "Ruby On Rails - API (Udemy)"
+          "name": "Python SQS e SNS",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy/python-sqs_sns.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy/python-sqs_sns_tn.jpg",
+          "dataTitle": "Python SQS e SNS | Udemy"
         },
         {
           "id": 5,
-          "name": "ShellScript",
-          "image": "https://public-variables.000webhostapp.com/certificates/shell_script.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/shell_script_thumb.png",
-          "dataTitle": "Shell Script (Treinaweb)"
+          "name": "Ruby On Rails Restful",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy/ruby-on-rails-rest_restful.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy/ruby-on-rails-rest_restful_tn.jpg",
+          "dataTitle": "Ruby On Rails Restful | Udemy"
         },
         {
           "id": 6,
-          "name": "Python",
-          "image": "https://public-variables.000webhostapp.com/certificates/python.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/python_thumb.png",
-          "dataTitle": "Python (Treinaweb)"
+          "name": "C# Api Rest",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_-_APIs_REST_com_ASP_NET_Web_API-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_-_APIs_REST_com_ASP_NET_Web_API-1_tn.jpg",
+          "dataTitle": "C# Api Rest | Treinaweb"
+        },
+        {
+          "id": 7,
+          "name": "C# Introdução",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_-_Introducao_ao_ASP_NET_Core-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_-_Introducao_ao_ASP_NET_Core-1_tn.jpg",
+          "dataTitle": "C# Introdução | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "C# Básico",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_Basico-1_tn.jpg",
+          "dataTitle": "C# Básico | Treinaweb"
+        },
+        {
+          "id": 9,
+          "name": "C# Intermediário",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_Intermediario-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/C_Sharp_Intermediario-1_tn.jpg",
+          "dataTitle": "C# Intermediário | Treinaweb"
+        },
+        {
+          "id": 10,
+          "name": "Dart fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Dart_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Dart_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Dart fundamentos | Treinaweb"
+        },
+        {
+          "id": 11,
+          "name": "Desenvolvedor C# Jr",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_CSharp_Junior-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_CSharp_Junior-1_tn.jpg",
+          "dataTitle": "Desenvolvedor C# Jr | Treinaweb"
+        },
+        {
+          "id": 12,
+          "name": "Desenvolvedor Java Jr",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Java_Junior-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Java_Junior-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Java Jr | Treinaweb"
+        },
+        {
+          "id": 13,
+          "name": "Desenvolvedor Java Sr",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Java_Senior-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Java_Senior-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Java Sr | Treinaweb"
+        },
+        {
+          "id": 14,
+          "name": "Desenvolvedor Java",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Java-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Java-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Java | Treinaweb"
+        },
+        {
+          "id": 15,
+          "name": "Desenvolvedor PHP Pleno",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_PHP_Pleno-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_PHP_Pleno-1_tn.jpg",
+          "dataTitle": "Desenvolvedor PHP Pleno | Treinaweb"
+        },
+        {
+          "id": 16,
+          "name": "Desenvolvedor Rails Fullstack",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Rails_Full-Stack-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Rails_Full-Stack-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Rails Fullstack | Treinaweb"
+        },
+        {
+          "id": 17,
+          "name": "Desenvolvedor Ruby Jr",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Ruby_Junior-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Ruby_Junior-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Ruby Jr | Treinaweb"
+        },
+        {
+          "id": 18,
+          "name": "Desenvolvedor Ruby on Rails",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Ruby_on_Rails-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Ruby_on_Rails-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Ruby On Rails | Treinaweb"
+        },
+        {
+          "id": 19,
+          "name": "Desenvolvedor Spring",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Spring_Full-Stack-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Spring_Full-Stack-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Spring | Treinaweb"
+        },
+        {
+          "id": 20,
+          "name": "Desenvolvedor Spring",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Spring-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Spring-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Spring | Treinaweb"
+        },
+        {
+          "id": 21,
+          "name": "Electron",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Electron_-_Criacao_de_aplicações_desktop-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Electron_-_Criacao_de_aplicações_desktop-1_tn.jpg",
+          "dataTitle": "Electron | Treinaweb"
+        },
+        {
+          "id": 22,
+          "name": "Java algoritmos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Algoritmos_-_Parte_1-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Algoritmos_-_Parte_1-1_tn.jpg",
+          "dataTitle": "Java algoritmos | Treinaweb"
+        },
+        {
+          "id": 23,
+          "name": "Java arquivos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Arquivos_e_I_O_API-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Arquivos_e_I_O_API-1_tn.jpg",
+          "dataTitle": "Java arquivos | Treinaweb"
+        },
+        {
+          "id": 24,
+          "name": "Java com JDBC",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Banco_de_dados_e_JDBC-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Banco_de_dados_e_JDBC-1_tn.jpg",
+          "dataTitle": "Java com JDBC | Treinaweb"
+        },
+        {
+          "id": 25,
+          "name": "Java collections",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Collections_-_Parte_1-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Collections_-_Parte_1-1_tn.jpg",
+          "dataTitle": "Java collections | Treinaweb"
+        },
+        {
+          "id": 26,
+          "name": "Java collections",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Collections_-_Parte_2-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Collections_-_Parte_2-1_tn.jpg",
+          "dataTitle": "Java collections | Treinaweb"
+        },
+        {
+          "id": 27,
+          "name": "Java com springboot",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Criação_de_aplicacoes_web_com_Spring_Boot-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Criação_de_aplicacoes_web_com_Spring_Boot-1_tn.jpg",
+          "dataTitle": "Java com springboot | Treinaweb"
+        },
+        {
+          "id": 28,
+          "name": "Java com spring MVC",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Criacao_de_aplicacoes_web_com_Spring_MVC-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Criacao_de_aplicacoes_web_com_Spring_MVC-1_tn.jpg",
+          "dataTitle": "Java com spring MVC | Treinaweb"
+        },
+        {
+          "id": 29,
+          "name": "Java desenvolvimento de jogos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Desenvolvimento_de_jogos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Desenvolvimento_de_jogos-1_tn.jpg",
+          "dataTitle": "Java desenvolvimento de jogos | Treinaweb"
+        },
+        {
+          "id": 30,
+          "name": "Java estrutura de dados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Estrutura_de_dados_-_Parte_1-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Estrutura_de_dados_-_Parte_1-1_tn.jpg",
+          "dataTitle": "Java estrutura de dados | Treinaweb"
+        },
+        {
+          "id": 31,
+          "name": "Java estrutura de dados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Estrutura_de_dados_-_Parte_2-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Estrutura_de_dados_-_Parte_2-1_tn.jpg",
+          "dataTitle": "Java estrutura de dados | Treinaweb"
+        },
+        {
+          "id": 32,
+          "name": "JavaFx",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_de_JavaFx-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_de_JavaFx-1_tn.jpg",
+          "dataTitle": "JavaFx | Treinaweb"
+        },
+        {
+          "id": 33,
+          "name": "Java Jax WS e Jax RS",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_de_JAX-WS_e_JAX-RS-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_de_JAX-WS_e_JAX-RS-1_tn.jpg",
+          "dataTitle": "Java Jax WS e Jax RS | Treinaweb"
+        },
+        {
+          "id": 34,
+          "name": "Java Struts",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_de_Struts_2-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_de_Struts_2-1_tn.jpg",
+          "dataTitle": "Java Struts | Treinaweb"
+        },
+        {
+          "id": 35,
+          "name": "Java Fundamentos para web",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_para_Web-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos_para_Web-1_tn.jpg",
+          "dataTitle": "Java Fundamentos para web | Treinaweb"
+        },
+        {
+          "id": 36,
+          "name": "Java Fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Java Fundamentos | Treinaweb"
+        },
+        {
+          "id": 37,
+          "name": "Java JPA",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Introducao_a_JPA-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Introducao_a_JPA-1_tn.jpg",
+          "dataTitle": "Java JPA | Treinaweb"
+        },
+        {
+          "id": 38,
+          "name": "Java OO",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Orientacao_a_objetos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Orientacao_a_objetos-1_tn.jpg",
+          "dataTitle": "Java OO | Treinaweb"
+        },
+        {
+          "id": 39,
+          "name": "Java Stream",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Stream_API-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_-_Stream_API-1_tn.jpg",
+          "dataTitle": "Java Stream | Treinaweb"
+        },
+        {
+          "id": 40,
+          "name": "Java Avançado",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_Avancado-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_Avancado-1_tn.jpg",
+          "dataTitle": "Java Avançado | Treinaweb"
+        },
+        {
+          "id": 41,
+          "name": "Java básico",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_Basico-1_tn.jpg",
+          "dataTitle": "Java básico | Treinaweb"
+        },
+        {
+          "id": 42,
+          "name": "Java intermediário",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_Intermediario-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Java_Intermediario-1_tn.jpg",
+          "dataTitle": "Java intermediário | Treinaweb"
+        },
+        {
+          "id": 43,
+          "name": "GraphQL",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/GraphQL_-_Criando_APIs_modernas_com_Graphcool_e_Apollo-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/GraphQL_-_Criando_APIs_modernas_com_Graphcool_e_Apollo-1_tn.jpg",
+          "dataTitle": "GraphQL | Treinaweb"
+        },
+        {
+          "id": 44,
+          "name": "PHP Mvc",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_-_MVC-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_-_MVC-1_tn.jpg",
+          "dataTitle": "PHP Mvc | Treinaweb"
+        },
+        {
+          "id": 45,
+          "name": "PHP Web services",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_-_Web_Services-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_-_Web_Services-1_tn.jpg",
+          "dataTitle": "PHP Web services | Treinaweb"
+        },
+        {
+          "id": 46,
+          "name": "PHP básico",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_Basico-1_tn.jpg",
+          "dataTitle": "PHP básico | Treinaweb"
+        },
+        {
+          "id": 47,
+          "name": "PHP intermediário",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_Intermediario-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/PHP_Intermediario-1_tn.jpg",
+          "dataTitle": "PHP intermediário | Treinaweb"
+        },
+        {
+          "id": 48,
+          "name": "Python fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Python_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Python_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Python fundamentos | Treinaweb"
+        },
+        {
+          "id": 49,
+          "name": "R Analise de clusters",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/R_-_Analise_de_clusters-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/R_-_Analise_de_clusters-1_tn.jpg",
+          "dataTitle": "R Analise de clusters | Treinaweb"
+        },
+        {
+          "id": 50,
+          "name": "R fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/R_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/R_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "R fundamentos | Treinaweb"
+        },
+        {
+          "id": 51,
+          "name": "Ruby on rails testes",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_-_Testes_unitarios-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_-_Testes_unitarios-1_tn.jpg",
+          "dataTitle": "Ruby on rails testes | Treinaweb"
+        },
+        {
+          "id": 52,
+          "name": "Ruby on rails avançado",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_Avancado-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_Avancado-1_tn.jpg",
+          "dataTitle": "Ruby on rails avançado | Treinaweb"
+        },
+        {
+          "id": 53,
+          "name": "Ruby on rails básico",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_Basico-1_tn.jpg",
+          "dataTitle": "Ruby on rails básico | Treinaweb"
+        },
+        {
+          "id": 54,
+          "name": "Ruby on rails intermediário",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_Intermediario-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ruby_on_Rails_Intermediario-1_tn.jpg",
+          "dataTitle": "Ruby on rails intermediário | Treinaweb"
+        },
+        {
+          "id": 55,
+          "name": "Silex",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Silex_-_Framework_PHP-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Silex_-_Framework_PHP-1_tn.jpg",
+          "dataTitle": "Silex | Treinaweb"
+        },
+        {
+          "id": 56,
+          "name": "Slim",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Slim_-_Microframework_PHP-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Slim_-_Microframework_PHP-1_tn.jpg",
+          "dataTitle": "Slim | Treinaweb"
+        },
+        {
+          "id": 57,
+          "name": "Spring com JWT",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Autenticacao_via_JWT-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Autenticacao_via_JWT-1_tn.jpg",
+          "dataTitle": "Spring com JWT | Treinaweb"
+        },
+        {
+          "id": 58,
+          "name": "Spring api REST",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Desenvolvimento_de_APIs_REST-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Desenvolvimento_de_APIs_REST-1_tn.jpg",
+          "dataTitle": "Spring api REST | Treinaweb"
+        },
+        {
+          "id": 59,
+          "name": "Spring fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Spring fundamentos | Treinaweb"
+        },
+        {
+          "id": 60,
+          "name": "Spring com JPA",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Spring_Data_JPA-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Spring_Data_JPA-1_tn.jpg",
+          "dataTitle": "Spring com JPA | Treinaweb"
+        },
+        {
+          "id": 61,
+          "name": "Spring security",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Spring_Security-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Spring_Security-1_tn.jpg",
+          "dataTitle": "Spring security | Treinaweb"
+        },
+        {
+          "id": 62,
+          "name": "Spring tópicos avançados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Tópicos_Avancados-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Spring_Framework_-_Tópicos_Avancados-1_tn.jpg",
+          "dataTitle": "Spring tópicos avançados | Treinaweb"
+        },
+        {
+          "id": 63,
+          "name": "Twig template engine",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Twig_-_PHP_Template_Engine-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Twig_-_PHP_Template_Engine-1_tn.jpg",
+          "dataTitle": "Twig template engine | Treinaweb"
+        },
+        {
+          "id": 64,
+          "name": "Php e MySql",
+          "image": "https://public-variables.000webhostapp.com/certificates/presencial/php_mysql_primecursos.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/presencial/php_mysql_primecursos_tn.jpg",
+          "dataTitle": "Php e MySql | Prime Cursos"
         }
       ]
     },
     {
-      "category": "Frontend / Mobile",
-      "id": "frontendMobile",
+      "category": "Frontend",
+      "id": "frontend",
       "color": "alert-success",
       "certificates": [
         {
           "id": 1,
           "name": "Angular",
-          "image": "https://public-variables.000webhostapp.com/certificates/alura-angular.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/alura-angular-thumb.png",
-          "dataTitle": "Angular (Alura)"
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/angular.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/angular_tn.jpg",
+          "dataTitle": "Angular | Alura"
         },
         {
           "id": 2,
-          "name": "Angular",
-          "image": "https://public-variables.000webhostapp.com/certificates/angular_sr.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/angular_sr_thumb.png",
-          "dataTitle": "Angular (Treinaweb)"
+          "name": "Angular CLI",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_CLI-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_CLI-1_tn.jpg",
+          "dataTitle": "Angular CLI | Treinaweb"
         },
         {
           "id": 3,
-          "name": "Vuejs",
-          "image": "https://public-variables.000webhostapp.com/certificates/ionic.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/ionic_thumb.png",
-          "dataTitle": "Vuejs (Treinaweb)"
+          "name": "Angular Criação de interfaces web",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Criacao_de_interfaces_web-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Criacao_de_interfaces_web-1_tn.jpg",
+          "dataTitle": "Angular Criação de interfaces web | Treinaweb"
         },
         {
           "id": 4,
-          "name": "Flutter",
-          "image": "",
-          "thumb": "",
-          "dataTitle": "Flutter (Alura)"
+          "name": "Angular Formulários",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Formularios-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Formularios-1_tn.jpg",
+          "dataTitle": "Angular Formulários | Treinaweb"
         },
         {
           "id": 5,
+          "name": "Angular Introdução",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Introducao-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Introducao-1_tn.jpg",
+          "dataTitle": "Angular Introdução | Treinaweb"
+        },
+        {
+          "id": 6,
+          "name": "Angular tópicos avançados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Topicos_avancados-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular_-_Topicos_avancados-1_tn.jpg",
+          "dataTitle": "Angular tópicos avançados | Treinaweb"
+        },
+        {
+          "id": 7,
+          "name": "Angular Elementos customizados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular-Elementos_Customizados_Componentes_Diretivas_e_Pipes.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Angular-Elementos_Customizados_Componentes_Diretivas_e_Pipes_tn.jpg",
+          "dataTitle": "Angular Elementos customizados | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "Desenvolvedor Angular Jr",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Angular_Junior-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Angular_Junior-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Angular Jr | Treinaweb"
+        },
+        {
+          "id": 9,
+          "name": "Desenvolvedor Angular Sr",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Angular_Senior-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Angular_Senior-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Angular Sr | Treinaweb"
+        },
+        {
+          "id": 10,
+          "name": "Desenvolvedor Angular",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Angular-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Desenvolvedor_Angular-1_tn.jpg",
+          "dataTitle": "Desenvolvedor Angular | Treinaweb"
+        },
+        {
+          "id": 11,
+          "name": "HTML5 e CSS3",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/HTML5_e_CSS3_-_Desenvolvimento_web_Avancado-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/HTML5_e_CSS3_-_Desenvolvimento_web_Avancado-1_tn.jpg",
+          "dataTitle": "HTML5 e CSS3 | Treinaweb"
+        },
+        {
+          "id": 12,
+          "name": "HTML5 e CSS3",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/HTML5_e_CSS3_-_Desenvolvimento_web_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/HTML5_e_CSS3_-_Desenvolvimento_web_Basico-1_tn.jpg",
+          "dataTitle": "HTML5 e CSS3 | Treinaweb"
+        },
+        {
+          "id": 13,
+          "name": "PWA",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/PWA_-_Progressive_Web_Apps-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/PWA_-_Progressive_Web_Apps-1_tn.jpg",
+          "dataTitle": "PWA - Progressive Web App | Treinaweb"
+        },
+        {
+          "id": 14,
+          "name": "React introdução",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/React_-_Introducao-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/React_-_Introducao-1_tn.jpg",
+          "dataTitle": "React introdução | Treinaweb"
+        },
+        {
+          "id": 15,
+          "name": "Typescript primeiros passos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/TypeScript_-_Primeiros_Passos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/TypeScript_-_Primeiros_Passos-1_tn.jpg",
+          "dataTitle": "Typescript primeiros passos | Treinaweb"
+        },
+        {
+          "id": 16,
+          "name": "VueJS criação de interfaces",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Vue_js_-_Criacao_de_interfaces_web-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Vue_js_-_Criacao_de_interfaces_web-1.png",
+          "dataTitle": "VueJS criação de interfaces | Treinaweb"
+        },
+        {
+          "id": 17,
+          "name": "Bootstrap Componente Card",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Bootstrap_-_Conhecendo_componente_de_Card-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Bootstrap_-_Conhecendo_componente_de_Card-1_tn.jpg",
+          "dataTitle": "Bootstrap Componente Card | Treinaweb"
+        },
+        {
+          "id": 18,
+          "name": "Bootstrap básico",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Bootstrap_4_-_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Bootstrap_4_-_Basico-1_tn.jpg",
+          "dataTitle": "Bootstrap básico | Treinaweb"
+        },
+        {
+          "id": 19,
+          "name": "Bootstrap Fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Bootstrap_4_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Bootstrap_4_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Bootstrap Fundamentos | Treinaweb"
+        }
+      ]
+    },
+    {
+      "category": "Mobile",
+      "id": "mobile",
+      "color": "alert-info",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Android básico",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Basico-1_tn.jpg",
+          "dataTitle": "Android básico | Treinaweb"
+        },
+        {
+          "id": 2,
+          "name": "Android Consumindo API",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Consumindo_uma_API-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Consumindo_uma_API-1_tn.jpg",
+          "dataTitle": "Android Consumindo API | Treinaweb"
+        },
+        {
+          "id": 3,
+          "name": "Android Intermediário",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Intermediario-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Intermediario-1_tn.jpg",
+          "dataTitle": "Android Intermediário | Treinaweb"
+        },
+        {
+          "id": 4,
+          "name": "Android com Material Designer",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Utilizando_Material_Design_nas_aplicacoes-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Android_-_Utilizando_Material_Design_nas_aplicacoes-1_tn.jpg",
+          "dataTitle": "Android com Material Designer | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "Flutter com SQLite",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Armazenamento_com_SQLite-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Armazenamento_com_SQLite-1_tn.jpg",
+          "dataTitle": "Flutter com SQLite | Treinaweb"
+        },
+        {
+          "id": 9,
+          "name": "Flutter Fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Flutter Fundamentos | Treinaweb"
+        },
+        {
+          "id": 10,
+          "name": "Flutter com arquivos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Trabalhando_com_arquivos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Trabalhando_com_arquivos-1_tn.jpg",
+          "dataTitle": "Flutter com arquivos | Treinaweb"
+        },
+        {
+          "id": 11,
+          "name": "Flutter widgets",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Widgets-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_-_Widgets-1_tn.jpg",
+          "dataTitle": "Flutter widgets | Treinaweb"
+        },
+        {
+          "id": 12,
+          "name": "Flutter criando um cardapio",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_UI_-_Cardapio_de_Restaurantes-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Flutter_UI_-_Cardapio_de_Restaurantes-1_tn.jpg",
+          "dataTitle": "Flutter criando um cardapio | Treinaweb"
+        },
+        {
+          "id": 13,
           "name": "Ionic",
-          "image": "https://public-variables.000webhostapp.com/certificates/ionic.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/ionic_thumb.png",
-          "dataTitle": "Ionic (Treinaweb)"
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ionic_-_Criacao_de_aplicacoes_mobile-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ionic_-_Criacao_de_aplicacoes_mobile-1_tn.jpg",
+          "dataTitle": "Ionic | Treinaweb"
+        },
+        {
+          "id": 14,
+          "name": "Xamarin forms",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Xamarin_Forms_-_Primeiros_passos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Xamarin_Forms_-_Primeiros_passos-1_tn.jpg",
+          "dataTitle": "Xamarin forms | Treinaweb"
+        }
+      ]
+    },
+    {
+      "category": "Desenvolvedor",
+      "id": "desenvolvedor",
+      "color": "alert-info",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Clean code",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Clean_Code_e_SOLID_-_Escrevendo_código_limpo_e_escalavel-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Clean_Code_e_SOLID_-_Escrevendo_código_limpo_e_escalavel-1_tn.jpg",
+          "dataTitle": "Clean code | Treinaweb"
+        },
+        {
+          "id": 2,
+          "name": "Git fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Git_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Git_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Git fundamentos | Treinaweb"
+        },
+        {
+          "id": 3,
+          "name": "Git com github",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Git_e_GitHub_-_Controle_de_versao-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Git_e_GitHub_-_Controle_de_versao-1_tn.jpg",
+          "dataTitle": "Git com github | Treinaweb"
+        },
+        {
+          "id": 4,
+          "name": "Lógica de programação",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Logica_de_Programacao_Completo-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Logica_de_Programacao_Completo-1_tn.jpg",
+          "dataTitle": "Lógica de programação | Treinaweb"
+        },
+        {
+          "id": 5,
+          "name": "Lógica orientada a objetos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Logica_Orientada_a_Objetos_Completo-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Logica_Orientada_a_Objetos_Completo-1_tn.jpg",
+          "dataTitle": "Lógica orientada a objetos | Treinaweb"
+        },
+        {
+          "id": 6,
+          "name": "RegEx expressão regular",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/RegEx_-_Expressoes_Regulares-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/RegEx_-_Expressoes_Regulares-1_tn.jpg",
+          "dataTitle": "RegEx expressão regular | Treinaweb"
+        },
+        {
+          "id": 7,
+          "name": "UML Unified Modeling Language",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/UML_-_Unified_Modeling_Language-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/UML_-_Unified_Modeling_Language-1_tn.jpg",
+          "dataTitle": "UML Unified Modeling Language | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "XML",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/XML_Completo-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/XML_Completo-1_tn.jpg",
+          "dataTitle": "XML | Treinaweb"
+        }
+      ]
+    },
+    {
+      "category": "Banco de dados",
+      "id": "database",
+      "color": "alert-dark",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Analista de banco de dados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Analista_de_banco_de_dados-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Analista_de_banco_de_dados-1_tn.jpg",
+          "dataTitle": "Analista de banco de dados | Treinaweb"
+        },
+        {
+          "id": 2,
+          "name": "MongoDB",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/MongoDB_-_Desenvolvedor-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/MongoDB_-_Desenvolvedor-1_tn.jpg",
+          "dataTitle": "MongoDB | Treinaweb"
+        },
+        {
+          "id": 3,
+          "name": "MySQL DBA",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/MySQL_-_DBA-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/MySQL_-_DBA-1_tn.jpg",
+          "dataTitle": "MySQL DBA | Treinaweb"
+        },
+        {
+          "id": 4,
+          "name": "MySQL Desenvolvedor",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/MySQL_-_Desenvolvedor-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/MySQL_-_Desenvolvedor-1_tn.jpg",
+          "dataTitle": "MySQL Desenvolvedor | Treinaweb"
+        },
+        {
+          "id": 5,
+          "name": "Oracle DBA",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Oracle_-_DBA-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Oracle_-_DBA-1_tn.jpg",
+          "dataTitle": "Oracle DBA | Treinaweb"
+        },
+        {
+          "id": 6,
+          "name": "Oracle Desenvolvedor",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Oracle_-_Desenvolvedor-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Oracle_-_Desenvolvedor-1_tn.jpg",
+          "dataTitle": "Oracle Desenvolvedor | Treinaweb"
+        },
+        {
+          "id": 7,
+          "name": "PostgreSQL Desenvolvedor",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/PostgreSQL_-_Desenvolvedor-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/PostgreSQL_-_Desenvolvedor-1_tn.jpg",
+          "dataTitle": "PostgreSQL Desenvolvedor | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "Projeto de banco de dados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Projeto_de_Banco_de_dados_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Projeto_de_Banco_de_dados_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Projeto de banco de dados | Treinaweb"
+        },
+        {
+          "id": 9,
+          "name": "SQLServer Desenvolvedor",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/SQL_Server_-_Desenvolvedor-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/SQL_Server_-_Desenvolvedor-1_tn.jpg",
+          "dataTitle": "SQLServer Desenvolvedor | Treinaweb"
         }
       ]
     },
     {
       "category": "Cloud",
       "id": "cloud",
-      "color": "alert-info",
+      "color": "alert-primary",
       "certificates": [
         {
           "id": 1,
-          "name": "AWS - Architect soluction",
-          "image": "https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1_thumb.png",
-          "dataTitle": "AWS - Soluction Architect (Alura)"
+          "name": "AWS EC2",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/aws-ec2.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/aws-ec2_tn.jpg",
+          "dataTitle": "AWS EC2 | Alura"
         },
         {
           "id": 2,
-          "name": "AWS - Sqs and Sns",
-          "image": "https://public-variables.000webhostapp.com/certificates/udemy_aws_sqs_and_sns.jpg",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy_aws_sqs_and_sns_thumb.jpg",
-          "dataTitle": "AWS - Sqs & Sns (Udemy)"
-        }
-      ]
-    },
-    {
-      "category": "Database",
-      "id": "database",
-      "color": "alert-dark",
-      "certificates": [
-        {
-          "id": 1,
-          "name": "Analista banco de dados",
-          "image": "https://public-variables.000webhostapp.com/certificates/analista_db.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/analista_db_thumb.png",
-          "dataTitle": "Analista de banco de dados (Treinaweb)"
-        },
-        {
-          "id": 2,
-          "name": "SQL Developer",
-          "image": "https://public-variables.000webhostapp.com/certificates/sql_developer.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/sql_developer_thumb.png",
-          "dataTitle": "Sql Developer (Treinaweb)"
+          "name": "AWS Soluction Architect",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect_tn.jpg",
+          "dataTitle": "AWS Soluction Architect | Alura"
         },
         {
           "id": 3,
-          "name": "MongoDB",
-          "image": "https://public-variables.000webhostapp.com/certificates/mongo_developer.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/mongo_developer_thumb.png",
-          "dataTitle": "MongoDB Developer (Treinaweb)"
+          "name": "AWS Soluction Architect",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect_2.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect_2_tn.jpg",
+          "dataTitle": "AWS Soluction Architect | Alura"
         },
         {
           "id": 4,
-          "name": "Redis",
-          "image": "",
-          "thumb": "",
-          "dataTitle": "Formação Redis (Alura)"
+          "name": "AWS Soluction Architect",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect_3.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect_3_tn.jpg",
+          "dataTitle": "AWS Soluction Architect | Alura"
+        },
+        {
+          "id": 5,
+          "name": "AWS Soluction Architect",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect_4.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/aws-solution_architect_4_tn.jpg",
+          "dataTitle": "AWS Soluction Architect | Alura"
+        },
+        {
+          "id": 6,
+          "name": "Oracle Cloud",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/oci-basics1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/oci-basics1_tn.jpg",
+          "dataTitle": "Oracle Cloud | Alura"
+        },
+        {
+          "id": 7,
+          "name": "AWS EC2",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Amazon_Web_Services_(AWS)_-_EC2_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Amazon_Web_Services_(AWS)_-_EC2_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "AWS EC2 | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "AWS S3",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Amazon_Web_Services_(AWS)_-_S3_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Amazon_Web_Services_(AWS)_-_S3_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "AWS S3 | Treinaweb"
+        },
+        {
+          "id": 9,
+          "name": "Firebase com Android",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Firebase_com_Android_-_Modulo_Develop-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Firebase_com_Android_-_Modulo_Develop-1_tn.jpg",
+          "dataTitle": "Firebase com Android | Treinaweb"
+        },
+        {
+          "id": 10,
+          "name": "Google cloud",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Google_Cloud_-_Primeiros_Passos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Google_Cloud_-_Primeiros_Passos-1_tn.jpg",
+          "dataTitle": "Google cloud | Treinaweb"
         }
       ]
     },
     {
       "category": "Devops",
       "id": "devops",
-      "color": "alert-warning",
+      "color": "alert-dark",
       "certificates": [
         {
           "id": 1,
           "name": "Apache Kafka",
-          "image": "https://public-variables.000webhostapp.com/certificates/kafka.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/kafka_thumb.png",
-          "dataTitle": "Kafka (Alura)"
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/apache-kafka.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/apache-kafka_tn.jpg",
+          "dataTitle": "Apache Kafka | Alura"
         },
         {
           "id": 2,
-          "name": "Docker",
-          "image": "https://public-variables.000webhostapp.com/certificates/docker_devops.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/docker_devops_thumb.png",
-          "dataTitle": "Docker (Treinaweb)"
+          "name": "Linux Essentials",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials1_tn.jpg",
+          "dataTitle": "Linux Essentials | Alura"
         },
         {
           "id": 3,
-          "name": "Linux",
-          "image": "https://public-variables.000webhostapp.com/certificates/linux-essentials-part-one.png",
-          "thumb": "https://public-variables.000webhostapp.com/certificates/linux-essentials-part-one-thumb.png",
-          "dataTitle": "Linux (Alura)"
+          "name": "Linux Essentials",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials2.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials2_tn.jpg",
+          "dataTitle": "Linux Essentials | Alura"
+        },
+        {
+          "id": 4,
+          "name": "Linux Essentials",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials3.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials3_tn.jpg",
+          "dataTitle": "Linux Essentials | Alura"
+        },
+        {
+          "id": 5,
+          "name": "Linux Essentials",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials4.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials4_tn.jpg",
+          "dataTitle": "Linux Essentials | Alura"
+        },
+        {
+          "id": 6,
+          "name": "Linux Essentials",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials5.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/linux-essentials5_tn.jpg",
+          "dataTitle": "Linux Essentials | Alura"
+        },
+        {
+          "id": 7,
+          "name": "Redis",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/redis1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/redis1_tn.jpg",
+          "dataTitle": "Redis | Alura"
+        },
+        {
+          "id": 8,
+          "name": "Redis",
+          "image": "https://public-variables.000webhostapp.com/certificates/alura/redis2.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/alura/redis2_tn.jpg",
+          "dataTitle": "Redis | Alura"
+        },
+        {
+          "id": 9,
+          "name": "Gitlab CI",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy/gitlab-ci.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy/gitlab-ci_tn.jpg",
+          "dataTitle": "Gitlab CI | Udemy"
+        },
+        {
+          "id": 10,
+          "name": "Analista DevOps",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Analista_DevOps-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Analista_DevOps-1_tn.jpg",
+          "dataTitle": "Analista DevOps | Treinaweb"
+        },
+        {
+          "id": 11,
+          "name": "Docker Fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Docker_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Docker_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Docker Fundamentos | Treinaweb"
+        },
+        {
+          "id": 12,
+          "name": "Docker Gerenciamento de Imagens",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Docker_-_Gerenciamento_de_Imagens-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Docker_-_Gerenciamento_de_Imagens-1_tn.jpg",
+          "dataTitle": "Docker Gerenciamento de Imagens | Treinaweb"
+        },
+        {
+          "id": 13,
+          "name": "Docker Primeiros passos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Docker_-_Primeiros_Passos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Docker_-_Primeiros_Passos-1_tn.jpg",
+          "dataTitle": "Docker Primeiros passos | Treinaweb"
+        },
+        {
+          "id": 14,
+          "name": "Nginx",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Nginx_-_Criacao_de_sites-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Nginx_-_Criacao_de_sites-1_tn.jpg",
+          "dataTitle": "Nginx | Treinaweb"
+        },
+        {
+          "id": 15,
+          "name": "Nginx fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Nginx_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Nginx_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Nginx fundamentos | Treinaweb"
+        },
+        {
+          "id": 16,
+          "name": "Shell script básico",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Shell_Script_Basico-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Shell_Script_Basico-1_tn.jpg",
+          "dataTitle": "Shell script básico | Treinaweb"
+        },
+        {
+          "id": 17,
+          "name": "Shell script intermediário",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Shell_Script_Intermediario-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Shell_Script_Intermediario-1_tn.jpg",
+          "dataTitle": "Shell script intermediário | Treinaweb"
+        },
+        {
+          "id": 18,
+          "name": "Ubuntu primeiros passos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ubuntu_Linux_-_Primeiros_Passos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Ubuntu_Linux_-_Primeiros_Passos-1_tn.jpg",
+          "dataTitle": "Ubuntu primeiros passos | Treinaweb"
+        },
+        {
+          "id": 19,
+          "name": "Windows fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Windows_-_Fundamentos_para_desenvolvedores-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Windows_-_Fundamentos_para_desenvolvedores-1_tn.jpg",
+          "dataTitle": "Windows fundamentos | Treinaweb"
+        },
+        {
+          "id": 20,
+          "name": "Administração de sistemas linux",
+          "image": "https://public-variables.000webhostapp.com/certificates/elaborata/administracao_linux.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/elaborata/administracao_linux_tn.jpg",
+          "dataTitle": "Administração de sistemas linux | Elaborata"
+        },
+        {
+          "id": 21,
+          "name": "Administração de redes linux",
+          "image": "https://public-variables.000webhostapp.com/certificates/elaborata/administracao_redes_linux.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/elaborata/administracao_redes_linux_tn.jpg",
+          "dataTitle": "Administração de redes linux | Elaborata"
+        },
+        {
+          "id": 22,
+          "name": "Administração de redes linux",
+          "image": "https://public-variables.000webhostapp.com/certificates/elaborata/administracao_redes_linux2.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/elaborata/administracao_redes_linux2_tn.jpg",
+          "dataTitle": "Administração de redes linux | Elaborata"
+        },
+        {
+          "id": 23,
+          "name": "Alta disponibilidade",
+          "image": "https://public-variables.000webhostapp.com/certificates/elaborata/alta_disponibilidade.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/elaborata/alta_disponibilidade_tn.jpg",
+          "dataTitle": "Alta disponibilidade | Elaborata"
+        },
+        {
+          "id": 24,
+          "name": "Fundamentos de segurança linux",
+          "image": "https://public-variables.000webhostapp.com/certificates/elaborata/fundamentos_administracao_linux.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/elaborata/fundamentos_administracao_linux_tn.jpg",
+          "dataTitle": "Fundamentos de segurança linux | Elaborata"
+        },
+        {
+          "id": 25,
+          "name": "Segurança linux",
+          "image": "https://public-variables.000webhostapp.com/certificates/elaborata/seguranca_linux.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/elaborata/seguranca_linux_tn.jpg",
+          "dataTitle": "Segurança linux | Elaborata"
+        },
+        {
+          "id": 26,
+          "name": "Virtualização linux",
+          "image": "https://public-variables.000webhostapp.com/certificates/elaborata/virtualizacao.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/elaborata/virtualizacao_tn.jpg",
+          "dataTitle": "Virtualização linux | Elaborata"
+        }
+      ]
+    },
+    {
+      "category": "Agile",
+      "id": "agile",
+      "color": "alert-primary",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Gestão ágil de projetos",
+          "image": "https://public-variables.000webhostapp.com/certificates/ampli/gestao-agil_projetos.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ampli/gestao-agil_projetos_tn.jpg",
+          "dataTitle": "Gestão ágil de projetos | Ampli"
+        },
+        {
+          "id": 2,
+          "name": "Metodologias Ageis Scrum",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy/metodologias-ageis-scrum.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy/metodologias-ageis-scrum_tn.jpg",
+          "dataTitle": "Metodologias Ageis Scrum | Udemy"
+        },
+        {
+          "id": 3,
+          "name": "Gerenciamento de projetos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Gerenciamento_de_projetos_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Gerenciamento_de_projetos_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Gerenciamento de projetos | Treinaweb"
+        },
+        {
+          "id": 4,
+          "name": "Kanban fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Kanban_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Kanban_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Kanban fundamentos | Treinaweb"
+        },
+        {
+          "id": 5,
+          "name": "Kanban com scrum",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Kanban_-_Usando_com_Scrum-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Kanban_-_Usando_com_Scrum-1_tn.jpg",
+          "dataTitle": "Kanban com scrum | Treinaweb"
+        },
+        {
+          "id": 6,
+          "name": "Lean Software Development",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/LSD_-_Lean_Software_Development-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/LSD_-_Lean_Software_Development-1_tn.jpg",
+          "dataTitle": "Lean Software Development | Treinaweb"
+        },
+        {
+          "id": 7,
+          "name": "Scrum planejamento agil",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Scrum_-_Planejamento_e_Desenvolvimento_ageis-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Scrum_-_Planejamento_e_Desenvolvimento_ageis-1_tn.jpg",
+          "dataTitle": "Scrum planejamento agil | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "XP Extreme programming",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/XP_-_Extreme_Programming-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/XP_-_Extreme_Programming-1_tn.jpg",
+          "dataTitle": "XP Extreme programming | Treinaweb"
+        }
+      ]
+    },
+    {
+      "category": "Tecnologias",
+      "id": "tecnologias",
+      "color": "alert-success",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Novas tecnologias em comunicação",
+          "image": "https://public-variables.000webhostapp.com/certificates/ampli/novas-tecnologias-em-comunicacao.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ampli/novas-tecnologias-em-comunicacao_tn.jpg",
+          "dataTitle": "Novas tecnologias em comunicação | Ampli"
+        },
+        {
+          "id": 2,
+          "name": "Tecnologia na educação",
+          "image": "https://public-variables.000webhostapp.com/certificates/ampli/tecnologias-educacao.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ampli/tecnologias-educacao_tn.jpg",
+          "dataTitle": "Tecnologia na educação | Ampli"
+        },
+        {
+          "id": 3,
+          "name": "API's Rest fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/APIs_Rest_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/APIs_Rest_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "API's Rest fundamentos | Treinaweb"
+        },
+        {
+          "id": 4,
+          "name": "Aplicações e arquiteturas",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Aplicacoes_e_Arquiteturas_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Aplicacoes_e_Arquiteturas_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Aplicações e arquiteturas | Treinaweb"
+        },
+        {
+          "id": 5,
+          "name": "Design Thinking",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Design__Thinking-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Design__Thinking-1_tn.jpg",
+          "dataTitle": "Design Thinking | Treinaweb"
+        },
+        {
+          "id": 6,
+          "name": "DNS Fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/DNS_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/DNS_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "DNS Fundamentos | Treinaweb"
+        },
+        {
+          "id": 7,
+          "name": "HTTP Fundamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/HTTP_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/HTTP_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "HTTP Fundamentos | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "Prototipação",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Prototipação_Rapida-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Prototipação_Rapida-1_tn.jpg",
+          "dataTitle": "Prototipação | Treinaweb"
+        },
+        {
+          "id": 9,
+          "name": "Selenium testes automatizados",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Selenium_-_Testes_Automatizados_com_TestNG-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Selenium_-_Testes_Automatizados_com_TestNG-1_tn.jpg",
+          "dataTitle": "Selenium testes automatizados | Treinaweb"
+        },
+        {
+          "id": 10,
+          "name": "Montagem de computadores",
+          "image": "https://public-variables.000webhostapp.com/certificates/presencial/montagem_pc_mastercomp.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/presencial/montagem_pc_mastercomp_tn.jpg",
+          "dataTitle": "Montagem de computadores | Mastercomp"
+        }
+      ]
+    },
+    {
+      "category": "Eventos",
+      "id": "eventos",
+      "color": "alert-info",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "CapiConf - 2017",
+          "image": "https://public-variables.000webhostapp.com/certificates/eventos/capiconf-2017.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/eventos/capiconf-2017_tn.jpg",
+          "dataTitle": "CapiConf - 2017 | Curitiba"
+        },
+        {
+          "id": 2,
+          "name": "DevSummit IV",
+          "image": "https://public-variables.000webhostapp.com/certificates/eventos/certificado-dev-summitiv.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/eventos/certificado-dev-summitiv_tn.jpg",
+          "dataTitle": "DevSummit IV | IGTI"
+        },
+        {
+          "id": 3,
+          "name": "Tecnologias disruptivas",
+          "image": "https://public-variables.000webhostapp.com/certificates/eventos/igti-disruptives-tecnologies-silicon-valley.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/eventos/igti-disruptives-tecnologies-silicon-valley_tn.jpg",
+          "dataTitle": "Tecnologias disruptivas | IGTI/Vale do silicio"
+        },
+        {
+          "id": 4,
+          "name": "Semana Academica",
+          "image": "https://public-variables.000webhostapp.com/certificates/eventos/uniopet-prime.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/eventos/uniopet-prime_tn.jpg",
+          "dataTitle": "Semana Academica | UniOpet"
+        }
+      ]
+    },
+    {
+      "category": "Negócios",
+      "id": "negocios",
+      "color": "alert-warning",
+      "certificates": [
+        {
+          "id": 1,
+          "name": "Economia Global Investimentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/ampli/economia-global-investimentos.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ampli/economia-global-investimentos_tn.jpg",
+          "dataTitle": "Economia Global Investimentos | Ampli"
+        },
+        {
+          "id": 2,
+          "name": "Investimentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/ampli/investimento.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ampli/investimento_tn.jpg",
+          "dataTitle": "Investimentos | Ampli"
+        },
+        {
+          "id": 3,
+          "name": "Juros e Parcelamentos",
+          "image": "https://public-variables.000webhostapp.com/certificates/ampli/juros_parcelamentos.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ampli/juros_parcelamentos_tn.jpg",
+          "dataTitle": "Juros e parcelamentos | Ampli"
+        },
+        {
+          "id": 4,
+          "name": "Planejamento financeiro",
+          "image": "https://public-variables.000webhostapp.com/certificates/ampli/planejamento-financeiro-orcamento-mao-obra-custos-despesas.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/ampli/planejamento-financeiro-orcamento-mao-obra-custos-despesas_tn.jpg",
+          "dataTitle": "Planejamento financeiro | Ampli"
+        },
+        {
+          "id": 5,
+          "name": "Time Management",
+          "image": "https://public-variables.000webhostapp.com/certificates/udemy/time_management.jpg",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/udemy/time_management_tn.jpg",
+          "dataTitle": "Time Management | Udemy"
+        },
+        {
+          "id": 6,
+          "name": "Facebook Marketing",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Facebook_Marketing_-_Como_colocar_sua_empresa_no_facebook-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Facebook_Marketing_-_Como_colocar_sua_empresa_no_facebook-1_tn.jpg",
+          "dataTitle": "Facebook Marketing | Treinaweb"
+        },
+        {
+          "id": 7,
+          "name": "LGPD",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/LGPD__-_Conceitos_e_recomendacoes_para_profissionais_de_tecnologia-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/LGPD__-_Conceitos_e_recomendacoes_para_profissionais_de_tecnologia-1_tn.jpg",
+          "dataTitle": "LGPD | Treinaweb"
+        },
+        {
+          "id": 8,
+          "name": "Marketing Digital",
+          "image": "https://public-variables.000webhostapp.com/certificates/treinaweb/Marketing_Digital_-_Fundamentos-1.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/treinaweb/Marketing_Digital_-_Fundamentos-1_tn.jpg",
+          "dataTitle": "Marketing Digital | Treinaweb"
+        },
+        {
+          "id": 9,
+          "name": "Fotografia de gestante",
+          "image": "https://public-variables.000webhostapp.com/certificates/presencial/fotografia_gestante_senac.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/presencial/fotografia_gestante_senac_tn.jpg",
+          "dataTitle": "Fotografia de gestante | Senac"
+        },
+        {
+          "id": 10,
+          "name": "Teologia sistematica",
+          "image": "https://public-variables.000webhostapp.com/certificates/presencial/teologia_sistematica_cenedi.png",
+          "thumb": "https://public-variables.000webhostapp.com/certificates/presencial/teologia_sistematica_cenedi_tn.jpg",
+          "dataTitle": "Teologia sistematica | Cenedi"
         }
       ]
     }
@@ -314,24 +1469,33 @@
   ],
   "diplomas": [
     {
-      "name": "Arquiteto de software | IGTI",
-      "image": "https://public-variables.000webhostapp.com/certificates/arquiteto-software.png",
-      "thumb": "https://public-variables.000webhostapp.com/certificates/arquiteto-software-thumb.png"
+      "id": "diploma-1",
+      "name": "Analista de sistemas",
+      "image": "https://public-variables.000webhostapp.com/diplomas/opet.png",
+      "thumb": "https://public-variables.000webhostapp.com/diplomas/opet_tn.jpg",
+      "dataTitle": "Analista de sistemas | UniOpet"
     },
     {
-      "name": "Arquitetura de software Java | UNICIV",
-      "image": "https://public-variables.000webhostapp.com/certificates/uniciv-arquitetura-java.png",
-      "thumb": "https://public-variables.000webhostapp.com/certificates/uniciv-arquitetura-java-thumb.png"
+      "id": "diploma-2",
+      "name": "Business Intelligence",
+      "image": "https://public-variables.000webhostapp.com/diplomas/positivo.png",
+      "thumb": "https://public-variables.000webhostapp.com/diplomas/positivo_tn.jpg",
+      "dataTitle": "Business Intelligence | Up Positivo"
     },
     {
-      "name": "Disruptives Technologies | IGTI",
-      "image": "https://public-variables.000webhostapp.com/certificates/igti-disruptives-tecnologies-silicon-valley.png",
-      "thumb": "https://public-variables.000webhostapp.com/certificates/igti-disruptives-tecnologies-silicon-valley-thumb.png"
+      "id": "diploma-3",
+      "name": "Arquiteto de sistemas Java",
+      "image": "https://public-variables.000webhostapp.com/diplomas/uniciv.png",
+      "thumb": "https://public-variables.000webhostapp.com/diplomas/uniciv_tn.jpg",
+      "dataTitle": "Arquiteto de sistemas Java | Uniciv"
     },
     {
-      "name": "Dev Summit IV | IGTI",
-      "image": "https://public-variables.000webhostapp.com/certificates/certificado-dev-summitiv.png",
-      "thumb": "https://public-variables.000webhostapp.com/certificates/certificado-dev-summitiv-thumb.png"
+      "id": "diploma-4",
+      "name": "Honra ao mérito",
+      "description": "Certificado de honra ao mérito",
+      "image": "https://public-variables.000webhostapp.com/diplomas/aomerito_exercito.png",
+      "thumb": "https://public-variables.000webhostapp.com/diplomas/aomerito_exercito_tn.jpg",
+      "dataTitle": "Honra ao mérito | Exercito Brasileiro"
     }
   ],
   "jobs": [

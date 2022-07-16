@@ -42,13 +42,7 @@
     </style>
 </head>
 <body id="app">
-<!--<div class="jumbotron jumbotron-fluid shadow-sm rounded">-->
-<!--    <div class="container">-->
-<!--        <h1 class="display-4"><i class="fa-solid fa-code"></i> {{data.info.title}}</h1>-->
-<!--        <p class="lead" style="margin-left: 4em">{{data.info.subTitle}}</p>-->
-<!--    </div>-->
-<!--</div>-->
-<nav class="navbar navbar-dark text-white" style="background-color: darkslateblue!important;">
+<nav v-if="!loading" class="navbar navbar-dark text-white" style="background-color: darkslateblue!important;">
     <div class="container-fluid">
         <a class="navbar-brand app-title-nav" href="#">
             <i class="fa-solid fa-code"></i>
@@ -56,7 +50,7 @@
         </a>
     </div>
 </nav>
-<div class="container mt-3">
+<div v-if="!loading" class="container mt-3">
     <div class="row">
         <div class="col-sm-12 col-md-6">
             <div class="card mb-3 shadow-sm">
@@ -172,6 +166,26 @@
         <div class="col-12">
             <div class="card shadow-sm">
                 <div class="card-body">
+                    <h5 class="card-title">Diplomas</h5>
+                    <figure class="figure" v-for="diploma of data.diplomas" style="margin-right: 1em">
+                        <a v-bind:href="diploma.image" data-lightbox="diploma-set'" v-bind:data-title="diploma.dataTitle">
+                            <img
+                                    v-bind:id="diploma.id"
+                                    v-on:mouseover="animateBadge(diploma.id, 'animate__pulse')"
+                                    v-on:mouseleave="removeAnimationBadge(diploma.id, 'animate__pulse')"
+                                    v-bind:src="diploma.thumb" style="min-width: 250px; max-width: 250px; min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                        </a>
+                        <figcaption class="figure-caption">{{diploma.dataTitle}}</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
                     <h5 class="card-title">Certificações / Badges</h5>
                     <figure class="figure" v-for="badge of data.certifications">
                         <img  v-bind:id="badge.id" v-on:mouseover="animateBadge(badge.id, 'animate__tada')" v-on:mouseleave="removeAnimationBadge(badge.id, 'animate__tada')"
@@ -222,7 +236,7 @@
             <div class="card mb-3 shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">{{course.category}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Certificados conquistados</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">Total: {{course.certificates.length}}</h6>
                     <div v-bind:id="course.id" class="carousel slide" data-bs-ride="true">
                         <div class="carousel-inner">
                             <div class="carousel-item" v-bind:class="certificate.id == 1 ? 'active' : ''" v-for="certificate of course.certificates" data-bs-interval="3000">
@@ -253,7 +267,7 @@
     </div>
 </div>
 
-<div class="container mb-3">
+<div v-if="!loading" class="container mb-3">
     <div class="row">
         <div class="col-sm-12 col-md-6">
             <ul class="list-group">
@@ -274,7 +288,15 @@
         <div class="col-sm-12 col-md-6"></div>
     </div>
 </div>
-<a href="https://public-variables.000webhostapp.com/certificates/aws_solution_arc_ass_1.png" data-lightbox="image-1" data-title="My caption">Image #1</a>
+
+<div v-if="loading" class="container mt-lg-5">
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <p class="text-center animate__animated animate__jello animate__infinite">Carregando</p>
+</div>
 
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
 <script src="./assets/js/vue.global.js"></script>
@@ -339,7 +361,8 @@
                                     id: 0,
                                     name: "",
                                     image: "",
-                                    thumb: ""
+                                    thumb: "",
+                                    dataTitle: ""
                                 }
                             ]
                         }
@@ -351,6 +374,15 @@
                             url: "",
                             badge: ""
                         }
+                    ],
+                    diplomas: [
+                        {
+                            id: 0,
+                            name: "",
+                            image: "",
+                            thumb: "",
+                            dataTitle: ""
+                        }
                     ]
                 },
             };
@@ -358,8 +390,8 @@
         mounted: function () {
             this.loading = true;
             axios
-                // .get('https://public-variables.000webhostapp.com/cv_resume/index.php')
-                .get('./data.json')
+                .get('https://public-variables.000webhostapp.com/cv_resume/index.php')
+                // .get('./data.json')
                 .then(response => (this.data = response.data)).finally(() => this.loading = false)
         },
         methods: {
@@ -370,6 +402,10 @@
             removeAnimationBadge(id, animation){
                 const element = document.getElementById(id);
                 element.classList.remove('animate__animated', animation);
+            },
+            getRandomIdFrom(lista){
+                const randomElement = lista[Math.floor(Math.random() * lista.length)];
+                return lista[randomElement.id];
             }
         }
     };
