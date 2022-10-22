@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Mr. Tiago</title>
+    <title>Sr. Tiago Iwamoto</title>
     <link rel="shortcut icon" href="favicon.ico"/>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/animate.min.css" rel="stylesheet" />
@@ -50,228 +50,240 @@
     <div class="container-fluid">
         <a class="navbar-brand app-title-nav" href="#">
             <i class="fa-solid fa-code"></i>
-               {{data.aboutme.title}}
+            {{data.aboutme.title}}
         </a>
     </div>
 </nav>
+
 <div v-if="!loading" class="container mt-3">
-    <div class="row">
+
+    <div class="row mx-1 shadow p-3 mb-3 bg-body rounded">
         <div class="col-sm-12 col-md-6">
-            <div class="card mb-3 shadow-sm">
-                <div class="row g-0">
-                    <div class="col-md-3">
-                        <img src="./assets/imgs/1621460436451.jpg" width="140" class="img-fluid m-all-1 app-img-border" alt="...">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="card-body">
-                            <h5 class="card-title">Sobre mim</h5>
-                            <p class="card-text" v-html="data.aboutme.description"></p>
-                            <p class="card-text"><small class="text-muted">{{formatarData(data.aboutme.updated_at)}}</small></p>
-                        </div>
-                    </div>
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <img src="./assets/imgs/1621460436451.jpg" width="140" class="img-fluid m-all-1 app-img-border" alt="...">
+                </div>
+                <div class="col-md-9">
+                    <h5 style="padding-left: 15px">Sobre mim</h5>
+                    <p style="padding-left: 15px" v-html="data.aboutme.description"></p>
+                    <p style="padding-left: 15px"><small class="text-muted">{{formatarData(data.aboutme.updatedAt)}}</small></p>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-6">
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Curriculum</h5>
-                    <div class="card" v-for="curriculum of data.curriculums">
-                        <div class="card-header">
-                            {{curriculum.language}}
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>{{curriculum.description}}</p>
-                                <footer class="blockquote-footer">Atualizado em <cite title="Source Title">{{formatarData(curriculum.updated_at)}}</cite></footer>
-                            </blockquote>
-                        </div>
-                        <div class="text-end">
-                            <a href="{{curriculum.url}}" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
-                            <a href="{{curriculum.url}}" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Ler Online</a>
-                        </div>
-                    </div>
+            <h5>Curriculum</h5>
+            <div class="alert alert-secondary" role="alert" v-for="curriculum of data.curriculuns">
+                <h4>{{curriculum.language}}</h4>
+                <i>{{curriculum.description}}</i>
+                <blockquote class="blockquote mb-2 text-end">
+                    <footer class="blockquote-footer">Atualizado em <cite title="Source Title">{{formatarData(curriculum.createdAt)}}</cite></footer>
+                </blockquote>
+                <div class="text-end">
+                    <a v-bind:href="curriculum.url" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em" target="_blank"><i class="fa-solid fa-book-open"></i> Ler Online</a>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mx-1 shadow p-3 mb-3 bg-body rounded">
         <div class="col-sm-12 col-md-6">
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Histórico profissional</h5>
-                    <div class="card mb-2" v-for="job of data.jobs">
-                        <div class="card-header">
-                            {{job.name}}
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>{{job.job}}</p>
-                                <footer class="blockquote-footer">{{formatarData(job.data_inicio)}} ~ <cite title="Source Title">{{job.data_fim === null ? 'Atual' : formatarData(job.data_fim)}}</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-6">
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Histórico escolar</h5>
-                    <div class="card mb-2" v-for="education of data.educations">
-                        <div class="card-header">
-                            {{education.courseName}}
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>{{education.description}}</p>
-                                <p>{{education.institution}}</p>
-                                <footer class="blockquote-footer"><cite title="Source Title">{{formatarData(education.start_date)}} ~ {{education.end_date === null ? 'Atual' : formatarData(education.end_date)}}</cite></footer>
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <h5>Histórico profissional</h5>
 
-    <div class="row mt-3">
-        <div class="col-12">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Diplomas</h5>
-                    <figure class="figure" v-for="diploma of data.degrees" style="margin-right: 1em">
-                        <a v-bind:href="server+'storage/'+diploma.image" data-lightbox="diploma-set'" v-bind:data-title="diploma.data_title">
+            <div class="alert alert-secondary mb-2" role="alert" v-for="job of data.jobs">
+                <h5>{{job.name}}</h5>
+                <p><i>{{job.funcao}}</i></p>
+                <blockquote class="blockquote mb-0">
+                    <footer class="blockquote-footer text-end">{{formatarData(job.startDate)}} ~ <cite title="Source Title">{{job.endDate === null ? 'Atual' : formatarData(job.endDate)}}</cite></footer>
+                </blockquote>
+            </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <h5>Histórico escolar</h5>
+            <div class="alert alert-secondary mb-2" role="alert" v-for="education of data.educations">
+                <h5>{{education.name}}</h5>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <a v-bind:href="server+'files/education/'+education.certificate" data-lightbox="diploma-set'" v-bind:data-title="education.name">
                             <img
-                                    v-bind:id="'diploma'+diploma.id"
-                                    v-on:mouseover="animateBadge('diploma'+diploma.id, 'animate__pulse')"
-                                    v-on:mouseleave="removeAnimationBadge('diploma'+diploma.id, 'animate__pulse')"
-                                    v-bind:src="server+'storage/'+diploma.thumb" style="min-width: 250px; max-width: 250px; min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                                    v-bind:id="education.certificate"
+                                    v-on:mouseover="animateBadge(education.certificate, 'animate__pulse')"
+                                    v-on:mouseleave="removeAnimationBadge(education.certificate, 'animate__pulse')"
+                                    v-bind:src="server+'files/education/'+education.certificateThumb" style="max-height: 100px" alt="..." />
                         </a>
-                        <figcaption class="figure-caption">{{diploma.data_title}}</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-3">
-        <div class="col-12">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Certificações / Badges</h5>
-                    <figure class="figure mx-3" v-for="certification of data.certifications">
-                        <img  v-bind:id="'certification'+certification.id" v-on:mouseover="animateBadge('certification'+certification.id, 'animate__tada')" v-on:mouseleave="removeAnimationBadge('certification'+certification.id, 'animate__tada')"
-                              v-bind:src="server+'storage/'+certification.image" class="rounded" style="min-width: 150px; max-width: 150px; margin-right: 1em;"  alt="..." />
-                        <figcaption class="figure-caption">{{certification.name}}</figcaption>
-                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="certification.url"><span class="badge text-bg-primary">Validar online</span></a></figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-3">
-        <div class="col-sm-12 col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-body spec-card">
-                    <h5 class="card-title">Habilidades</h5>
-                    <div class="card mb-3" v-bind:data-label="specialist.category" v-bind:class="specialist.color" v-for="specialist of data.specialists">
-                        <div class="card-body" style="margin-right: 5em">
-                            <span class="badge" style="margin-right: 1em" v-bind:class="specialist.color_chip" v-for="hability of splitHabilities(specialist.habilities)">{{hability}}</span>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-12 col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">Projetos</h5>
-                    <div class="card mb-3" v-for="work of data.works">
-                        <div class="card-body">
-                            <h5 class="card-title">{{work.name}}</h5>
-                            <p class="card-text">{{work.description}}</p>
-                        </div>
-                        <div class="mt-1 mb-1 text-end">
-                            <a v-bind:href="work.url" class="btn btn-outline-primary" style="margin-right: 1em">Acessar</a>
-                            <a v-bind:href="work.source" class="btn btn-outline-primary">Código fonte</a>
-                        </div>
+                    <div class="col-sm-12 col-md-8">
+                        <p class="mb-1"><i>{{education.description}}</i></p>
+                        <p class="mb-1">{{education.institution}}</p>
+                        <blockquote class="blockquote mb-0 text-end">
+                            <footer class="blockquote-footer"><cite title="Source Title">{{formatarData(education.startDate)}} ~ {{education.endDate === null ? 'Atual' : formatarData(education.endDate)}}</cite></footer>
+                        </blockquote>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row mt-3">
-        <h5 class="card-title">Certificações</h5>
+    <div class="row mx-1 shadow p-3 mb-3 bg-body rounded">
+        <h5>Certificações / Badges</h5>
+        <div class="row">
+            <div class="col-auto" v-for="certification of data.certifications">
+                <figure class="figure">
+                    <a v-bind:href="server+'files/certificates/'+certification.certificate" data-lightbox="certification-set" data-title="Certificação">
+                        <img  v-bind:id="certification.certificate" v-on:mouseover="animateBadge(certification.certificate, 'animate__tada')" v-on:mouseleave="removeAnimationBadge(certification.certificate, 'animate__tada')"
+                              v-bind:src="server+'files/certificates/'+certification.certificateThumb" class="rounded" style="min-width: 150px; max-width: 150px; margin-right: 1em;"  alt="..." />
+                    </a>
+                    <figcaption class="figure-caption">{{certification.name}}</figcaption>
+                    <figcaption class="figure-caption"><a target="_blank" v-bind:href="certification.url"><span class="badge text-bg-primary">Validar online</span></a></figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-1 shadow p-3 mb-3 bg-body rounded">
+        <div class="col-sm-12 col-md-6">
+            <h5>Habilidades</h5>
+            <div class="card mb-3" v-bind:data-label="specialist.category" v-bind:class="specialist.color" v-for="specialist of data.specialists">
+                <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                    {{specialist.category}}
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+                <div class="card-body" style="margin-right: 5em">
+                    <span class="badge" style="margin-right: 1em" v-bind:class="specialist.colorChip" v-for="hability of splitHabilities(specialist.habilities)">{{hability}}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <h5>Projetos</h5>
+            <div class="card mb-3" v-for="work of data.works">
+                <div class="card-body">
+                    <h5 class="card-title">{{work.name}}</h5>
+                    <p class="card-text">{{work.description}}</p>
+                </div>
+                <div class="mt-1 mb-1 text-end">
+                    <a v-bind:href="work.url" class="btn btn-outline-primary" style="margin-right: 1em">Acessar</a>
+                    <a v-bind:href="work.source" class="btn btn-outline-primary">Código fonte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-1 shadow p-3 mb-3 bg-body rounded">
+        <h5>Últimos cursos</h5>
+
+        <div id="carouselExampleCaptions" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item " style="text-align: center" v-bind:class="latestedCourses.id == data.latestCourseCertifications[0].id ? 'active' : ''"
+                     v-for="latestedCourses of data.latestCourseCertifications">
+                    <img v-bind:src="server+'files/courses/'+latestedCourses.course_id+'/'+latestedCourses.certificate"
+                         class="d-block w-50 mx-auto" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row mx-1 shadow p-3 mb-3 bg-body rounded">
+        <h5>Cursos</h5>
         <div class="col-sm-12 col-md-4 mt-2" v-for="course of data.courses">
-            <div class="card mb-3 shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">{{course.category}}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Total: {{course.certificates.length}}</h6>
-                    <div v-bind:id="course.courseid" class="carousel slide" data-bs-ride="true">
-                        <div class="carousel-inner">
-                            <div class="carousel-item" v-bind:class="certificate.id == course.certificates[0].id ? 'active' : ''" v-for="certificate of course.certificates" data-bs-interval="3000">
-                                <figure class="figure d-block">
-                                    <a v-bind:href="server+'storage/'+certificate.image" v-bind:data-lightbox="course.courseid+'-set'" v-bind:data-title="certificate.data_title">
+            <h5 class="card-title">{{course.category}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Total: {{course.certifications.length}}</h6>
+            <div v-bind:id="course.courseId" class="carousel slide" data-bs-ride="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item" v-bind:class="certificate.id == course.certifications[0].id ? 'active' : ''" v-for="certificate of course.certifications.reverse()" data-bs-interval="3000">
+                        <figure class="figure d-block">
+                            <a v-bind:href="server+'files/courses/'+course.id+'/'+certificate.certificate" v-bind:data-lightbox="course.courseId+'-set'" v-bind:data-title="certificate.name">
+                                <img
+                                        v-bind:id="course.courseId+certificate.id"
+                                        v-on:mouseover="animateBadge(course.courseId+certificate.id, 'animate__pulse')"
+                                        v-on:mouseleave="removeAnimationBadge(course.courseId+certificate.id, 'animate__pulse')"
+                                        v-bind:src="server+'files/courses/'+course.id+'/'+certificate.certificateThumb"
+                                        style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                            </a>
+                            <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{certificate.name}}</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" v-bind:data-bs-target="'#'+course.courseId" data-bs-slide="prev">
+                    <span class="text-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" v-bind:data-bs-target="'#'+course.courseId" data-bs-slide="next">
+                    <span class="text-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-1 shadow p-3 mb-3 bg-body rounded">
+        <h5>Softwares</h5>
+        <div class="d-flex justify-content-center" v-if="softwareLoading">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div v-if="!softwareLoading">
+            <div id="softwares" class="carousel carousel-dark slide" data-bs-ride="carousel" v-if="data.softwares.length > 0">
+                <div class="carousel-inner">
+                    <div class="carousel-item " style="text-align: center" v-bind:class="software.id == data.softwares[0].id ? 'active' : ''"
+                         v-for="software of data.softwares">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <figure class="figure d-block mx-5">
+                                    <a v-bind:href="server+'files/softwares/'+software.image" v-bind:data-lightbox="'software-'+software.id+'-set'" v-bind:data-title="software.name">
                                         <img
-                                                v-bind:id="course.courseid+certificate.id"
-                                                v-on:mouseover="animateBadge(course.courseid+certificate.id, 'animate__pulse')"
-                                                v-on:mouseleave="removeAnimationBadge(course.courseid+certificate.id, 'animate__pulse')"
-                                                v-bind:src="server+'storage/'+certificate.thumb"
-                                                style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                                                v-bind:id="'software-'+software.id"
+                                                v-on:mouseover="animateBadge('software-'+software.id, 'animate__pulse')"
+                                                v-on:mouseleave="removeAnimationBadge('software-'+software.id, 'animate__pulse')"
+                                                v-bind:src="server+'files/softwares/'+software.image"
+                                                style="min-height: 400px; max-height: 400px" class="d-block w-75 mx-auto" alt="..." />
                                     </a>
-                                    <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{certificate.data_title}}</figcaption>
+                                    <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{software.name}}</figcaption>
                                 </figure>
                             </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="alert alert-secondary w-75" role="alert">
+                                    <h4 class="alert-heading">{{software.name}}</h4>
+                                    <p>{{software.description}}</p>
+                                    <hr>
+                                    <p class="mb-0">
+                                        <a class="btn btn-outline-primary mx-1" v-bind:href="software.url">Download</a>
+                                        <a class="btn btn-outline-primary mx-1" v-bind:href="software.mirror">Mirror</a>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" v-bind:data-bs-target="'#'+course.courseid" data-bs-slide="prev">
-                            <span class="text-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" v-bind:data-bs-target="'#'+course.courseid" data-bs-slide="next">
-                            <span class="text-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#softwares" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#softwares" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
+
     </div>
 </div>
 
-<div v-if="!loading" class="container mb-3">
-    <div class="row">
-        <div class="col-sm-12 col-md-6">
-            <ul class="list-group">
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <span><i class="fa-brands fa-youtube"></i> AltissimoProcessamento</span>
-                    <span class="badge bg-danger rounded-pill">NOVO</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <span><i class="fa-solid fa-graduation-cap"></i> Sympla (Cursos)</span>
-                    <span class="badge bg-primary rounded-pill">PAGOS</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <span><i class="fa-solid fa-blog"></i> Blog</span>
-                    <span class="badge bg-primary rounded-pill">DICAS</span>
-                </li>
-            </ul>
-        </div>
-        <div class="col-sm-12 col-md-6"></div>
+<div class="d-flex justify-content-center mt-5" v-if="loading">
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
     </div>
-</div>
-
-<div v-if="loading" class="container mt-lg-5">
-    <div class="d-flex justify-content-center">
-        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-    </div>
-    <p class="text-center animate__animated animate__jello animate__infinite">Carregando</p>
 </div>
 
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
@@ -284,107 +296,156 @@
         data() {
             return {
                 loading: false,
+                softwareLoading: false,
                 currentYear: new Date().getFullYear(),
-                server: 'http://localhost:8080/',
-                serveraws: 'http://ec2-54-175-239-49.compute-1.amazonaws.com:8000/',
+                server: '/',
                 data: {
                     aboutme: {
+                        id: 0,
                         title: "",
-                        subTitle: "",
+                        subtitle: "",
+                        description: "",
+                        github: "",
+                        linkedin: "",
+                        sympla: "",
+                        udemy: "",
+                        youtube: "",
+                        tiktok: "",
                         updatedAt: ""
                     },
-                    curriculums: {
-                        id: 0,
-                        description: '',
-                        created_at: '',
-                        language: '',
-                        type: '',
-                        updatedAt: '',
-                        url: ''
-                    },
-                    jobs: [
-                        {
-                            id: null,
-                            name: '',
-                            job: '',
-                            startDate: '',
-                            endDate: ''
-                        }
-                    ],
-                    educations: [
-                        {
-                            course_name: "",
-                            description: "",
-                            institution: "",
-                            startDate: "",
-                            endDate: ""
-                        }
-                    ],
-                    degrees: [
+                    certifications: [
                         {
                             id: 0,
                             name: "",
-                            image: "",
-                            thumb: "",
-                            data_title: ""
-                        }
-                    ],
-                    certifications: [
-                        {
-                            id: null,
-                            name: "",
                             description: "",
-                            image: "",
-                            thumb: "",
-                            url: ""
-                        }
-                    ],
-                    specialists: [
-                        {
-                            category: "",
-                            color: "",
-                            color_chip: "",
-                            habilites: []
-                        }
-                    ],
-                    works: [
-                        {
-                            name: "",
-                            description: "",
+                            certificate: "",
+                            certificateThumb: "",
                             url: "",
-                            source: ""
+                            createdAt: "",
+                            updatedAt: ""
                         }
                     ],
                     courses: [
                         {
+                            id: 0,
                             category: "",
-                            id: null,
-                            courseid: '',
-                            color: "",
-                            certificates: [
+                            courseId: "",
+                            createdAt: "",
+                            updatedAt: "",
+                            certifications: [
                                 {
                                     id: 0,
                                     name: "",
-                                    image: "",
-                                    thumb: "",
-                                    data_title: ""
+                                    institution: "",
+                                    certificate: "",
+                                    certificateThumb: "",
+                                    createdAt: "",
+                                    updatedAt: ""
                                 }
                             ]
                         }
-                    ]
+                    ],
+                    latestCourseCertifications: [
+                        {
+                            id: 0,
+                            name: "",
+                            institution: "",
+                            certificate: "",
+                            course_id: 0,
+                            certificate_thumb: "",
+                            created_at: "",
+                            updated_at: ""
+                        }
+                    ],
+                    curriculuns: [
+                        {
+                            id: 0,
+                            description: "",
+                            language: "",
+                            type: "",
+                            url: "",
+                            createdAt: "",
+                            updatedAt: ""
+                        }
+                    ],
+                    educations: [
+                        {
+                            id: 0,
+                            name: "",
+                            institution: "",
+                            description: "",
+                            startDate: "",
+                            endDate: "",
+                            certificate: "",
+                            certificateThumb: "",
+                            createdAt: "",
+                            updatedAt: ""
+                        }
+                    ],
+                    jobs: [
+                        {
+                            id: 0,
+                            name: "",
+                            funcao: "",
+                            startDate: "",
+                            endDate: "",
+                            createdAt: "",
+                            updatedAt: ""
+                        }
+                    ],
+                    specialists: [
+                        {
+                            id: 0,
+                            category: "",
+                            color: "",
+                            colorChip: "",
+                            habilities: "",
+                            createdAt: "",
+                            updatedAt: ""
+                        }
+                    ],
+                    works: [
+                        {
+                           id: 0,
+                           name: "",
+                           description: "",
+                           url: "",
+                           source: "",
+                           createdAt: "",
+                           updatedAt: ""
+                        }
+                    ],
+                    softwares: [
+                        {
+                            id: 0,
+                            name: "",
+                            softwareCategory: "",
+                            description: "",
+                            image: "",
+                            thumb: "",
+                            url: "",
+                            mirror: "",
+                            createdAt: "",
+                            updatedAt: ""
+                        }
+                    ],
+                    softwareCategories: []
+
                 },
             };
         },
         mounted: function () {
             this.loading = true;
             axios
-                .get(this.server+'api/me', {
-                    headers: {Authorization: 'Iwa 77e4dca7-0901-4f62-a8ed-6de4fc66043e'}})
+                // .get(this.server+'api/me', {
+                //     headers: {Authorization: 'Iwa 77e4dca7-0901-4f62-a8ed-6de4fc66043e'}})
                 // .get('http://localhost:8000/api/me', {
                 // .get('http://192.168.31.214:8000/api/me', {
                 //     headers: {Authorization: '77e4dca7-0901-4f62-a8ed-6de4fc66043e'}})
-                // .get('./data.json')
-                .then(response => (this.data = response.data))
+                .get('./data.json')
+                .then(response => {
+                    this.data = response.data;
+                })
                 .finally(() => this.loading = false)
         },
         methods: {
@@ -396,26 +457,25 @@
                 const element = document.getElementById(id);
                 element.classList.remove('animate__animated', animation);
             },
-            getRandomIdFrom(lista){
-                const randomElement = lista[Math.floor(Math.random() * lista.length)];
-                return lista[randomElement.id];
-            },
+            // getRandomIdFrom(lista){
+            //     const randomElement = lista[Math.floor(Math.random() * lista.length)];
+            //     return lista[randomElement.id];
+            // },
             splitHabilities(lista){
                 if(lista){
                     return lista.split(',');
                 }
             },
-            shuffle(lista){
-                const shuffled = lista.sort(() => Math.random() - 0.5);
-                return shuffled;
-            },
+            // shuffle(lista){
+            //     const shuffled = lista.sort(() => Math.random() - 0.5);
+            //     return shuffled;
+            // },
             formatarData(data){
                 if(data){
                     //2022-08-14T22:55:39.000000Z
                     const dia = data.slice(8,10);
                     const mes = data.slice(5,7);
                     const ano = data.slice(0,4);
-                    console.log(dia + '/' + mes + '/' + ano)
                     return mes + '/' + ano;
                 }
             }

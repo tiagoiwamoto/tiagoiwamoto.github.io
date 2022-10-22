@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mr. Tiago</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/css/animate.min.css" rel="stylesheet" />
+    <link href="./assets/css/lightbox.min.css" rel="stylesheet" />
+    <link href="./assets/css/all.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
+
+        .app-navbar-color{
+            background-color: darkslateblue!important;
+        }
+
+        .app-title-nav{
+            font-family: 'Edu NSW ACT Foundation', cursive;
+            font-size: 2em;
+        }
+
+        .app-img-border{
+            border-radius: 20%;
+        }
+
+        .spec-card .card::after {
+            position: absolute;
+            content: attr(data-label);
+            top: -10px;
+            right: -8px;
+            padding: 0.5rem;
+            width: 7rem;
+            background: #5eb757;
+            color: black;
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-size: x-small;
+            box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+        }
+
+        .m-all-1{
+            margin: 1em;
+        }
+    </style>
+</head>
+<body id="app">
+<nav v-if="!loading" class="navbar navbar-dark text-white app-navbar-color">
+    <div class="container-fluid">
+        <a class="navbar-brand app-title-nav" href="#">
+            <i class="fa-solid fa-code"></i>
+               {{data.aboutme.title}}
+        </a>
+    </div>
+</nav>
+<div v-if="!loading" class="container mt-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img src="./assets/imgs/1621460436451.jpg" width="140" class="img-fluid m-all-1 app-img-border" alt="...">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Sobre mim</h5>
+                            <p class="card-text" v-html="data.aboutme.description"></p>
+                            <p class="card-text"><small class="text-muted">{{formatarData(data.aboutme.updated_at)}}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Curriculum</h5>
+                    <div class="card" v-for="curriculum of data.curriculums">
+                        <div class="card-header">
+                            {{curriculum.language}}
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{curriculum.description}}</p>
+                                <footer class="blockquote-footer">Atualizado em <cite title="Source Title">{{formatarData(curriculum.updated_at)}}</cite></footer>
+                            </blockquote>
+                        </div>
+                        <div class="text-end">
+                            <a href="{{curriculum.url}}" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
+                            <a href="{{curriculum.url}}" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Ler Online</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Histórico profissional</h5>
+                    <div class="card mb-2" v-for="job of data.jobs">
+                        <div class="card-header">
+                            {{job.name}}
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{job.job}}</p>
+                                <footer class="blockquote-footer">{{formatarData(job.data_inicio)}} ~ <cite title="Source Title">{{job.data_fim === null ? 'Atual' : formatarData(job.data_fim)}}</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Histórico escolar</h5>
+                    <div class="card mb-2" v-for="education of data.educations">
+                        <div class="card-header">
+                            {{education.courseName}}
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{education.description}}</p>
+                                <p>{{education.institution}}</p>
+                                <footer class="blockquote-footer"><cite title="Source Title">{{formatarData(education.start_date)}} ~ {{education.end_date === null ? 'Atual' : formatarData(education.end_date)}}</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Diplomas</h5>
+                    <figure class="figure" v-for="diploma of data.degrees" style="margin-right: 1em">
+                        <a v-bind:href="server+'storage/'+diploma.image" data-lightbox="diploma-set'" v-bind:data-title="diploma.data_title">
+                            <img
+                                    v-bind:id="'diploma'+diploma.id"
+                                    v-on:mouseover="animateBadge('diploma'+diploma.id, 'animate__pulse')"
+                                    v-on:mouseleave="removeAnimationBadge('diploma'+diploma.id, 'animate__pulse')"
+                                    v-bind:src="server+'storage/'+diploma.thumb" style="min-width: 250px; max-width: 250px; min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                        </a>
+                        <figcaption class="figure-caption">{{diploma.data_title}}</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Certificações / Badges</h5>
+                    <figure class="figure mx-3" v-for="certification of data.certifications">
+                        <img  v-bind:id="'certification'+certification.id" v-on:mouseover="animateBadge('certification'+certification.id, 'animate__tada')" v-on:mouseleave="removeAnimationBadge('certification'+certification.id, 'animate__tada')"
+                              v-bind:src="server+'storage/'+certification.image" class="rounded" style="min-width: 150px; max-width: 150px; margin-right: 1em;"  alt="..." />
+                        <figcaption class="figure-caption">{{certification.name}}</figcaption>
+                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="certification.url"><span class="badge text-bg-primary">Validar online</span></a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body spec-card">
+                    <h5 class="card-title">Habilidades</h5>
+                    <div class="card mb-3" v-bind:data-label="specialist.category" v-bind:class="specialist.color" v-for="specialist of data.specialists">
+                        <div class="card-body" style="margin-right: 5em">
+                            <span class="badge" style="margin-right: 1em" v-bind:class="specialist.color_chip" v-for="hability of splitHabilities(specialist.habilities)">{{hability}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Projetos</h5>
+                    <div class="card mb-3" v-for="work of data.works">
+                        <div class="card-body">
+                            <h5 class="card-title">{{work.name}}</h5>
+                            <p class="card-text">{{work.description}}</p>
+                        </div>
+                        <div class="mt-1 mb-1 text-end">
+                            <a v-bind:href="work.url" class="btn btn-outline-primary" style="margin-right: 1em">Acessar</a>
+                            <a v-bind:href="work.source" class="btn btn-outline-primary">Código fonte</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <h5 class="card-title">Certificações</h5>
+        <div class="col-sm-12 col-md-4 mt-2" v-for="course of data.courses">
+            <div class="card mb-3 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{course.category}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Total: {{course.certificates.length}}</h6>
+                    <div v-bind:id="course.courseid" class="carousel slide" data-bs-ride="true">
+                        <div class="carousel-inner">
+                            <div class="carousel-item" v-bind:class="certificate.id == course.certificates[0].id ? 'active' : ''" v-for="certificate of course.certificates" data-bs-interval="3000">
+                                <figure class="figure d-block">
+                                    <a v-bind:href="server+'storage/'+certificate.image" v-bind:data-lightbox="course.courseid+'-set'" v-bind:data-title="certificate.data_title">
+                                        <img
+                                                v-bind:id="course.courseid+certificate.id"
+                                                v-on:mouseover="animateBadge(course.courseid+certificate.id, 'animate__pulse')"
+                                                v-on:mouseleave="removeAnimationBadge(course.courseid+certificate.id, 'animate__pulse')"
+                                                v-bind:src="server+'storage/'+certificate.thumb"
+                                                style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                                    </a>
+                                    <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{certificate.data_title}}</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" v-bind:data-bs-target="'#'+course.courseid" data-bs-slide="prev">
+                            <span class="text-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" v-bind:data-bs-target="'#'+course.courseid" data-bs-slide="next">
+                            <span class="text-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div v-if="!loading" class="container mb-3">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="fa-brands fa-youtube"></i> AltissimoProcessamento</span>
+                    <span class="badge bg-danger rounded-pill">NOVO</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="fa-solid fa-graduation-cap"></i> Sympla (Cursos)</span>
+                    <span class="badge bg-primary rounded-pill">PAGOS</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span><i class="fa-solid fa-blog"></i> Blog</span>
+                    <span class="badge bg-primary rounded-pill">DICAS</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-6"></div>
+    </div>
+</div>
+
+<div v-if="loading" class="container mt-lg-5">
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" style="width: 5rem; height: 5rem;" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+    <p class="text-center animate__animated animate__jello animate__infinite">Carregando</p>
+</div>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/vue.global.js"></script>
+<script src="./assets/js/axios.min.js"></script>
+<script src="./assets/js/fontawesome.all.min.js"></script>
+<script src="./assets/js/lightbox-plus-jquery.min.js"></script>
+<script>
+    const app = {
+        data() {
+            return {
+                loading: false,
+                currentYear: new Date().getFullYear(),
+                server: 'http://localhost:8080/',
+                serveraws: 'http://ec2-54-175-239-49.compute-1.amazonaws.com:8000/',
+                data: {
+                    aboutme: {
+                        title: "",
+                        subTitle: "",
+                        updatedAt: ""
+                    },
+                    curriculums: {
+                        id: 0,
+                        description: '',
+                        created_at: '',
+                        language: '',
+                        type: '',
+                        updatedAt: '',
+                        url: ''
+                    },
+                    jobs: [
+                        {
+                            id: null,
+                            name: '',
+                            job: '',
+                            startDate: '',
+                            endDate: ''
+                        }
+                    ],
+                    educations: [
+                        {
+                            course_name: "",
+                            description: "",
+                            institution: "",
+                            startDate: "",
+                            endDate: ""
+                        }
+                    ],
+                    degrees: [
+                        {
+                            id: 0,
+                            name: "",
+                            image: "",
+                            thumb: "",
+                            data_title: ""
+                        }
+                    ],
+                    certifications: [
+                        {
+                            id: null,
+                            name: "",
+                            description: "",
+                            image: "",
+                            thumb: "",
+                            url: ""
+                        }
+                    ],
+                    specialists: [
+                        {
+                            category: "",
+                            color: "",
+                            color_chip: "",
+                            habilites: []
+                        }
+                    ],
+                    works: [
+                        {
+                            name: "",
+                            description: "",
+                            url: "",
+                            source: ""
+                        }
+                    ],
+                    courses: [
+                        {
+                            category: "",
+                            id: null,
+                            courseid: '',
+                            color: "",
+                            certificates: [
+                                {
+                                    id: 0,
+                                    name: "",
+                                    image: "",
+                                    thumb: "",
+                                    data_title: ""
+                                }
+                            ]
+                        }
+                    ]
+                },
+            };
+        },
+        mounted: function () {
+            this.loading = true;
+            axios
+                .get(this.server+'api/me', {
+                    headers: {Authorization: 'Iwa 77e4dca7-0901-4f62-a8ed-6de4fc66043e'}})
+                // .get('http://localhost:8000/api/me', {
+                // .get('http://192.168.31.214:8000/api/me', {
+                //     headers: {Authorization: '77e4dca7-0901-4f62-a8ed-6de4fc66043e'}})
+                // .get('./data.json')
+                .then(response => (this.data = response.data))
+                .finally(() => this.loading = false)
+        },
+        methods: {
+            animateBadge(id, animation){
+                const element = document.getElementById(id);
+                element.classList.add('animate__animated', animation);
+            },
+            removeAnimationBadge(id, animation){
+                const element = document.getElementById(id);
+                element.classList.remove('animate__animated', animation);
+            },
+            getRandomIdFrom(lista){
+                const randomElement = lista[Math.floor(Math.random() * lista.length)];
+                return lista[randomElement.id];
+            },
+            splitHabilities(lista){
+                if(lista){
+                    return lista.split(',');
+                }
+            },
+            shuffle(lista){
+                const shuffled = lista.sort(() => Math.random() - 0.5);
+                return shuffled;
+            },
+            formatarData(data){
+                if(data){
+                    //2022-08-14T22:55:39.000000Z
+                    const dia = data.slice(8,10);
+                    const mes = data.slice(5,7);
+                    const ano = data.slice(0,4);
+                    console.log(dia + '/' + mes + '/' + ano)
+                    return mes + '/' + ano;
+                }
+            }
+        }
+    };
+    Vue.createApp(app).mount('#app')
+</script>
+</body>
+</html>
