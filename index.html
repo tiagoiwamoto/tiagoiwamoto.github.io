@@ -7,22 +7,22 @@
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./assets/css/animate.min.css" rel="stylesheet" />
     <link href="./assets/css/lightbox.min.css" rel="stylesheet" />
+    <link href="./assets/css/all.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap');
-        /*.spec-card .card::before {*/
-        /*    position: absolute;*/
-        /*    top: 2rem;*/
-        /*    right: -0.5rem;*/
-        /*    content: "";*/
-        /*    background: #283593;*/
-        /*    height: 18px;*/
-        /*    width: 18px;*/
-        /*    transform: rotate(45deg);*/
-        /*}*/
+
+        .app-navbar-color{
+            background-color: darkslateblue!important;
+        }
 
         .app-title-nav{
             font-family: 'Edu NSW ACT Foundation', cursive;
             font-size: 2em;
+        }
+
+        .app-img-border{
+            border-radius: 20%;
         }
 
         .spec-card .card::after {
@@ -32,21 +32,25 @@
             right: -8px;
             padding: 0.5rem;
             width: 7rem;
-            background: #b900ff;
-            color: white;
+            background: #5eb757;
+            color: black;
             text-align: center;
             font-family: "Roboto", sans-serif;
             font-size: x-small;
             box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
         }
+
+        .m-all-1{
+            margin: 1em;
+        }
     </style>
 </head>
 <body id="app">
-<nav v-if="!loading" class="navbar navbar-dark text-white" style="background-color: darkslateblue!important;">
+<nav v-if="!loading" class="navbar navbar-dark text-white app-navbar-color">
     <div class="container-fluid">
         <a class="navbar-brand app-title-nav" href="#">
             <i class="fa-solid fa-code"></i>
-               {{data.info.title}}
+               {{data.aboutme.title}}
         </a>
     </div>
 </nav>
@@ -56,13 +60,13 @@
             <div class="card mb-3 shadow-sm">
                 <div class="row g-0">
                     <div class="col-md-3">
-                        <img src="./assets/imgs/1621460436451.jpg" width="140" class="img-fluid" style="margin: 1em; border-radius: 20%" alt="...">
+                        <img src="./assets/imgs/1621460436451.jpg" width="140" class="img-fluid m-all-1 app-img-border" alt="...">
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title">Sobre mim</h5>
-                            <p class="card-text" v-html="data.aboutMe"></p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <p class="card-text" v-html="data.aboutme.description"></p>
+                            <p class="card-text"><small class="text-muted">{{formatarData(data.aboutme.updated_at)}}</small></p>
                         </div>
                     </div>
                 </div>
@@ -72,49 +76,19 @@
             <div class="card mb-3 shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">Curriculum</h5>
-                    <div class="card">
+                    <div class="card" v-for="curriculum of data.curriculums">
                         <div class="card-header">
-                            Português
+                            {{curriculum.language}}
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                                <p>Meu curriculum atualizado</p>
-                                <footer class="blockquote-footer">Atualizado em <cite title="Source Title">10/07/2022</cite></footer>
+                                <p>{{curriculum.description}}</p>
+                                <footer class="blockquote-footer">Atualizado em <cite title="Source Title">{{formatarData(curriculum.updated_at)}}</cite></footer>
                             </blockquote>
                         </div>
                         <div class="text-end">
-                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
-                            <a href="#" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Ler Online</a>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-header">
-                            English
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>My resume</p>
-                                <footer class="blockquote-footer">Updated at <cite title="Source Title">2022-07-10</cite></footer>
-                            </blockquote>
-                        </div>
-                        <div class="text-end">
-                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
-                            <a href="#" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Read Online</a>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-header">
-                            Japanese
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <p>My resume</p>
-                                <footer class="blockquote-footer">Updated at <cite title="Source Title">2022-07-10</cite></footer>
-                            </blockquote>
-                        </div>
-                        <div class="text-end">
-                            <a href="#" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
-                            <a href="#" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Read Online</a>
+                            <a href="{{curriculum.url}}" class="btn btn-primary" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-circle-chevron-down"></i> Download</a>
+                            <a href="{{curriculum.url}}" class="btn btn-success" style="margin-right: 1em; margin-bottom: 1em"><i class="fa-solid fa-book-open"></i> Ler Online</a>
                         </div>
                     </div>
                 </div>
@@ -134,7 +108,7 @@
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
                                 <p>{{job.job}}</p>
-                                <footer class="blockquote-footer">{{job.dataInicio}} ~ <cite title="Source Title">{{job.dataFim === null ? 'Atual' : job.dataFim}}</cite></footer>
+                                <footer class="blockquote-footer">{{formatarData(job.data_inicio)}} ~ <cite title="Source Title">{{job.data_fim === null ? 'Atual' : formatarData(job.data_fim)}}</cite></footer>
                             </blockquote>
                         </div>
                     </div>
@@ -153,7 +127,7 @@
                             <blockquote class="blockquote mb-0">
                                 <p>{{education.description}}</p>
                                 <p>{{education.institution}}</p>
-                                <footer class="blockquote-footer"><cite title="Source Title">{{education.startDate}} ~ {{education.endDate === null ? 'Atual' : education.endDate}}</cite></footer>
+                                <footer class="blockquote-footer"><cite title="Source Title">{{formatarData(education.start_date)}} ~ {{education.end_date === null ? 'Atual' : formatarData(education.end_date)}}</cite></footer>
                             </blockquote>
                         </div>
                     </div>
@@ -167,15 +141,15 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">Diplomas</h5>
-                    <figure class="figure" v-for="diploma of data.diplomas" style="margin-right: 1em">
-                        <a v-bind:href="diploma.image" data-lightbox="diploma-set'" v-bind:data-title="diploma.dataTitle">
+                    <figure class="figure" v-for="diploma of data.degrees" style="margin-right: 1em">
+                        <a v-bind:href="server+'storage/'+diploma.image" data-lightbox="diploma-set'" v-bind:data-title="diploma.data_title">
                             <img
-                                    v-bind:id="diploma.id"
-                                    v-on:mouseover="animateBadge(diploma.id, 'animate__pulse')"
-                                    v-on:mouseleave="removeAnimationBadge(diploma.id, 'animate__pulse')"
-                                    v-bind:src="diploma.thumb" style="min-width: 250px; max-width: 250px; min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                                    v-bind:id="'diploma'+diploma.id"
+                                    v-on:mouseover="animateBadge('diploma'+diploma.id, 'animate__pulse')"
+                                    v-on:mouseleave="removeAnimationBadge('diploma'+diploma.id, 'animate__pulse')"
+                                    v-bind:src="server+'storage/'+diploma.thumb" style="min-width: 250px; max-width: 250px; min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
                         </a>
-                        <figcaption class="figure-caption">{{diploma.dataTitle}}</figcaption>
+                        <figcaption class="figure-caption">{{diploma.data_title}}</figcaption>
                     </figure>
                 </div>
             </div>
@@ -187,11 +161,11 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">Certificações / Badges</h5>
-                    <figure class="figure" v-for="badge of data.certifications">
-                        <img  v-bind:id="badge.id" v-on:mouseover="animateBadge(badge.id, 'animate__tada')" v-on:mouseleave="removeAnimationBadge(badge.id, 'animate__tada')"
-                              v-bind:src="badge.badge" class="rounded" style="min-width: 250px; max-width: 250px; margin-right: 1em;"  alt="..." />
-                        <figcaption class="figure-caption">{{badge.name}}</figcaption>
-                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="badge.url"><span class="badge text-bg-primary">Validar online</span></a></figcaption>
+                    <figure class="figure mx-3" v-for="certification of data.certifications">
+                        <img  v-bind:id="'certification'+certification.id" v-on:mouseover="animateBadge('certification'+certification.id, 'animate__tada')" v-on:mouseleave="removeAnimationBadge('certification'+certification.id, 'animate__tada')"
+                              v-bind:src="server+'storage/'+certification.image" class="rounded" style="min-width: 150px; max-width: 150px; margin-right: 1em;"  alt="..." />
+                        <figcaption class="figure-caption">{{certification.name}}</figcaption>
+                        <figcaption class="figure-caption"><a target="_blank" v-bind:href="certification.url"><span class="badge text-bg-primary">Validar online</span></a></figcaption>
                     </figure>
                 </div>
             </div>
@@ -205,7 +179,7 @@
                     <h5 class="card-title">Habilidades</h5>
                     <div class="card mb-3" v-bind:data-label="specialist.category" v-bind:class="specialist.color" v-for="specialist of data.specialists">
                         <div class="card-body" style="margin-right: 5em">
-                            <span class="badge" style="margin-right: 1em" v-bind:class="specialist.colorChip" v-for="hability of specialist.habilites">{{hability}}</span>
+                            <span class="badge" style="margin-right: 1em" v-bind:class="specialist.color_chip" v-for="hability of splitHabilities(specialist.habilities)">{{hability}}</span>
                         </div>
                     </div>
                 </div>
@@ -232,31 +206,33 @@
     </div>
 
     <div class="row mt-3">
-        <div class="col-sm-12 col-md-4" v-for="course of data.courses">
+        <h5 class="card-title">Certificações</h5>
+        <div class="col-sm-12 col-md-4 mt-2" v-for="course of data.courses">
             <div class="card mb-3 shadow-sm">
                 <div class="card-body">
                     <h5 class="card-title">{{course.category}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Total: {{course.certificates.length}}</h6>
-                    <div v-bind:id="course.id" class="carousel slide" data-bs-ride="true">
+                    <div v-bind:id="course.courseid" class="carousel slide" data-bs-ride="true">
                         <div class="carousel-inner">
-                            <div class="carousel-item" v-bind:class="certificate.id == 1 ? 'active' : ''" v-for="certificate of course.certificates" data-bs-interval="3000">
+                            <div class="carousel-item" v-bind:class="certificate.id == course.certificates[0].id ? 'active' : ''" v-for="certificate of course.certificates" data-bs-interval="3000">
                                 <figure class="figure d-block">
-                                    <a v-bind:href="certificate.image" v-bind:data-lightbox="course.id+'-set'" v-bind:data-title="certificate.dataTitle">
+                                    <a v-bind:href="server+'storage/'+certificate.image" v-bind:data-lightbox="course.courseid+'-set'" v-bind:data-title="certificate.data_title">
                                         <img
-                                                v-bind:id="course.id+certificate.id"
-                                                v-on:mouseover="animateBadge(course.id+certificate.id, 'animate__pulse')"
-                                                v-on:mouseleave="removeAnimationBadge(course.id+certificate.id, 'animate__pulse')"
-                                                v-bind:src="certificate.thumb" style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
+                                                v-bind:id="course.courseid+certificate.id"
+                                                v-on:mouseover="animateBadge(course.courseid+certificate.id, 'animate__pulse')"
+                                                v-on:mouseleave="removeAnimationBadge(course.courseid+certificate.id, 'animate__pulse')"
+                                                v-bind:src="server+'storage/'+certificate.thumb"
+                                                style="min-height: 200px; max-height: 200px" class="d-block w-75 mx-auto" alt="..." />
                                     </a>
-                                    <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{certificate.dataTitle}}</figcaption>
+                                    <figcaption class="figure-caption text-end" style="margin-right: 3.8em">{{certificate.data_title}}</figcaption>
                                 </figure>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" v-bind:data-bs-target="'#'+course.id" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" v-bind:data-bs-target="'#'+course.courseid" data-bs-slide="prev">
                             <span class="text-dark"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" v-bind:data-bs-target="'#'+course.id" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" v-bind:data-bs-target="'#'+course.courseid" data-bs-slide="next">
                             <span class="text-dark"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -309,38 +285,66 @@
             return {
                 loading: false,
                 currentYear: new Date().getFullYear(),
+                server: 'http://localhost:8080/',
+                serveraws: 'http://ec2-54-175-239-49.compute-1.amazonaws.com:8000/',
                 data: {
-                    info: {
+                    aboutme: {
                         title: "",
-                        subTitle: ""
+                        subTitle: "",
+                        updatedAt: ""
                     },
-                    socialNetworks: {
-                        github: "",
-                        linkedin: ""
+                    curriculums: {
+                        id: 0,
+                        description: '',
+                        created_at: '',
+                        language: '',
+                        type: '',
+                        updatedAt: '',
+                        url: ''
                     },
-                    aboutMe: "",
+                    jobs: [
+                        {
+                            id: null,
+                            name: '',
+                            job: '',
+                            startDate: '',
+                            endDate: ''
+                        }
+                    ],
                     educations: [
                         {
-                            courseName: "",
+                            course_name: "",
                             description: "",
                             institution: "",
                             startDate: "",
                             endDate: ""
                         }
                     ],
+                    degrees: [
+                        {
+                            id: 0,
+                            name: "",
+                            image: "",
+                            thumb: "",
+                            data_title: ""
+                        }
+                    ],
+                    certifications: [
+                        {
+                            id: null,
+                            name: "",
+                            description: "",
+                            image: "",
+                            thumb: "",
+                            url: ""
+                        }
+                    ],
                     specialists: [
                         {
                             category: "",
                             color: "",
-                            colorChip: "",
+                            color_chip: "",
                             habilites: []
-                        }
-                    ],
-                    cvs: [
-                        {
-                            type: "",
-                            updatedAt: "",
-                            url: ""
                         }
                     ],
                     works: [
@@ -354,7 +358,8 @@
                     courses: [
                         {
                             category: "",
-                            id: "",
+                            id: null,
+                            courseid: '',
                             color: "",
                             certificates: [
                                 {
@@ -362,26 +367,9 @@
                                     name: "",
                                     image: "",
                                     thumb: "",
-                                    dataTitle: ""
+                                    data_title: ""
                                 }
                             ]
-                        }
-                    ],
-                    certifications: [
-                        {
-                            name: "",
-                            description: "",
-                            url: "",
-                            badge: ""
-                        }
-                    ],
-                    diplomas: [
-                        {
-                            id: 0,
-                            name: "",
-                            image: "",
-                            thumb: "",
-                            dataTitle: ""
                         }
                     ]
                 },
@@ -390,9 +378,14 @@
         mounted: function () {
             this.loading = true;
             axios
-                .get('https://public-variables.000webhostapp.com/cv_resume/index.php')
+                .get(this.server+'api/me', {
+                    headers: {Authorization: 'Iwa 77e4dca7-0901-4f62-a8ed-6de4fc66043e'}})
+                // .get('http://localhost:8000/api/me', {
+                // .get('http://192.168.31.214:8000/api/me', {
+                //     headers: {Authorization: '77e4dca7-0901-4f62-a8ed-6de4fc66043e'}})
                 // .get('./data.json')
-                .then(response => (this.data = response.data)).finally(() => this.loading = false)
+                .then(response => (this.data = response.data))
+                .finally(() => this.loading = false)
         },
         methods: {
             animateBadge(id, animation){
@@ -406,6 +399,25 @@
             getRandomIdFrom(lista){
                 const randomElement = lista[Math.floor(Math.random() * lista.length)];
                 return lista[randomElement.id];
+            },
+            splitHabilities(lista){
+                if(lista){
+                    return lista.split(',');
+                }
+            },
+            shuffle(lista){
+                const shuffled = lista.sort(() => Math.random() - 0.5);
+                return shuffled;
+            },
+            formatarData(data){
+                if(data){
+                    //2022-08-14T22:55:39.000000Z
+                    const dia = data.slice(8,10);
+                    const mes = data.slice(5,7);
+                    const ano = data.slice(0,4);
+                    console.log(dia + '/' + mes + '/' + ano)
+                    return mes + '/' + ano;
+                }
             }
         }
     };
