@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-api-proxy",
+  "version": "1.0.0",
+  "description": "Proxy para API sem SSL válido",
+  "main": "api/index.js",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
+  "engines": {
+    "node": ">=14.x"
+  }
+}
+
