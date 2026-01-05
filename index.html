@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio Profissional</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3273dc;
+            --secondary-color: #363636;
+        }
+
+        .hero.is-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 2rem;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #667eea;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 40px;
+            padding-bottom: 30px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-item:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 16px;
+            width: 2px;
+            height: calc(100% - 16px);
+            background: #dbdbdb;
+        }
+
+        .timeline-item:last-child:after {
+            display: none;
+        }
+
+        .timeline-certificate-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .timeline-certificate-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+
+        .academic-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .academic-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .academic-meta-item i {
+            color: #667eea;
+        }
+
+        .certification-badge {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: white;
+            border-left: 4px solid #667eea;
+            margin-bottom: 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .certification-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+            border-left-color: #764ba2;
+        }
+
+        .certification-badge i {
+            color: #667eea;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .certification-content {
+            flex-grow: 1;
+        }
+
+        .certification-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #363636;
+            margin-bottom: 5px;
+        }
+
+        .certification-category {
+            display: inline-block;
+            padding: 2px 8px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .certification-dates {
+            font-size: 0.85rem;
+            color: #888;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .certification-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .certification-status.valid {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .certification-status.expired {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .certification-status.no-expiry {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .stats-card {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 8px;
+        }
+
+        .stats-number {
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .stats-label {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .course-category {
+            margin-bottom: 3rem;
+        }
+
+        .course-item {
+            padding: 10px 15px;
+            background: #f9f9f9;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            border-left: 3px solid #667eea;
+        }
+
+        /* Carrossel de Cursos */
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            gap: 20px;
+        }
+
+        .carousel-item {
+            min-width: calc(33.333% - 14px);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .carousel-item {
+                min-width: calc(50% - 10px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-item {
+                min-width: 100%;
+            }
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            height: 100%;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+        }
+
+        .course-card-header {
+            border-bottom: 2px solid #f5f5f5;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        .course-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #363636;
+            margin-bottom: 8px;
+            line-height: 1.4;
+            min-height: 50px;
+        }
+
+        .course-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .course-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .course-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .course-meta-item i {
+            color: #667eea;
+        }
+
+        .course-certificate-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .course-certificate-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            align-items: center;
+        }
+
+        .carousel-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .carousel-btn:hover:not(:disabled) {
+            background: #5568d3;
+            transform: scale(1.1);
+        }
+
+        .carousel-btn:disabled {
+            background: #dbdbdb;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            gap: 8px;
+        }
+
+        .carousel-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #dbdbdb;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            padding: 0;
+        }
+
+        .carousel-indicator.active {
+            background: #667eea;
+            width: 30px;
+            border-radius: 5px;
+        }
+
+        .category-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+
+        .category-btn {
+            padding: 10px 20px;
+            border: 2px solid #dbdbdb;
+            background: white;
+            color: #363636;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .category-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .category-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .carousel-counter {
+            font-size: 0.9rem;
+            color: #888;
+            font-weight: 500;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            transform: scale(1.2);
+        }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+            padding: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .footer {
+            background-color: #363636;
+            padding: 3rem 1.5rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top is-dark" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#home">
+                    <strong>Portfólio</strong>
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#jornada">Jornada</a>
+                    <a class="navbar-item" href="#posicao">Posição Atual</a>
+                    <a class="navbar-item" href="#certificacoes">Certificações</a>
+                    <a class="navbar-item" href="#academico">Histórico Acadêmico</a>
+                    <a class="navbar-item" href="#cursos">Cursos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero is-primary is-medium" id="home">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <figure class="image is-128x128 is-inline-block mb-4">
+                    <img class="is-rounded" src="./assets/1762262208433.jpeg" alt="Foto de perfil">
+                </figure>
+                <h1 class="title is-1 has-text-white">
+                    Tiago Henrique Iwamoto
+                </h1>
+                <h2 class="subtitle is-3 has-text-white">
+                    Staff Engineer | Especialista de Sistema
+                </h2>
+                <p class="subtitle is-5 has-text-white-ter">
+                    Itaú Unibanco | Sistemas Resilientes e Escaláveis
+                </p>
+                <div class="social-links mt-5">
+                    <a href="https://github.com/tiagoiwamoto" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tiago-iwamoto/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:contato@tiagoiwamoto.com.br" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@cidadaoaleatorio" target="_blank" title="youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Minha Jornada -->
+    <section class="section" id="jornada">
+        <div class="container">
+            <h2 class="title is-2 section-title">
+                <i class="fas fa-road mr-2"></i>Minha Jornada
+            </h2>
+            <div class="content is-medium">
+                <p>
+                    Olá! Sou um profissional apaixonado por tecnologia com uma trajetória marcada por constante aprendizado e evolução.
+                    Minha jornada na área de TI começou há vários anos, e desde então tenho me dedicado a aprimorar minhas habilidades
+                    e conhecimentos em diversas tecnologias e metodologias.
+                </p>
+                <p>
+                    Ao longo da minha carreira, tive a oportunidade de trabalhar em projetos desafiadores que me permitiram desenvolver
+                    competências técnicas sólidas e habilidades interpessoais essenciais para o trabalho em equipe. Acredito no poder
+                    da tecnologia para transformar negócios e melhorar a vida das pessoas.
+                </p>
+                <p>
+                    Minha filosofia de trabalho é baseada em três pilares: aprendizado contínuo, qualidade no que faço e colaboração.
+                    Estou sempre em busca de novos desafios que me permitam crescer profissionalmente e contribuir para o sucesso dos projetos.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posição Atual -->
+    <section class="section has-background-light" id="posicao">
+        <div class="container">
+            <h2 class="title is-2 section-title">
+                <i class="fas fa-briefcase mr-2"></i>Posição Profissional Atual
+            </h2>
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-64x64">
+                                <i class="fas fa-building" style="font-size: 64px; color: #667eea;"></i>
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Especialista de Sistema (Staff Engineer)</p>
+                            <p class="subtitle is-6">Itaú Unibanco | Setembro 2021 - Presente</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>
+                            Atualmente atuo como <strong>Especialista de Sistema (Staff Engineer)</strong> no Itaú Unibanco,
+                            onde sou responsável pela criação de sistemas resilientes e escaláveis.
+                        </p>
+
+                        <h5 class="title is-5 mt-4">Trajetória na empresa:</h5>
+                        <div class="timeline" style="padding: 10px 0;">
+                            <div class="timeline-item" style="padding-left: 30px; padding-bottom: 20px;">
+                                <div style="position: relative;">
+                                    <strong>Especialista de Sistema (Staff Engineer)</strong>
+                                    <br><span class="has-text-grey is-size-7">Novembro 2025 - Presente</span>
+                                    <p class="mt-2">Promovido a Especialista, focando em arquitetura de sistemas de alta disponibilidade e escalabilidade.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" style="padding-left: 30px; padding-bottom: 20px;">
+                                <div style="position: relative;">
+                                    <strong>Tech Lead</strong>
+                                    <br><span class="has-text-grey is-size-7">2022 - Novembro 2025</span>
+                                    <p class="mt-2">Liderança técnica de time, arquitetura de soluções e mentoria de desenvolvedores.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item" style="padding-left: 30px;">
+                                <div style="position: relative;">
+                                    <strong>Team Member</strong>
+                                    <br><span class="has-text-grey is-size-7">Setembro 2021 - 2022</span>
+                                    <p class="mt-2">Desenvolvimento de sistemas bancários e soluções financeiras.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="title is-5 mt-4">Responsabilidades atuais:</h5>
+                        <ul>
+                            <li>Criação e manutenção de sistemas resilientes e escaláveis</li>
+                            <li>Arquitetura de soluções de alta disponibilidade para ambientes críticos</li>
+                            <li>Resolução de problemas complexos de performance e escalabilidade</li>
+                            <li>Definição de padrões e boas práticas de desenvolvimento</li>
+                            <li>Mentoria técnica e liderança de times de engenharia</li>
+                            <li>Garantia de qualidade e segurança em sistemas financeiros</li>
+                            <li>Participação ativa em decisões técnicas e estratégicas</li>
+                        </ul>
+
+                        <div class="tags mt-4">
+                            <span class="tag is-primary">Java</span>
+                            <span class="tag is-primary">Spring Boot</span>
+                            <span class="tag is-primary">Golang</span>
+                            <span class="tag is-primary">Microservices</span>
+                            <span class="tag is-primary">Kafka</span>
+                            <span class="tag is-primary">Docker</span>
+                            <span class="tag is-primary">AWS</span>
+                            <span class="tag is-primary">Redis</span>
+                            <span class="tag is-primary">Observabilidade</span>
+                            <span class="tag is-primary">Resiliência</span>
+                            <span class="tag is-primary">Escalabilidade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificações -->
+    <section class="section" id="certificacoes">
+        <div class="container">
+            <h2 class="title is-2 section-title">
+                <i class="fas fa-certificate mr-2"></i>Certificações Profissionais
+            </h2>
+            <div id="certificacoes-container" class="columns is-multiline">
+                <div class="loading" style="width: 100%;">
+                    <div class="spinner"></div>
+                    <p class="mt-4">Carregando certificações...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Histórico Acadêmico -->
+    <section class="section has-background-light" id="academico">
+        <div class="container">
+            <h2 class="title is-2 section-title">
+                <i class="fas fa-graduation-cap mr-2"></i>Histórico Acadêmico
+            </h2>
+            <div id="timeline-container" class="timeline">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p class="mt-4">Carregando histórico acadêmico...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cursos -->
+    <section class="section" id="cursos">
+        <div class="container">
+            <h2 class="title is-2 section-title">
+                <i class="fas fa-book mr-2"></i>Cursos Realizados
+            </h2>
+
+            <!-- Estatísticas -->
+            <div class="columns is-multiline mb-5">
+                <div class="column is-4">
+                    <div class="stats-card">
+                        <div class="stats-number" id="total-cursos">0</div>
+                        <div class="stats-label">Total de Cursos</div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="stats-card">
+                        <div class="stats-number" id="total-categorias">0</div>
+                        <div class="stats-label">Categorias</div>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="stats-card">
+                        <div class="stats-number" id="total-horas">0</div>
+                        <div class="stats-label">Horas de Estudo</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seletor de Categorias -->
+            <div id="category-selector" class="category-selector">
+                <!-- Será preenchido dinamicamente -->
+            </div>
+
+            <!-- Carrossel de Cursos -->
+            <div id="cursos-container">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p class="mt-4">Carregando cursos...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered has-text-white">
+                <p>
+                    <strong class="has-text-white">Portfólio Profissional</strong> - 2026
+                </p>
+                <p>
+                    Desenvolvido com <i class="fas fa-heart" style="color: #ff6b6b;"></i> usando
+                    <a href="https://bulma.io" target="_blank" style="color: #667eea;">Bulma CSS</a>
+                </p>
+                <div class="social-links mt-4">
+                    <a href="https://github.com/" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:seu@email.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox para Certificados -->
+    <div id="lightbox" class="lightbox" onclick="fecharLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="fecharLightbox()">&times;</button>
+            <img id="lightbox-image" class="lightbox-image" src="" alt="Certificado">
+            <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        // Navbar burger toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const offset = 70;
+                        const targetPosition = target.offsetTop - offset;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Carregar cursos
+            carregarCursos();
+
+            // Carregar escolaridades
+            carregarEscolaridades();
+
+            // Carregar certificações
+            carregarCertificacoes();
+        });
+
+        // Estado global do carrossel
+        let todosOsCursos = [];
+        let cursosCategoria = {};
+        let categoriaAtual = 'Todos';
+        let currentPage = 0;
+        const itemsPerPage = 3;
+
+        // Carregar certificações profissionais
+        async function carregarCertificacoes() {
+            try {
+                const response = await fetch('http://kamehouse.com.br:7000/certificacoes');
+                const data = await response.json();
+
+                // Garantir que temos um array de certificações
+                let certificacoes = [];
+                if (Array.isArray(data)) {
+                    certificacoes = data;
+                } else if (data && typeof data === 'object') {
+                    certificacoes = data.certificacoes || data.data || data.results || [];
+                }
+
+                if (!Array.isArray(certificacoes) || certificacoes.length === 0) {
+                    throw new Error('Nenhuma certificação encontrada');
+                }
+
+                // Ordenar por data de emissão (mais recente primeiro)
+                certificacoes.sort((a, b) => {
+                    const dataA = a.dataEmissao ? new Date(a.dataEmissao) : new Date(0);
+                    const dataB = b.dataEmissao ? new Date(b.dataEmissao) : new Date(0);
+                    return dataB - dataA;
+                });
+
+                // Renderizar certificações
+                renderizarCertificacoes(certificacoes);
+
+            } catch (error) {
+                console.error('Erro ao carregar certificações:', error);
+                const container = document.getElementById('certificacoes-container');
+                container.innerHTML = `
+                    <div class="notification is-warning" style="width: 100%;">
+                        <p><i class="fas fa-exclamation-triangle mr-2"></i>
+                        Não foi possível carregar as certificações.</p>
+                        <p class="is-size-7 mt-2">Erro: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderizarCertificacoes(certificacoes) {
+            const container = document.getElementById('certificacoes-container');
+
+            container.innerHTML = certificacoes.map(cert => {
+                const dataEmissao = cert.dataEmissao
+                    ? new Date(cert.dataEmissao).toLocaleDateString('pt-BR', { year: 'numeric', month: 'short' })
+                    : '';
+
+                const dataExpiracao = cert.dataExpiracao
+                    ? new Date(cert.dataExpiracao).toLocaleDateString('pt-BR', { year: 'numeric', month: 'short' })
+                    : null;
+
+                const certificadoUrl = cert.pathCertificado
+                    ? `http://kamehouse.com.br:7000/${cert.pathCertificado}`
+                    : '';
+
+                // Verificar se está válida
+                let statusHtml = '';
+                if (dataExpiracao) {
+                    const hoje = new Date();
+                    const expiracao = new Date(cert.dataExpiracao);
+
+                    if (expiracao > hoje) {
+                        statusHtml = '<span class="certification-status valid"><i class="fas fa-check-circle"></i> Válida</span>';
+                    } else {
+                        statusHtml = '<span class="certification-status expired"><i class="fas fa-times-circle"></i> Expirada</span>';
+                    }
+                } else {
+                    statusHtml = '<span class="certification-status no-expiry"><i class="fas fa-infinity"></i> Sem expiração</span>';
+                }
+
+                return `
+                    <div class="column is-6">
+                        <div class="certification-badge"
+                             ${certificadoUrl ? `data-certificate-url="${certificadoUrl}" data-course-name="${cert.nome.replace(/"/g, '&quot;')}"` : ''}>
+                            <i class="fas fa-award"></i>
+                            <div class="certification-content">
+                                <div class="certification-name">${cert.nome}</div>
+                                ${cert.categoria?.nome ? `<span class="certification-category">${cert.categoria.nome}</span>` : ''}
+                                <div class="certification-dates">
+                                    ${dataEmissao ? `<span><i class="fas fa-calendar-alt"></i> ${dataEmissao}</span>` : ''}
+                                    ${dataExpiracao ? `<span><i class="fas fa-calendar-times"></i> ${dataExpiracao}</span>` : ''}
+                                    ${statusHtml}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Carregar escolaridades (histórico acadêmico)
+        async function carregarEscolaridades() {
+            try {
+                const response = await fetch('http://kamehouse.com.br:7000/escolaridades');
+                const data = await response.json();
+
+                // Garantir que temos um array de escolaridades
+                let escolaridades = [];
+                if (Array.isArray(data)) {
+                    escolaridades = data;
+                } else if (data && typeof data === 'object') {
+                    escolaridades = data.escolaridades || data.data || data.results || [];
+                }
+
+                if (!Array.isArray(escolaridades) || escolaridades.length === 0) {
+                    throw new Error('Nenhuma escolaridade encontrada');
+                }
+
+                // Ordenar por data de conclusão (mais recente primeiro)
+                escolaridades.sort((a, b) => {
+                    const dataA = a.dataConclusao ? new Date(a.dataConclusao) : new Date(0);
+                    const dataB = b.dataConclusao ? new Date(b.dataConclusao) : new Date(0);
+                    return dataB - dataA;
+                });
+
+                // Renderizar timeline
+                renderizarTimeline(escolaridades);
+
+            } catch (error) {
+                console.error('Erro ao carregar escolaridades:', error);
+                const container = document.getElementById('timeline-container');
+                container.innerHTML = `
+                    <div class="notification is-warning">
+                        <p><i class="fas fa-exclamation-triangle mr-2"></i>
+                        Não foi possível carregar o histórico acadêmico.</p>
+                        <p class="is-size-7 mt-2">Erro: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderizarTimeline(escolaridades) {
+            const container = document.getElementById('timeline-container');
+
+            container.innerHTML = escolaridades.map(escolaridade => {
+                const dataInicio = escolaridade.dataInicio
+                    ? new Date(escolaridade.dataInicio).toLocaleDateString('pt-BR', { year: 'numeric', month: '2-digit' })
+                    : '';
+                const dataConclusao = escolaridade.dataConclusao
+                    ? new Date(escolaridade.dataConclusao).toLocaleDateString('pt-BR', { year: 'numeric', month: '2-digit' })
+                    : 'Presente';
+
+                const certificadoUrl = escolaridade.certificadoUrl
+                    ? `http://kamehouse.com.br:7000/${escolaridade.certificadoUrl}`
+                    : '';
+
+                return `
+                    <div class="timeline-item">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title is-4">${escolaridade.nome}</p>
+                                <p class="subtitle is-6">
+                                    ${escolaridade.escola}
+                                    ${escolaridade.categoria?.nome ? `| <span class="tag is-info is-light">${escolaridade.categoria.nome}</span>` : ''}
+                                </p>
+                                ${escolaridade.descricao ? `<p>${escolaridade.descricao}</p>` : ''}
+
+                                <div class="academic-meta">
+                                    ${dataInicio || dataConclusao ?
+                                        `<div class="academic-meta-item">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>${dataInicio} - ${dataConclusao}</span>
+                                        </div>`
+                                        : ''}
+                                    ${escolaridade.duracaoHoras ?
+                                        `<div class="academic-meta-item">
+                                            <i class="fas fa-clock"></i>
+                                            <span>${escolaridade.duracaoHoras}h</span>
+                                        </div>`
+                                        : ''}
+                                </div>
+
+                                ${certificadoUrl ?
+                                    `<button type="button" class="timeline-certificate-btn"
+                                            data-certificate-url="${certificadoUrl}"
+                                            data-course-name="${escolaridade.nome.replace(/"/g, '&quot;')}">
+                                        <i class="fas fa-certificate"></i>
+                                        Ver Certificado
+                                    </button>`
+                                    : ''}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        async function carregarCursos() {
+            try {
+                const response = await fetch('http://kamehouse.com.br:7000/cursos');
+                const data = await response.json();
+
+                // Garantir que temos um array de cursos
+                let cursos = [];
+                if (Array.isArray(data)) {
+                    cursos = data;
+                } else if (data && typeof data === 'object') {
+                    cursos = data.cursos || data.data || data.results || [];
+                }
+
+                if (!Array.isArray(cursos) || cursos.length === 0) {
+                    throw new Error('Nenhum curso encontrado ou formato de dados inválido');
+                }
+
+                // Ordenar cursos por data de conclusão (mais recente primeiro)
+                cursos.sort((a, b) => {
+                    const dataA = a.dataConclusao ? new Date(a.dataConclusao) : new Date(0);
+                    const dataB = b.dataConclusao ? new Date(b.dataConclusao) : new Date(0);
+                    return dataB - dataA; // Ordem decrescente (mais recente primeiro)
+                });
+
+                todosOsCursos = cursos;
+
+                // Agrupar cursos por categoria
+                let totalHoras = 0;
+                cursos.forEach(curso => {
+                    const categoriaNome = curso.categoria?.nome || 'Outros';
+
+                    if (!cursosCategoria[categoriaNome]) {
+                        cursosCategoria[categoriaNome] = [];
+                    }
+                    cursosCategoria[categoriaNome].push(curso);
+
+                    if (curso.duracaoHoras) {
+                        totalHoras += parseInt(curso.duracaoHoras) || 0;
+                    }
+                });
+
+                // Ordenar cursos dentro de cada categoria por data
+                Object.keys(cursosCategoria).forEach(cat => {
+                    cursosCategoria[cat].sort((a, b) => {
+                        const dataA = a.dataConclusao ? new Date(a.dataConclusao) : new Date(0);
+                        const dataB = b.dataConclusao ? new Date(b.dataConclusao) : new Date(0);
+                        return dataB - dataA;
+                    });
+                });
+
+                // Atualizar estatísticas
+                document.getElementById('total-cursos').textContent = cursos.length;
+                document.getElementById('total-categorias').textContent = Object.keys(cursosCategoria).length;
+                document.getElementById('total-horas').textContent = totalHoras;
+
+                // Criar seletor de categorias
+                criarSeletorCategorias();
+
+                // Renderizar carrossel inicial
+                renderizarCarrossel();
+
+            } catch (error) {
+                console.error('Erro ao carregar cursos:', error);
+                const container = document.getElementById('cursos-container');
+                container.innerHTML = `
+                    <div class="notification is-warning">
+                        <p><i class="fas fa-exclamation-triangle mr-2"></i>
+                        Não foi possível carregar os cursos. Por favor, tente novamente mais tarde.</p>
+                        <p class="is-size-7 mt-2">Erro: ${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function criarSeletorCategorias() {
+            const selector = document.getElementById('category-selector');
+            const categorias = ['Todos', ...Object.keys(cursosCategoria).sort()];
+
+            selector.innerHTML = categorias.map(cat => {
+                const count = cat === 'Todos' ? todosOsCursos.length : cursosCategoria[cat].length;
+                return `
+                    <button class="category-btn ${cat === 'Todos' ? 'active' : ''}"
+                            onclick="filtrarPorCategoria('${cat}')">
+                        ${cat} <span class="tag is-light is-small">${count}</span>
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function filtrarPorCategoria(categoria) {
+            categoriaAtual = categoria;
+            currentPage = 0;
+
+            // Atualizar botões
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('.category-btn').classList.add('active');
+
+            renderizarCarrossel();
+        }
+
+        function renderizarCarrossel() {
+            const container = document.getElementById('cursos-container');
+
+            // Obter cursos da categoria atual
+            const cursosParaExibir = categoriaAtual === 'Todos'
+                ? todosOsCursos
+                : cursosCategoria[categoriaAtual];
+
+            if (!cursosParaExibir || cursosParaExibir.length === 0) {
+                container.innerHTML = '<p class="has-text-centered">Nenhum curso encontrado nesta categoria.</p>';
+                return;
+            }
+
+            // Criar estrutura do carrossel
+            const totalPages = Math.ceil(cursosParaExibir.length / itemsPerPage);
+
+            container.innerHTML = `
+                <div class="carousel-wrapper">
+                    <div class="carousel-container" id="carousel-container">
+                        ${cursosParaExibir.map(curso => criarCardCurso(curso)).join('')}
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prev-btn" onclick="navegarCarrossel(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-indicators" id="carousel-indicators">
+                        ${Array.from({length: totalPages}, (_, i) =>
+                            `<button class="carousel-indicator ${i === 0 ? 'active' : ''}"
+                                     onclick="irParaPagina(${i})"></button>`
+                        ).join('')}
+                    </div>
+                    <span class="carousel-counter" id="carousel-counter">
+                        ${currentPage + 1} / ${totalPages}
+                    </span>
+                    <button class="carousel-btn" id="next-btn" onclick="navegarCarrossel(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            `;
+
+            atualizarCarrossel();
+        }
+
+        function criarCardCurso(curso) {
+            const dataFormatada = curso.dataConclusao
+                ? new Date(curso.dataConclusao).toLocaleDateString('pt-BR')
+                : '';
+
+            const certificadoUrl = curso.certificadoUrl
+                ? `http://kamehouse.com.br:7000/${curso.certificadoUrl}`
+                : '';
+
+            return `
+                <div class="carousel-item">
+                    <div class="course-card">
+                        <div class="course-card-header">
+                            <div class="course-title">${curso.nome}</div>
+                            ${curso.categoria?.nome ?
+                                `<span class="tag is-info is-light">
+                                    <i class="fas fa-tag mr-1"></i>${curso.categoria.nome}
+                                </span>`
+                                : ''}
+                        </div>
+                        <div class="course-description">
+                            ${curso.descricao || 'Curso completo e certificado.'}
+                        </div>
+                        <div class="course-meta">
+                            ${curso.escola ?
+                                `<div class="course-meta-item">
+                                    <i class="fas fa-university"></i>
+                                    <span>${curso.escola}</span>
+                                </div>`
+                                : ''}
+                            ${curso.duracaoHoras ?
+                                `<div class="course-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>${curso.duracaoHoras}h</span>
+                                </div>`
+                                : ''}
+                            ${dataFormatada ?
+                                `<div class="course-meta-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <span>${dataFormatada}</span>
+                                </div>`
+                                : ''}
+                        </div>
+                        ${certificadoUrl ?
+                            `<button type="button" class="course-certificate-link"
+                                    data-certificate-url="${certificadoUrl}"
+                                    data-course-name="${curso.nome.replace(/"/g, '&quot;')}">
+                                <i class="fas fa-certificate"></i>
+                                Ver Certificado
+                            </button>`
+                            : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        function navegarCarrossel(direcao) {
+            const cursosParaExibir = categoriaAtual === 'Todos'
+                ? todosOsCursos
+                : cursosCategoria[categoriaAtual];
+
+            const totalPages = Math.ceil(cursosParaExibir.length / itemsPerPage);
+
+            currentPage += direcao;
+
+            if (currentPage < 0) currentPage = 0;
+            if (currentPage >= totalPages) currentPage = totalPages - 1;
+
+            atualizarCarrossel();
+        }
+
+        function irParaPagina(pagina) {
+            currentPage = pagina;
+            atualizarCarrossel();
+        }
+
+        function atualizarCarrossel() {
+            const container = document.getElementById('carousel-container');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const counter = document.getElementById('carousel-counter');
+
+            if (!container) return;
+
+            const cursosParaExibir = categoriaAtual === 'Todos'
+                ? todosOsCursos
+                : cursosCategoria[categoriaAtual];
+
+            const totalPages = Math.ceil(cursosParaExibir.length / itemsPerPage);
+
+            // Calcular deslocamento
+            const itemWidth = container.querySelector('.carousel-item')?.offsetWidth || 0;
+            const gap = 20;
+            const offset = currentPage * itemsPerPage * (itemWidth + gap);
+
+            container.style.transform = `translateX(-${offset}px)`;
+
+            // Atualizar botões
+            if (prevBtn) prevBtn.disabled = currentPage === 0;
+            if (nextBtn) nextBtn.disabled = currentPage >= totalPages - 1;
+
+            // Atualizar contador
+            if (counter) {
+                counter.textContent = `${currentPage + 1} / ${totalPages}`;
+            }
+
+            // Atualizar indicadores
+            document.querySelectorAll('.carousel-indicator').forEach((indicator, index) => {
+                indicator.classList.toggle('active', index === currentPage);
+            });
+        }
+
+        // Adicionar suporte para touch/swipe em dispositivos móveis
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('cursos-container');
+
+            container.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            container.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    navegarCarrossel(1); // Swipe left
+                } else {
+                    navegarCarrossel(-1); // Swipe right
+                }
+            }
+        }
+
+        // Atualizar carrossel quando a janela for redimensionada
+        window.addEventListener('resize', () => {
+            if (todosOsCursos.length > 0) {
+                atualizarCarrossel();
+            }
+        });
+
+        // Funções do Lightbox
+        function abrirLightbox(url, titulo) {
+            console.log('Abrindo lightbox:', url, titulo); // Debug
+            const lightbox = document.getElementById('lightbox');
+            const image = document.getElementById('lightbox-image');
+            const caption = document.getElementById('lightbox-caption');
+
+            if (!lightbox || !image || !caption) {
+                console.error('Elementos do lightbox não encontrados');
+                return;
+            }
+
+            image.src = url;
+            caption.textContent = titulo;
+            lightbox.classList.add('active');
+
+            // Prevenir scroll do body
+            document.body.style.overflow = 'hidden';
+        }
+
+        function fecharLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox) return;
+
+            lightbox.classList.remove('active');
+
+            // Restaurar scroll do body
+            document.body.style.overflow = '';
+
+            // Limpar imagem
+            const image = document.getElementById('lightbox-image');
+            if (image) {
+                setTimeout(() => {
+                    image.src = '';
+                }, 300); // Esperar animação
+            }
+        }
+
+        // Event delegation para botões de certificado (cursos, timeline acadêmica e certificações)
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.course-certificate-link, .timeline-certificate-btn, .certification-badge');
+            if (btn) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const url = btn.getAttribute('data-certificate-url');
+                const name = btn.getAttribute('data-course-name');
+
+                if (url) {
+                    abrirLightbox(url, name);
+                } else {
+                    console.error('URL do certificado não encontrada');
+                }
+            }
+        });
+
+        // Fechar lightbox com tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                fecharLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
+
